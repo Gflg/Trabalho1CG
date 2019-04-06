@@ -1,3 +1,6 @@
+int transicao=0;
+int cor=0;
+
 class Vertice{
   int x;
   int y;
@@ -118,22 +121,47 @@ void setup(){
 }
 
 void draw(){
-  criarTela();
-  //Pintar as opções de resposta com a cor preto
-  if(mouseX >= 225 && mouseX <= 275 && mouseY >= 775 && mouseY <= 825){
-    fill(0);
-    rect(225, 775, 50, 50);
+  //fazer o cross fade da tela se uma opção for escolhida
+  if (transicao == 1){
+    background(cor);
+    cor+=5;
+    if(cor > 255)
+      transicao=0;
   }
-  else if (mouseX >= 550 && mouseX <= 600 && mouseY >= 775 && mouseY <= 825){
-    fill(0);
-    rect(550, 775, 50, 50);
-  }
-  else if (mouseX >= 825 && mouseX <= 875 && mouseY >= 775 && mouseY <= 825){
-    fill(0);
-    rect(825, 775, 50, 50);
-  }
-  else if (mouseX >= 1150 && mouseX <= 1200 && mouseY >= 775 && mouseY <= 825){
-    fill(0);
-    rect(1150, 775, 50, 50);
+  else{
+    criarTela();
+    //Pintar as opções de resposta com a cor preto
+    if(mouseX >= 225 && mouseX <= 275 && mouseY >= 775 && mouseY <= 825){
+      fill(0);
+      rect(225, 775, 50, 50);
+      if(mousePressed){
+        transicao=1;
+        cor=0;
+      }
+    }
+    else if (mouseX >= 550 && mouseX <= 600 && mouseY >= 775 && mouseY <= 825){
+      fill(0);
+      rect(550, 775, 50, 50);
+      if(mousePressed){
+        transicao=1;
+        cor=0;
+      }
+    }
+    else if (mouseX >= 825 && mouseX <= 875 && mouseY >= 775 && mouseY <= 825){
+      fill(0);
+      rect(825, 775, 50, 50);
+      if(mousePressed){
+        transicao=1;
+        cor=0;
+      }
+    }
+    else if (mouseX >= 1150 && mouseX <= 1200 && mouseY >= 775 && mouseY <= 825){
+      fill(0);
+      rect(1150, 775, 50, 50);
+      if(mousePressed){
+        transicao=1;
+        cor=0;
+      }
+    }
   }
 }
