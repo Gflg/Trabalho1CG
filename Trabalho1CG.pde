@@ -1,9 +1,11 @@
 int transicao;
 int cor;
 int fase;
+int acertos;
+int erros;
 
 void setup() {
-  cor = transicao = fase = 0;
+  cor = transicao = fase = acertos = erros = 0;
   size(1300,1000);
   background(255);
 }
@@ -19,6 +21,7 @@ void draw() {
     }
   }
   else {
+    String estadoResposta;
     switch (fase) {
       case 0:
           fill(0, 0, 0);
@@ -32,23 +35,37 @@ void draw() {
       case 1:
           Fase1 primeiraFase = new Fase1();
           primeiraFase.drawTela();
-          if (primeiraFase.checkResposta()) {
-            transicao = 1;
-            cor = 0; 
+          estadoResposta = primeiraFase.checkResposta();
+          if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
+              transicao = 1;
+              cor = 0;
+              acertos++;
+          } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
+              transicao = 1;
+              cor = 0;
+              erros++;
           }
           break;
       case 2:
           Fase2 segundaFase = new Fase2();
           segundaFase.drawTela();
-          if (segundaFase.checkResposta()) {
-            transicao = 1;
-            cor = 0; 
+          estadoResposta = segundaFase.checkResposta();
+          if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
+              transicao = 1;
+              cor = 0;
+              acertos++;
+          } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
+              transicao = 1;
+              cor = 0;
+              erros++;
           }
           break;
       default:
           fill(0, 0, 0);
           textSize(40);
-          text("Obrigado por jogar!", 450, 500);
+          text("Obrigado por jogar!", 450, 450);
+          text("Acertos: " + acertos, 540, 500);
+          text("Erros    : " + erros, 540, 550);
     }
   }
 }

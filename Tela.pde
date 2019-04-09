@@ -12,36 +12,32 @@ public abstract class Tela {
   * todas as telas, este método pode ficar implementado na super classe como está.
   * Se alguma fase não permitir, basta reimplementar com @Override
   */
-  public boolean checkResposta() {
+  public String checkResposta() {
     //Pintar as opções de resposta com a cor preto
     if(mouseX >= 225 && mouseX <= 275 && mouseY >= 775 && mouseY <= 825){
       fill(0);
       rect(225, 775, 50, 50);
-      if(mousePressed && this.idResposta == 1){
-        return true;
-      }
+      if(mousePressed)
+        return this.idResposta == 1 ? Estado.RESPOSTA_CERTA : Estado.RESPOSTA_ERRADA;
     }
     else if (mouseX >= 550 && mouseX <= 600 && mouseY >= 775 && mouseY <= 825){
       fill(0);
       rect(550, 775, 50, 50);
-      if(mousePressed && this.idResposta == 2){
-        return true;
-      }
+      if(mousePressed)
+        return this.idResposta == 2 ? Estado.RESPOSTA_CERTA : Estado.RESPOSTA_ERRADA;
     }
     else if (mouseX >= 825 && mouseX <= 875 && mouseY >= 775 && mouseY <= 825){
       fill(0);
       rect(825, 775, 50, 50);
-      if(mousePressed && this.idResposta == 3){
-        return true;
-      }
+      if(mousePressed)
+        return this.idResposta == 3 ? Estado.RESPOSTA_CERTA : Estado.RESPOSTA_ERRADA;
     }
     else if (mouseX >= 1150 && mouseX <= 1200 && mouseY >= 775 && mouseY <= 825){
       fill(0);
       rect(1150, 775, 50, 50);
-      if(mousePressed && this.idResposta == 4){
-        return true;
-      }
+      if(mousePressed)
+        return this.idResposta == 4 ? Estado.RESPOSTA_CERTA : Estado.RESPOSTA_ERRADA;
     }
-    return false;
+    return Estado.VAZIO;
   }
 }
