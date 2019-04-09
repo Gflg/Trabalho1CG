@@ -37,6 +37,14 @@ void draw() {
             cor = 0; 
           }
           break;
+      case 2:
+          Fase2 segundaFase = new Fase2();
+          segundaFase.drawTela();
+          if (segundaFase.checkResposta()) {
+            transicao = 1;
+            cor = 0; 
+          }
+          break;
       default:
           fill(0, 0, 0);
           textSize(40);
