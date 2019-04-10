@@ -82,34 +82,60 @@ public class Fase2 extends Tela {
     // Desenhando área padrão de resposta
     super.drawRespostas();
     
-    //Definindo raios e centro da elipse/circulo
-    Vertice centro = new Vertice(150, 850);
-    int raioHorizontal = 100;
-    int raioVertical = 100;
+    //Criando vértices do Retângulo
+    Vertice v1Retangulo = new Vertice(50, 800);
+    Vertice v2Retangulo = new Vertice(130, 800);
+    Vertice v4Retangulo = new Vertice(130, 900);
     
-    fill(100, 100, 100);
-    rect(25, 750, 1225, 200);
+    int translacaoX = 300;
     
-    fill(25, 255, 255);
-    rect(225, 775, 50, 50);
-    rect(550, 775, 50, 50);
-    rect(825, 775, 50, 50);
-    rect(1150, 775, 50, 50);
+    // <!-- Resposta 1
+    fill(74, 132, 232);
+    rect(v1Retangulo.getX(), v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
+    rect(v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()), v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
     
-    //As próximas coisas serão pintadas de azul
-    fill(255, 0, 0);
-    //Olhar a documentação da função ellipse: https://processing.org/reference/ellipse_.html
-    //Circulo criado abaixo
-    ellipse(centro.getX(), centro.getY(), raioHorizontal, raioVertical);
+    fill(0, 0, 0);
+    textSize(40);
+    text("S", v1Retangulo.getX() + 30, v2Retangulo.getY() + 60);
+    text("2", v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + 30, v2Retangulo.getY() + 60);
     
-    fill(0, 255, 0);
-    ellipse(centro.getX() + 300, centro.getY(), raioHorizontal + 50, raioVertical + 50);
+    // -->
     
-    fill(0, 255, 0);
-    ellipse(centro.getX() + 600, centro.getY(), raioHorizontal, raioVertical + 50);
+    // <!-- Resposta 2
+    fill(74, 132, 232);
+    rect(v1Retangulo.getX() + translacaoX, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
+    rect(v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + translacaoX, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
     
-    fill(0, 0, 255);
-    ellipse(centro.getX() + 900, centro.getY(), raioHorizontal + 50, raioVertical);
+    fill(0, 0, 0);
+    textSize(40);
+    text("T", v1Retangulo.getX() + 30 + translacaoX, v2Retangulo.getY() + 60);
+    text("4", v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + 30 + translacaoX, v2Retangulo.getY() + 60);
+    
+    // -->
+    
+    // <!-- Resposta 3
+    fill(74, 132, 232);
+    rect(v1Retangulo.getX() + translacaoX * 2, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
+    rect(v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + translacaoX * 2, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
+    
+    fill(0, 0, 0);
+    textSize(40);
+    text("U", v1Retangulo.getX() + 30 + translacaoX * 2, v2Retangulo.getY() + 60);
+    text("4", v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + 30 + translacaoX * 2, v2Retangulo.getY() + 60);
+    
+    // -->
+    
+    // <!-- Resposta 4
+    fill(74, 132, 232);
+    rect(v1Retangulo.getX() + translacaoX * 3, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
+    rect(v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + translacaoX * 3, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
+    
+    fill(0, 0, 0);
+    textSize(40);
+    text("T", v1Retangulo.getX() + 30 + translacaoX * 3, v2Retangulo.getY() + 60);
+    text("3", v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + 30 + translacaoX * 3, v2Retangulo.getY() + 60);
+    
+    //-->
   }
 
 }
