@@ -78,21 +78,15 @@ public class Fase1 extends Tela {
     text("?", centro.getX() + 350, centro.getY());
   }
   
-  private void drawRespostas() {
+  protected void drawRespostas() {
+    // Desenhando área padrão de resposta
+    super.drawRespostas();
+    
     //Definindo raios e centro da elipse/circulo
     Vertice centro = new Vertice(150, 850);
     int raioHorizontal = 100;
     int raioVertical = 100;
-    
-    fill(100, 100, 100);
-    rect(25, 750, 1225, 200);
-    
-    fill(25, 255, 255);
-    rect(225, 775, 50, 50);
-    rect(550, 775, 50, 50);
-    rect(825, 775, 50, 50);
-    rect(1150, 775, 50, 50);
-    
+        
     //As próximas coisas serão pintadas de azul
     fill(255, 0, 0);
     //Olhar a documentação da função ellipse: https://processing.org/reference/ellipse_.html

@@ -78,7 +78,10 @@ public class Fase2 extends Tela {
     text("?", centro.getX() + 350, centro.getY());
   }
   
-  private void drawRespostas() {
+  protected void drawRespostas() {
+    // Desenhando área padrão de resposta
+    super.drawRespostas();
+    
     //Definindo raios e centro da elipse/circulo
     Vertice centro = new Vertice(150, 850);
     int raioHorizontal = 100;
