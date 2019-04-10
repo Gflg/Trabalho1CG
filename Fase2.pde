@@ -59,25 +59,6 @@ public class Fase2 extends Tela {
     text("↓", v1Retangulo.getX() + 90, 27*v2Retangulo.getY()); //Posição inicial do texto x e y
   }
   
-  private void drawCirculo() {
-    //Definindo raios e centro da elipse/circulo
-    Vertice centro = new Vertice(450, 650);
-    int raioHorizontal = 100;
-    int raioVertical = 100;
-    
-    //As próximas coisas serão pintadas de azul
-    fill(0, 0, 255);
-    //Olhar a documentação da função ellipse: https://processing.org/reference/ellipse_.html
-    //Circulo criado abaixo
-    ellipse(centro.getX(), centro.getY(), raioHorizontal, raioVertical);
-    
-    //Fonte do texto
-    fill(0, 0, 0);
-    textSize(40);
-    text("→", centro.getX() + 150, centro.getY()); //Posição inicial do texto x e y
-    text("?", centro.getX() + 350, centro.getY());
-  }
-  
   protected void drawRespostas() {
     // Desenhando área padrão de resposta
     super.drawRespostas();
@@ -102,7 +83,7 @@ public class Fase2 extends Tela {
     // -->
     
     // <!-- Resposta 2
-    fill(74, 132, 232);
+    fill(48,213,200);
     rect(v1Retangulo.getX() + translacaoX, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
     rect(v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + translacaoX, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
     
@@ -114,19 +95,19 @@ public class Fase2 extends Tela {
     // -->
     
     // <!-- Resposta 3
-    fill(74, 132, 232);
+    fill(255, 255, 0);
     rect(v1Retangulo.getX() + translacaoX * 2, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
     rect(v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + translacaoX * 2, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
     
     fill(0, 0, 0);
     textSize(40);
-    text("U", v1Retangulo.getX() + 30 + translacaoX * 2, v2Retangulo.getY() + 60);
-    text("4", v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + 30 + translacaoX * 2, v2Retangulo.getY() + 60);
+    text("T", v1Retangulo.getX() + 30 + translacaoX * 2, v2Retangulo.getY() + 60);
+    text("3", v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + 30 + translacaoX * 2, v2Retangulo.getY() + 60);
     
     // -->
     
     // <!-- Resposta 4
-    fill(74, 132, 232);
+    fill(48,213,200);
     rect(v1Retangulo.getX() + translacaoX * 3, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
     rect(v1Retangulo.getX() + (v2Retangulo.getX() - v1Retangulo.getX()) + translacaoX * 3, v1Retangulo.getY(), v2Retangulo.getX() - v1Retangulo.getX(), v4Retangulo.getY() - v2Retangulo.getY());
     
