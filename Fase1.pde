@@ -53,14 +53,14 @@ public class Fase1 extends Tela {
     Vertice v2Retangulo = new Vertice(500, 350);
     Vertice v3Retangulo = new Vertice(400, 450);
     Vertice v4Retangulo = new Vertice(500, 450);
-    Quadrado q1 = new Quadrado(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
+    Quadrilatero q1 = new Quadrilatero(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
     float[][] escala = {{1,0},{0,0.75}};
     
     //As próximas coisas serão pintadas de verde
     stroke(0, 128, 0);
     //Olhar a documentação da função rect: https://processing.org/reference/rect_.html
     //Quadrado criado abaixo
-    q1.drawQuadrado();
+    q1.drawQuadrilatero();
     
     //Fonte do texto
     fill(0, 0, 0);
@@ -70,13 +70,13 @@ public class Fase1 extends Tela {
     //Translação no eixo x e aumento de escala no y para aumentar a altura do quadrado
     stroke(255, 0, 0);
     float[][] translacao = {{350},{0}};
-    Quadrado q2 = new Quadrado(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
+    Quadrilatero q2 = new Quadrilatero(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
     for (int i=0; i<4; i++){
       q2.moveVertice(i, translacao);
       if (i<2)
         q2.transformaVertice(i, escala);
     }
-    q2.drawQuadrado();
+    q2.drawQuadrilatero();
   }
   
   private void drawLosango() {
@@ -85,13 +85,13 @@ public class Fase1 extends Tela {
     Vertice v2Losango = new Vertice(500, 550);
     Vertice v3Losango = new Vertice(350, 650);
     Vertice v4Losango = new Vertice(550, 650);
-    Quadrado l1 = new Quadrado(v1Losango, v2Losango, v3Losango, v4Losango);
+    Quadrilatero l1 = new Quadrilatero(v1Losango, v2Losango, v3Losango, v4Losango);
     
     //As próximas coisas serão pintadas de azul
     stroke(0, 0, 255);
     //Olhar a documentação da função ellipse: https://processing.org/reference/ellipse_.html
     //Circulo criado abaixo
-    l1.drawQuadrado();
+    l1.drawQuadrilatero();
     
     //Fonte do texto
     fill(0, 0, 0);
@@ -108,7 +108,7 @@ public class Fase1 extends Tela {
     Vertice v2Losango = new Vertice(180, 840);
     Vertice v3Losango = new Vertice(30, 940);
     Vertice v4Losango = new Vertice(230, 940);
-    Quadrado l1 = new Quadrado(v1Losango, v2Losango, v3Losango, v4Losango);
+    Quadrilatero l1 = new Quadrilatero(v1Losango, v2Losango, v3Losango, v4Losango);
     float[][] escalaCerta = {{1,0},{0,0.9}};
     float[][] escalaErrada = {{0.9,0},{0,1}};
     float[][] escalaErrada2 = {{1.1,0},{0,1}};
@@ -122,11 +122,11 @@ public class Fase1 extends Tela {
     //Olhar a documentação da função ellipse: https://processing.org/reference/ellipse_.html
     //Circulo criado abaixo
     //ellipse(centro.getX(), centro.getY(), raioHorizontal, raioVertical);
-    l1.drawQuadrado();
+    l1.drawQuadrilatero();
     
     stroke(0, 128, 0);
     float[][] translacao = {{300},{0}};
-    Quadrado l2 = new Quadrado(v1Losango, v2Losango, v3Losango, v4Losango);
+    Quadrilatero l2 = new Quadrilatero(v1Losango, v2Losango, v3Losango, v4Losango);
     for (int i=0; i<4; i++){
       l2.moveVertice(i, translacao);
       if(i<2)
@@ -136,23 +136,23 @@ public class Fase1 extends Tela {
       else
         l2.transformaVertice(i, escalaErrada2);
     }
-    l2.drawQuadrado();
+    l2.drawQuadrilatero();
     //ellipse(centro.getX() + 300, centro.getY(), raioHorizontal + 50, raioVertical + 50);
     
     stroke(0, 128, 0);
     translacao[0][0] = 600;
-    Quadrado l3 = new Quadrado(v1Losango, v2Losango, v3Losango, v4Losango);
+    Quadrilatero l3 = new Quadrilatero(v1Losango, v2Losango, v3Losango, v4Losango);
     for (int i=0; i<4; i++){
       l3.moveVertice(i, translacao);
       if (i<2)
         l3.transformaVertice(i, escalaCerta);
     }
-    l3.drawQuadrado();
+    l3.drawQuadrilatero();
     //ellipse(centro.getX() + 600, centro.getY(), raioHorizontal, raioVertical + 50);
     
     stroke(0, 0, 255);
     translacao[0][0] = 910;
-    Quadrado l4 = new Quadrado(v1Losango, v2Losango, v3Losango, v4Losango);
+    Quadrilatero l4 = new Quadrilatero(v1Losango, v2Losango, v3Losango, v4Losango);
     for (int i=0; i<4; i++){
       l4.moveVertice(i, translacao);
       if(i==2)
@@ -160,7 +160,7 @@ public class Fase1 extends Tela {
       else if(i == 3)
         l4.transformaVertice(i, escalaErrada2);
     }
-    l4.drawQuadrado();
+    l4.drawQuadrilatero();
     //ellipse(centro.getX() + 900, centro.getY(), raioHorizontal + 50, raioVertical);
   }
 
