@@ -17,10 +17,10 @@ public abstract class Tela {
 
   // Desenha área padrão de respostas
   protected void drawRespostas() {
-    fill(100, 100, 100);
-    rect(25, 750, 1225, 200);
+    fill(180);
+    rect(25, 750, 1235, 200);
 
-    fill(25, 255, 255);
+    fill(125, 255, 255);
     rect(baseRespostaMin.getX(), baseRespostaMin.getY(), 50, 50);
     rect(baseRespostaMin.getX() + deslocamentoX, baseRespostaMin.getY(), 50, 50);
     rect(baseRespostaMin.getX() + deslocamentoX * 2, baseRespostaMin.getY(), 50, 50);
