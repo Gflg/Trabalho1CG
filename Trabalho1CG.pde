@@ -60,6 +60,20 @@ void draw() {
               erros++;
           }
           break;
+      case 3:
+          Fase3 terceiraFase = new Fase3();
+          terceiraFase.drawTela();
+          estadoResposta = terceiraFase.checkResposta();
+          if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
+              transicao = 1;
+              cor = 0;
+              acertos++;
+          } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
+              transicao = 1;
+              cor = 0;
+              erros++;
+          }
+          break;
       default:
           fill(0, 0, 0);
           textSize(40);

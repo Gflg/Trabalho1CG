@@ -29,7 +29,6 @@ public class Triangulo{
       }
       vertices[i][vertice] = soma;
     }
-    println(vertices[1][vertice]);
   }
   
   public void moveVertice(int vertice, float[][] translacao){
