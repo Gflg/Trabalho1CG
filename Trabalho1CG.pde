@@ -3,9 +3,12 @@ int cor;
 int fase;
 int acertos;
 int erros;
+int ultimoTempo;
+int pontuacao;
+int aux;
 
 void setup() {
-  cor = transicao = fase = acertos = erros = 0;
+  cor = transicao = fase = acertos = erros = ultimoTempo = pontuacao = 0;
   size(1300,1000);
   background(255);
 }
@@ -40,6 +43,9 @@ void draw() {
               transicao = 1;
               cor = 0;
               acertos++;
+              aux = millis();
+              pontuacao += 1000000/(aux - ultimoTempo);
+              ultimoTempo = aux;
           } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
               transicao = 1;
               cor = 0;
@@ -54,6 +60,9 @@ void draw() {
               transicao = 1;
               cor = 0;
               acertos++;
+              aux = millis();
+              pontuacao += 1000000/(aux - ultimoTempo);
+              ultimoTempo = aux;
           } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
               transicao = 1;
               cor = 0;
@@ -68,6 +77,26 @@ void draw() {
               transicao = 1;
               cor = 0;
               acertos++;
+              aux = millis();
+              pontuacao += 1000000/(aux - ultimoTempo);
+              ultimoTempo = aux;
+          } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
+              transicao = 1;
+              cor = 0;
+              erros++;
+          }
+          break;
+      case 4:
+          Fase4 quartaFase = new Fase4();
+          quartaFase.drawTela();
+          estadoResposta = quartaFase.checkResposta();
+          if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
+              transicao = 1;
+              cor = 0;
+              acertos++;
+              aux = millis();
+              pontuacao += 100000000/(aux - ultimoTempo);
+              ultimoTempo = aux;
           } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
               transicao = 1;
               cor = 0;
@@ -80,6 +109,7 @@ void draw() {
           text("Obrigado por jogar!", 450, 450);
           text("Acertos: " + acertos, 540, 500);
           text("Erros    : " + erros, 540, 550);
+          text("Pontuação: " + pontuacao, 540, 600);
     }
   }
 }
