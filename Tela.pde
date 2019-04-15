@@ -1,4 +1,5 @@
 public abstract class Tela {
+
   protected final int idResposta;
   
   private Vertice baseRespostaMin;

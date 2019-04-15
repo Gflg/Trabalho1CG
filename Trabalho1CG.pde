@@ -112,4 +112,5 @@ void draw() {
           text("Pontuação: " + pontuacao, 540, 600);
     }
   }
+
 }

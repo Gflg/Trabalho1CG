@@ -1,5 +1,5 @@
 public class Fase1 extends Tela {
-  
+
   public Fase1() {
     // Parametro para construtor da super classe é o numero da resposta
      super(3); 
