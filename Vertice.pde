@@ -1,27 +1,35 @@
 public class Vertice {
 
-  private int x;
-  private int y;
+  public float[] coordenadas;
+  public int quantidadeDimensoes;
 
-  public Vertice(int x, int y) {
-    this.x = x;
-    this.y = y;
+  public Vertice(float... coordenadas) {
+    this.quantidadeDimensoes = coordenadas.length;
+    this.coordenadas = coordenadas;
   }
 
-  public int getX() {
-    return this.x;
+  public float getX() {
+    return this.coordenadas[0];
   }
 
-  public int getY() {
-    return this.y;
+  public float getY() {
+    return this.coordenadas[1];
+  }
+  
+  public float getZ() {
+     return this.coordenadas[2]; 
   }
 
-  public void setX(int x) {
-    this.x = x;
+  public void setX(float x) {
+    this.coordenadas[0] = x;
   }
 
-  public void setY(int y) {
-    this.y = y;
+  public void setY(float y) {
+    this.coordenadas[1] = y;
   }
-
+  
+  public void setZ(float z) {
+     this.coordenadas[2] = z; 
+  }
+  
 }
