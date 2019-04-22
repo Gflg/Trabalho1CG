@@ -1,22 +1,18 @@
 public class Quadrilatero extends FiguraGeometrica {
 
-  public Quadrilatero(Vertice v1, Vertice v2, Vertice v3, Vertice v4) {
-    super(2, 4);
-    this.vertices[0][0] = v1.getX();
-    this.vertices[1][0] = v1.getY();
-    this.vertices[0][1] = v2.getX();
-    this.vertices[1][1] = v2.getY();
-    this.vertices[0][2] = v3.getX();
-    this.vertices[1][2] = v3.getY();
-    this.vertices[0][3] = v4.getX();
-    this.vertices[1][3] = v4.getY();
+  public Quadrilatero(Vertice[] verticesQuadrilatero){
+    super(2, verticesQuadrilatero.length);
+    this.vertices[0] = verticesQuadrilatero[0];
+    this.vertices[1] = verticesQuadrilatero[1];
+    this.vertices[2] = verticesQuadrilatero[2];
+    this.vertices[3] = verticesQuadrilatero[3];
   }
 
   public void drawQuadrilatero() {
-    line(vertices[0][0], vertices[1][0], vertices[0][1], vertices[1][1]);
-    line(vertices[0][0], vertices[1][0], vertices[0][2], vertices[1][2]);
-    line(vertices[0][2], vertices[1][2], vertices[0][3], vertices[1][3]);
-    line(vertices[0][1], vertices[1][1], vertices[0][3], vertices[1][3]);
+    line(vertices[0].getX(), vertices[0].getY(), vertices[1].getX(), vertices[1].getY());
+    line(vertices[0].getX(), vertices[0].getY(), vertices[2].getX(), vertices[2].getY());
+    line(vertices[2].getX(), vertices[2].getY(), vertices[3].getX(), vertices[3].getY());
+    line(vertices[1].getX(), vertices[1].getY(), vertices[3].getX(), vertices[3].getY());
   }
 
 }
