@@ -157,7 +157,7 @@ public class Fase1 extends Tela {
 
     stroke(0, 128, 0);
 
-    translacao[0][0] = 300;
+    translacao[0][0] += 300;
 
     Quadrilatero l3 = new Quadrilatero(verticesQuadrilatero3);
 
@@ -172,7 +172,7 @@ public class Fase1 extends Tela {
 
     stroke(0, 0, 255);
 
-    translacao[0][0] = 400;
+    translacao[0][0] += 300;
 
     Quadrilatero l4 = new Quadrilatero(verticesQuadrilatero3);
 

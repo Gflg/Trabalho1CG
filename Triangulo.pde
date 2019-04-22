@@ -2,9 +2,9 @@ public class Triangulo extends FiguraGeometrica {
 
   public Triangulo(Vertice[] verticesTriangulo){
     super(2, verticesTriangulo.length);
-    this.vertices[0] = verticesTriangulo[0];
-    this.vertices[1] = verticesTriangulo[1];
-    this.vertices[2] = verticesTriangulo[2];
+    this.vertices[0] = new Vertice(verticesTriangulo[0]);
+    this.vertices[1] = new Vertice(verticesTriangulo[1]);
+    this.vertices[2] = new Vertice(verticesTriangulo[2]);
   }
 
   public void drawTriangulo(){

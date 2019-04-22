@@ -2,10 +2,10 @@ public class Quadrilatero extends FiguraGeometrica {
 
   public Quadrilatero(Vertice[] verticesQuadrilatero){
     super(2, verticesQuadrilatero.length);
-    this.vertices[0] = verticesQuadrilatero[0];
-    this.vertices[1] = verticesQuadrilatero[1];
-    this.vertices[2] = verticesQuadrilatero[2];
-    this.vertices[3] = verticesQuadrilatero[3];
+    this.vertices[0] = new Vertice(verticesQuadrilatero[0]);
+    this.vertices[1] = new Vertice(verticesQuadrilatero[1]);
+    this.vertices[2] = new Vertice(verticesQuadrilatero[2]);
+    this.vertices[3] = new Vertice(verticesQuadrilatero[3]);
   }
 
   public void drawQuadrilatero() {
