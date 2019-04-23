@@ -37,17 +37,14 @@ public class FiguraGeometrica {
     for(int i = 0; i < transformacao.length; i++){
       float soma = 0;
       for(int j = 0; j < transformacao[i].length; j++){
-        //soma += transformacao[i][j]*vertices[j][vertice];
-        soma += transformacao[i][j]*vertices[vertice].coordenadas[i];
+        soma += transformacao[i][j]*vertices[vertice].coordenadas[j];
       }
       vertices[vertice].coordenadas[i] = soma;
-      //vertices[i][vertice] = soma;
     }
   }
 
   void moveVertice(int vertice, float[][] translacao) {
     for (int i = 0; i < getQuantidadeDimensoes(); i++){
-      //vertices[i][vertice] += translacao[i][0];
       vertices[vertice].coordenadas[i] += translacao[i][0];
     }
   }

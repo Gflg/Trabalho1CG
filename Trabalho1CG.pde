@@ -112,7 +112,7 @@ void draw() {
               cor = 0;
               acertos++;
               aux = millis();
-              pontuacao += 1000000/(aux - ultimoTempo);
+              pontuacao += 100000000/(aux - ultimoTempo);
               ultimoTempo = aux;
           } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
               transicao = 1;
@@ -129,7 +129,7 @@ void draw() {
               cor = 0;
               acertos++;
               aux = millis();
-              pontuacao += 1000000/(aux - ultimoTempo);
+              pontuacao += 100000000/(aux - ultimoTempo);
               ultimoTempo = aux;
           } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
               transicao = 1;

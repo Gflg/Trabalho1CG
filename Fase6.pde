@@ -1,7 +1,7 @@
 public class Fase6 extends Tela {
 
   public Fase6() {
-    super(2); //Parâmetro para o construtor da super classe é a posição (número) da resposta correta
+    super(4); //Parâmetro para o construtor da super classe é a posição (número) da resposta correta
   }
 
   public void drawTela() {
