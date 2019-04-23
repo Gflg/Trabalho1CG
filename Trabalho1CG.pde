@@ -120,6 +120,23 @@ void draw() {
               erros++;
           }
           break;
+      case 6:
+          Fase6 sextaFase = new Fase6();
+          sextaFase.drawTela();
+          estadoResposta = sextaFase.checkResposta();
+          if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
+              transicao = 1;
+              cor = 0;
+              acertos++;
+              aux = millis();
+              pontuacao += 1000000/(aux - ultimoTempo);
+              ultimoTempo = aux;
+          } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
+              transicao = 1;
+              cor = 0;
+              erros++;
+          }
+          break;
       default:
           fill(0, 0, 0);
           textSize(40);
