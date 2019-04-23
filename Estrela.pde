@@ -4,27 +4,27 @@ public class Estrela extends FiguraGeometrica {
     super(2, 10);
     this.vertices[0][0] = v1.getX();
     this.vertices[1][0] = v1.getY();
-    Vertice segundoNivel = new Vertice(v1.getX(), v1.getY() + 50);
-    this.vertices[0][1] = segundoNivel.getX() - 25;
+    Vertice segundoNivel = new Vertice(v1.getX(), v1.getY() + 25);
+    this.vertices[0][1] = segundoNivel.getX() - 12.5;
     this.vertices[1][1] = segundoNivel.getY();
-    this.vertices[0][2] = segundoNivel.getX() + 25;
+    this.vertices[0][2] = segundoNivel.getX() + 12.5;
     this.vertices[1][2] = segundoNivel.getY();
-    this.vertices[0][3] = this.vertices[0][1] - 50;
+    this.vertices[0][3] = this.vertices[0][1] - 25;
     this.vertices[1][3] = segundoNivel.getY();
-    this.vertices[0][4] = this.vertices[0][2] + 50;
+    this.vertices[0][4] = this.vertices[0][2] + 25;
     this.vertices[1][4] = segundoNivel.getY();
-    Vertice terceiroNivel = new Vertice(segundoNivel.getX(), segundoNivel.getY() + 40);
-    this.vertices[0][5] = terceiroNivel.getX() - 35;
+    Vertice terceiroNivel = new Vertice(segundoNivel.getX(), segundoNivel.getY() + 20);
+    this.vertices[0][5] = terceiroNivel.getX() - 17.5;
     this.vertices[1][5] = terceiroNivel.getY();
-    this.vertices[0][6] = terceiroNivel.getX() + 35;
+    this.vertices[0][6] = terceiroNivel.getX() + 17.5;
     this.vertices[1][6] = terceiroNivel.getY();
-    Vertice quartoNivel = new Vertice(terceiroNivel.getX(), terceiroNivel.getY() + 25);
+    Vertice quartoNivel = new Vertice(terceiroNivel.getX(), terceiroNivel.getY() + 12.5);
     this.vertices[0][7] = quartoNivel.getX();
     this.vertices[1][7] = quartoNivel.getY();
-    this.vertices[0][8] = quartoNivel.getX() - 50;
-    this.vertices[1][8] = quartoNivel.getY() + 25;
-    this.vertices[0][9] = quartoNivel.getX() + 50;
-    this.vertices[1][9] = quartoNivel.getY() + 25;
+    this.vertices[0][8] = quartoNivel.getX() - 25;
+    this.vertices[1][8] = quartoNivel.getY() + 12.5;
+    this.vertices[0][9] = quartoNivel.getX() + 25;
+    this.vertices[1][9] = quartoNivel.getY() + 12.5;
   }
   
   public void drawEstrela() {
