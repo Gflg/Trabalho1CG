@@ -1,5 +1,4 @@
 public class Fase4 extends Tela {
-  float[][] rotacao = new float[2][2];
   public Fase4() {
     // Parametro para construtor da super classe é o numero da resposta
      super(1); 
@@ -9,13 +8,6 @@ public class Fase4 extends Tela {
     drawSetas();
     drawTriangulos();
     drawRespostas();
-  }
-  
-  public void setRotacao(float angulo){
-    rotacao[0][0] = cos(angulo);
-    rotacao[0][1] = -sin(angulo);
-    rotacao[1][0] = sin(angulo);
-    rotacao[1][1] = cos(angulo);
   }
   
   private void drawSetas() {
@@ -39,90 +31,94 @@ public class Fase4 extends Tela {
   private void drawTriangulos() {
     float[][] translacao = {{0},{200}};
     //Criando os vértices do Triângulo
-    Vertice v1Triangulo = new Vertice(630, 60);
-    Vertice v2Triangulo = new Vertice(660, 60);
-    Vertice v3Triangulo = new Vertice(630, 0);
-    Triangulo t1 = new Triangulo(v1Triangulo, v2Triangulo, v3Triangulo);
+    Vertice[] verticesTriangulo = new Vertice[3];
+    verticesTriangulo[0] = new Vertice(630, 60);
+    verticesTriangulo[1] = new Vertice(660, 60);
+    verticesTriangulo[2] = new Vertice(630, 0);
+    Triangulo t1 = new Triangulo(verticesTriangulo);
     
-    Triangulo t5 = new Triangulo(v1Triangulo, v2Triangulo, v3Triangulo);
+    Triangulo t5 = new Triangulo(verticesTriangulo);
     for (int i=0; i<3; i++)
       t5.moveVertice(i, translacao);
     
     translacao[1][0] += 200;
     
-    Triangulo t9 = new Triangulo(v1Triangulo, v2Triangulo, v3Triangulo);
+    Triangulo t9 = new Triangulo(verticesTriangulo);
     for (int i=0; i<3; i++)
       t9.moveVertice(i, translacao);
       
     translacao[1][0] += 200;
     
-    Triangulo t13 = new Triangulo(v1Triangulo, v2Triangulo, v3Triangulo);
+    Triangulo t13 = new Triangulo(verticesTriangulo);
     for (int i=0; i<3; i++)
       t13.moveVertice(i, translacao);
     
-    Vertice v4Triangulo = new Vertice(630, 60);
-    Vertice v5Triangulo = new Vertice(v2Triangulo.getX() - 2*(v2Triangulo.getX() - v1Triangulo.getX()), 60); //Aplicando a reflexão no eixo X, mantendo o eixo Y intacto
-    Vertice v6Triangulo = new Vertice(630, 0);
-    Triangulo t2 = new Triangulo(v4Triangulo, v5Triangulo, v6Triangulo);
+    Vertice[] verticesTriangulo2 = new Vertice[3];
+    verticesTriangulo2[0] = new Vertice(630, 60);
+    verticesTriangulo2[1] = new Vertice(verticesTriangulo[1].getX() - 2*(verticesTriangulo[1].getX() - verticesTriangulo[0].getX()), 60); //Aplicando a reflexão no eixo X, mantendo o eixo Y intacto
+    verticesTriangulo2[2] = new Vertice(630, 0);
+    Triangulo t2 = new Triangulo(verticesTriangulo2);
     
     translacao[1][0] = 200;
-    Triangulo t6 = new Triangulo(v4Triangulo, v5Triangulo, v6Triangulo);
+    Triangulo t6 = new Triangulo(verticesTriangulo2);
     for (int i=0; i<3; i++)
       t6.moveVertice(i, translacao);
     
     translacao[1][0] += 200;
     
-    Triangulo t10 = new Triangulo(v4Triangulo, v5Triangulo, v6Triangulo);
+    Triangulo t10 = new Triangulo(verticesTriangulo2);
     for (int i=0; i<3; i++)
       t10.moveVertice(i, translacao);
     
     translacao[1][0] += 200;
     
-    Triangulo t14 = new Triangulo(v4Triangulo, v5Triangulo, v6Triangulo);
+    Triangulo t14 = new Triangulo(verticesTriangulo2);
     for (int i=0; i<3; i++)
       t14.moveVertice(i, translacao);
     
-    Vertice v7Triangulo = new Vertice(600, 120);
-    Vertice v8Triangulo = new Vertice(660, 120);
-    Vertice v9Triangulo = new Vertice(600, 60);
-    Triangulo t3 = new Triangulo(v7Triangulo, v8Triangulo, v9Triangulo);
+    Vertice[] verticesTriangulo3 = new Vertice[3];
+    verticesTriangulo3[0] = new Vertice(600, 120);
+    verticesTriangulo3[1] = new Vertice(660, 120);
+    verticesTriangulo3[2] = new Vertice(600, 60);
+    Triangulo t3 = new Triangulo(verticesTriangulo3);
     
     translacao[1][0] = 200;
-    Triangulo t7 = new Triangulo(v7Triangulo, v8Triangulo, v9Triangulo);
+    Triangulo t7 = new Triangulo(verticesTriangulo3);
     for (int i=0; i<3; i++)
       t7.moveVertice(i, translacao);
     
     translacao[1][0] += 200;
     
-    Triangulo t11 = new Triangulo(v7Triangulo, v8Triangulo, v9Triangulo);
+    Triangulo t11 = new Triangulo(verticesTriangulo3);
     for (int i=0; i<3; i++)
       t11.moveVertice(i, translacao);
       
     translacao[1][0] += 200;
     
-    Triangulo t15 = new Triangulo(v7Triangulo, v8Triangulo, v9Triangulo);
+    Triangulo t15 = new Triangulo(verticesTriangulo3);
     for (int i=0; i<3; i++)
       t15.moveVertice(i, translacao);
     
-    Vertice v10Triangulo = new Vertice(v7Triangulo.getX() + (v8Triangulo.getX() - v7Triangulo.getX()), v8Triangulo.getY() - (v8Triangulo.getY() - v9Triangulo.getY()));
-    Vertice v11Triangulo = new Vertice(660, 120);
-    Vertice v12Triangulo = new Vertice(600, 60);
-    Triangulo t4 = new Triangulo(v10Triangulo, v11Triangulo, v12Triangulo);
+    Vertice[] verticesTriangulo4 = new Vertice[3];
+    verticesTriangulo4[0] = new Vertice(verticesTriangulo3[0].getX() + (verticesTriangulo3[1].getX() - verticesTriangulo3[0].getX()), verticesTriangulo3[1].getY() - (verticesTriangulo3[1].getY() - verticesTriangulo3[2].getY()));
+    verticesTriangulo4[1] = new Vertice(660, 120);
+    verticesTriangulo4[2] = new Vertice(600, 60);
+    Triangulo t4 = new Triangulo(verticesTriangulo4);
     
     translacao[1][0] = 200;
-    Triangulo t8 = new Triangulo(v10Triangulo, v11Triangulo, v12Triangulo);
+    Triangulo t8 = new Triangulo(verticesTriangulo4);
     for (int i=0; i<3; i++)
       t8.moveVertice(i, translacao);
     
     translacao[1][0] += 200;
     
-    Triangulo t12 = new Triangulo(v10Triangulo, v11Triangulo, v12Triangulo);
+    Triangulo t12 = new Triangulo(verticesTriangulo4);
     for (int i=0; i<3; i++)
       t12.moveVertice(i, translacao);
       
     translacao[1][0] += 200;
     
-    Triangulo t16 = new Triangulo(v10Triangulo, v11Triangulo, v12Triangulo);
+    Triangulo t16 = new Triangulo(verticesTriangulo4);
     for (int i=0; i<3; i++)
       t16.moveVertice(i, translacao);
     
@@ -186,113 +182,117 @@ public class Fase4 extends Tela {
     float[][] translacao = {{-500},{800}};
     
     //Triangulo do topo - direita
-    Vertice v1Triangulo = new Vertice(630, 60);
-    Vertice v2Triangulo = new Vertice(660, 60);
-    Vertice v3Triangulo = new Vertice(630, 0);
+    Vertice[] verticesTriangulo = new Vertice[3];
+    verticesTriangulo[0] = new Vertice(630, 60);
+    verticesTriangulo[1] = new Vertice(660, 60);
+    verticesTriangulo[2] = new Vertice(630, 0);
     
-    Triangulo t1 = new Triangulo(v1Triangulo, v2Triangulo, v3Triangulo);
+    Triangulo t1 = new Triangulo(verticesTriangulo);
     for (int i=0; i<3; i++)
       t1.moveVertice(i, translacao);
       
     translacao[0][0] += 300;
     
-    Triangulo t5 = new Triangulo(v1Triangulo, v2Triangulo, v3Triangulo);
+    Triangulo t5 = new Triangulo(verticesTriangulo);
     for (int i=0; i<3; i++)
       t5.moveVertice(i, translacao);
     
     translacao[0][0] += 300;
     
-    Triangulo t9 = new Triangulo(v1Triangulo, v2Triangulo, v3Triangulo);
+    Triangulo t9 = new Triangulo(verticesTriangulo);
     for (int i=0; i<3; i++)
       t9.moveVertice(i, translacao);
       
     translacao[0][0] += 350;
     
-    Triangulo t13 = new Triangulo(v1Triangulo, v2Triangulo, v3Triangulo);
+    Triangulo t13 = new Triangulo(verticesTriangulo);
     for (int i=0; i<3; i++)
       t13.moveVertice(i, translacao);
       
     //Triangulo do topo - esquerda
-    Vertice v4Triangulo = new Vertice(630, 60);
-    Vertice v5Triangulo = new Vertice(v2Triangulo.getX() - 2*(v2Triangulo.getX() - v1Triangulo.getX()), 60); //Aplicando a reflexão no eixo X, mantendo o eixo Y intacto
-    Vertice v6Triangulo = new Vertice(630, 0);
+    Vertice[] verticesTriangulo2 = new Vertice[3];
+    verticesTriangulo2[0] = new Vertice(630, 60);
+    verticesTriangulo2[1] = new Vertice(verticesTriangulo[1].getX() - 2*(verticesTriangulo[1].getX() - verticesTriangulo[0].getX()), 60); //Aplicando a reflexão no eixo X, mantendo o eixo Y intacto
+    verticesTriangulo2[2] = new Vertice(630, 0);
     
     translacao[0][0] = -500;
-    Triangulo t2 = new Triangulo(v4Triangulo, v5Triangulo, v6Triangulo);
+    Triangulo t2 = new Triangulo(verticesTriangulo2);
     for (int i=0; i<3; i++)
       t2.moveVertice(i, translacao);
     
     translacao[0][0] += 300;
-    Triangulo t6 = new Triangulo(v4Triangulo, v5Triangulo, v6Triangulo);
+    Triangulo t6 = new Triangulo(verticesTriangulo2);
     for (int i=0; i<3; i++)
       t6.moveVertice(i, translacao);
     
     translacao[0][0] += 300;
     
-    Triangulo t10 = new Triangulo(v4Triangulo, v5Triangulo, v6Triangulo);
+    Triangulo t10 = new Triangulo(verticesTriangulo2);
     for (int i=0; i<3; i++)
       t10.moveVertice(i, translacao);
     
     translacao[0][0] += 350;
     
-    Triangulo t14 = new Triangulo(v4Triangulo, v5Triangulo, v6Triangulo);
+    Triangulo t14 = new Triangulo(verticesTriangulo2);
     for (int i=0; i<3; i++)
       t14.moveVertice(i, translacao);
     
     
     //Triangulo de baixo - esquerda
-    Vertice v7Triangulo = new Vertice(600, 120);
-    Vertice v8Triangulo = new Vertice(660, 120);
-    Vertice v9Triangulo = new Vertice(600, 60);
+    Vertice[] verticesTriangulo3 = new Vertice[3];
+    verticesTriangulo3[0] = new Vertice(600, 120);
+    verticesTriangulo3[1] = new Vertice(660, 120);
+    verticesTriangulo3[2] = new Vertice(600, 60);
     
     translacao[0][0] = -500;
-    Triangulo t3 = new Triangulo(v7Triangulo, v8Triangulo, v9Triangulo);
+    Triangulo t3 = new Triangulo(verticesTriangulo3);
     for (int i=0; i<3; i++)
       t3.moveVertice(i, translacao);
     
     translacao[0][0] += 300;
-    Triangulo t7 = new Triangulo(v7Triangulo, v8Triangulo, v9Triangulo);
+    Triangulo t7 = new Triangulo(verticesTriangulo3);
     for (int i=0; i<3; i++)
       t7.moveVertice(i, translacao);
     
     translacao[0][0] += 300;
     
-    Triangulo t11 = new Triangulo(v7Triangulo, v8Triangulo, v9Triangulo);
+    Triangulo t11 = new Triangulo(verticesTriangulo3);
     for (int i=0; i<3; i++)
       t11.moveVertice(i, translacao);
       
     translacao[0][0] += 350;
     
-    Triangulo t15 = new Triangulo(v7Triangulo, v8Triangulo, v9Triangulo);
+    Triangulo t15 = new Triangulo(verticesTriangulo3);
     for (int i=0; i<3; i++)
       t15.moveVertice(i, translacao);
       
       
     
     //Triangulo de baixo - direita
-    Vertice v10Triangulo = new Vertice(v7Triangulo.getX() + (v8Triangulo.getX() - v7Triangulo.getX()), v8Triangulo.getY() - (v8Triangulo.getY() - v9Triangulo.getY()));
-    Vertice v11Triangulo = new Vertice(660, 120);
-    Vertice v12Triangulo = new Vertice(600, 60);
+    Vertice[] verticesTriangulo4 = new Vertice[3];
+    verticesTriangulo4[0] = new Vertice(verticesTriangulo3[0].getX() + (verticesTriangulo3[1].getX() - verticesTriangulo3[0].getX()), verticesTriangulo3[1].getY() - (verticesTriangulo3[1].getY() - verticesTriangulo3[2].getY()));
+    verticesTriangulo4[1] = new Vertice(660, 120);
+    verticesTriangulo4[2] = new Vertice(600, 60);
     
     translacao[0][0] = -500;
-    Triangulo t4 = new Triangulo(v10Triangulo, v11Triangulo, v12Triangulo);
+    Triangulo t4 = new Triangulo(verticesTriangulo4);
     for (int i=0; i<3; i++)
       t4.moveVertice(i, translacao);
     
     translacao[0][0] += 300;
-    Triangulo t8 = new Triangulo(v10Triangulo, v11Triangulo, v12Triangulo);
+    Triangulo t8 = new Triangulo(verticesTriangulo4);
     for (int i=0; i<3; i++)
       t8.moveVertice(i, translacao);
     
     translacao[0][0] += 300;
     
-    Triangulo t12 = new Triangulo(v10Triangulo, v11Triangulo, v12Triangulo);
+    Triangulo t12 = new Triangulo(verticesTriangulo4);
     for (int i=0; i<3; i++)
       t12.moveVertice(i, translacao);
       
     translacao[0][0] += 350;
     
-    Triangulo t16 = new Triangulo(v10Triangulo, v11Triangulo, v12Triangulo);
+    Triangulo t16 = new Triangulo(verticesTriangulo4);
     for (int i=0; i<3; i++)
       t16.moveVertice(i, translacao);
     

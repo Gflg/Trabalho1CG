@@ -19,11 +19,12 @@ public class Fase3 extends Tela {
   
   private void drawRetangulos() {
     //Criando vértices do Retângulo
-    Vertice v1Retangulo = new Vertice(550, 0);
-    Vertice v2Retangulo = new Vertice(600, 0);
-    Vertice v3Retangulo = new Vertice(550, 100);
-    Vertice v4Retangulo = new Vertice(600, 100);
-    Quadrilatero q1 = new Quadrilatero(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
+    Vertice[] verticesRetangulo = new Vertice[4];
+    verticesRetangulo[0] = new Vertice(550, 0);
+    verticesRetangulo[1] = new Vertice(600, 0);
+    verticesRetangulo[2] = new Vertice(550, 100);
+    verticesRetangulo[3] = new Vertice(600, 100);
+    Quadrilatero q1 = new Quadrilatero(verticesRetangulo);
     float[][] translacao = {{200},{-250}};
     
     setRotacao(PI/4);
@@ -39,14 +40,14 @@ public class Fase3 extends Tela {
     q1.drawQuadrilatero();
     
     fill(0);
-    text("↓", v1Retangulo.getX() + (v4Retangulo.getX() - v1Retangulo.getX())/3, (2*(v4Retangulo.getY() - v2Retangulo.getY())) - 50);
+    text("↓", verticesRetangulo[0].getX() + (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/3, (2*(verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
     
     translacao[0][0] = 1000;
     translacao[1][0] = 570;
     
     setRotacao(3*(PI/4));
     
-    Quadrilatero q2 = new Quadrilatero(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
+    Quadrilatero q2 = new Quadrilatero(verticesRetangulo);
     for (int i=0; i<4; i++){
       q2.transformaVertice(i, rotacao);
       q2.moveVertice(i, translacao);
@@ -55,13 +56,13 @@ public class Fase3 extends Tela {
     q2.drawQuadrilatero();
     
     fill(0);
-    text("↓", v1Retangulo.getX() + (v4Retangulo.getX() - v1Retangulo.getX())/3, (4*(v4Retangulo.getY() - v2Retangulo.getY())) - 50);
+    text("↓", verticesRetangulo[0].getX() + (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/3, (4*(verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
     
     translacao[0][0] = 950;
     translacao[1][0] = 200;
     setRotacao(5*(PI/4));
     
-    Quadrilatero q3 = new Quadrilatero(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
+    Quadrilatero q3 = new Quadrilatero(verticesRetangulo);
     for (int i=0; i<4; i++){
       q3.transformaVertice(i, rotacao);
       q3.moveVertice(i, translacao);
@@ -70,13 +71,13 @@ public class Fase3 extends Tela {
     q3.drawQuadrilatero();
     
     fill(0);
-    text("↓", v1Retangulo.getX() + (v4Retangulo.getX() - v1Retangulo.getX())/3, (6*(v4Retangulo.getY() - v2Retangulo.getY())) - 50);
+    text("↓", verticesRetangulo[0].getX() + (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/3, (6*(verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
     
     /*translacao[0][0] = 0;
     translacao[1][0] = 500;
     setRotacao(7*(PI/4));
     
-    Quadrilatero q4 = new Quadrilatero(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
+    Quadrilatero q4 = new Quadrilatero(verticesRetangulo[0], verticesRetangulo[1], verticesRetangulo[2], verticesRetangulo[3]);
     for (int i=0; i<4; i++){
       q4.transformaVertice(i, rotacao);
       q4.moveVertice(i, translacao);
@@ -91,11 +92,12 @@ public class Fase3 extends Tela {
     super.drawRespostas();
     
     //Criando vértices do Retângulo
-    Vertice v1Retangulo = new Vertice(100, 800);
-    Vertice v2Retangulo = new Vertice(150, 800);
-    Vertice v3Retangulo = new Vertice(100, 900);
-    Vertice v4Retangulo = new Vertice(150, 900);
-    Quadrilatero q1 = new Quadrilatero(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
+    Vertice[] verticesRetangulo = new Vertice[4];
+    verticesRetangulo[0] = new Vertice(100, 800);
+    verticesRetangulo[1] = new Vertice(150, 800);
+    verticesRetangulo[2] = new Vertice(100, 900);
+    verticesRetangulo[3] = new Vertice(150, 900);
+    Quadrilatero q1 = new Quadrilatero(verticesRetangulo);
     
     // <!-- Resposta 1
     q1.drawQuadrilatero();
@@ -106,11 +108,12 @@ public class Fase3 extends Tela {
     // -->
     
     // <!-- Resposta 2
-    Vertice v5Retangulo = new Vertice(100, 825);
-    Vertice v6Retangulo = new Vertice(200, 825);
-    Vertice v7Retangulo = new Vertice(100, 875);
-    Vertice v8Retangulo = new Vertice(200, 875);
-    Quadrilatero q2 = new Quadrilatero(v5Retangulo, v6Retangulo, v7Retangulo, v8Retangulo);
+    Vertice[] verticesRetangulo2 = new Vertice[4];
+    verticesRetangulo2[0] = new Vertice(100, 825);
+    verticesRetangulo2[1] = new Vertice(200, 825);
+    verticesRetangulo2[2] = new Vertice(100, 875);
+    verticesRetangulo2[3] = new Vertice(200, 875);
+    Quadrilatero q2 = new Quadrilatero(verticesRetangulo2);
     for (int i=0; i<4; i++)
       q2.moveVertice(i, translacao);
     
@@ -123,7 +126,7 @@ public class Fase3 extends Tela {
     translacao[1][0] = 620;
     setRotacao(PI/4);
     
-    Quadrilatero q3 = new Quadrilatero(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
+    Quadrilatero q3 = new Quadrilatero(verticesRetangulo);
     for (int i=0; i<4; i++){
       q3.transformaVertice(i, rotacao);
       q3.moveVertice(i, translacao);
@@ -138,7 +141,7 @@ public class Fase3 extends Tela {
     translacao[1][0] = 745;
     setRotacao(7*(PI/4));
     
-    Quadrilatero q4 = new Quadrilatero(v1Retangulo, v2Retangulo, v3Retangulo, v4Retangulo);
+    Quadrilatero q4 = new Quadrilatero(verticesRetangulo);
     for (int i=0; i<4; i++){
       q4.transformaVertice(i, rotacao);
       q4.moveVertice(i, translacao);
