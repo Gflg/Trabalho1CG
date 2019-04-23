@@ -52,23 +52,23 @@ void draw() {
               erros++;
           }
           break;
-      //case 2:
-      //    Fase2 segundaFase = new Fase2();
-      //    segundaFase.drawTela();
-      //    estadoResposta = segundaFase.checkResposta();
-      //    if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
-      //        transicao = 1;
-      //        cor = 0;
-      //        acertos++;
-      //        aux = millis();
-      //        pontuacao += 1000000/(aux - ultimoTempo);
-      //        ultimoTempo = aux;
-      //    } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
-      //        transicao = 1;
-      //        cor = 0;
-      //        erros++;
-      //    }
-      //    break;
+      case 2:
+          Fase5 segundaFase = new Fase5();
+          segundaFase.drawTela();
+          estadoResposta = segundaFase.checkResposta();
+          if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
+              transicao = 1;
+              cor = 0;
+              acertos++;
+              aux = millis();
+              pontuacao += 1000000/(aux - ultimoTempo);
+              ultimoTempo = aux;
+          } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
+              transicao = 1;
+              cor = 0;
+              erros++;
+          }
+          break;
       //case 3:
       //    Fase3 terceiraFase = new Fase3();
       //    terceiraFase.drawTela();
