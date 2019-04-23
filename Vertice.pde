@@ -7,6 +7,14 @@ public class Vertice {
     this.quantidadeDimensoes = coordenadas.length;
     this.coordenadas = coordenadas;
   }
+  
+  public Vertice(Vertice outro) {
+     this.quantidadeDimensoes = outro.quantidadeDimensoes;
+     this.coordenadas = new float[outro.quantidadeDimensoes];
+     for(int i = 0; i < outro.quantidadeDimensoes; i++) {
+         this.coordenadas[i] = outro.coordenadas[i];
+     }
+  }
 
   public float getX() {
     return this.coordenadas[0];

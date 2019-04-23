@@ -1,10 +1,10 @@
 public class FiguraGeometrica {
 
-  float[][] vertices;
+  Vertice[] vertices;
   int quantidadeDimensoes, quantidadeVertices;
 
   public FiguraGeometrica(int quantidadeDimensoes, int quantidadeVertices) {
-    this.vertices = new float[quantidadeDimensoes][quantidadeVertices];
+    this.vertices = new Vertice[quantidadeVertices];
     setQuantidadeDimensoes(quantidadeDimensoes);
     setQuantidadeVertices(quantidadeVertices);
   }
@@ -25,25 +25,27 @@ public class FiguraGeometrica {
     this.quantidadeVertices = quantidadeVertices;
   }
 
+/*
   public void updateVertice(int vertice, float[] novosPontos) {
     for (int i = 0; i < getQuantidadeDimensoes(); i++){
       this.vertices[i][vertice] = novosPontos[i];
     }
   }
+*/
 
   void transformaVertice(int vertice, float[][] transformacao) {
     for(int i = 0; i < transformacao.length; i++){
       float soma = 0;
       for(int j = 0; j < transformacao[i].length; j++){
-        soma += transformacao[i][j]*vertices[j][vertice];
+        soma += transformacao[i][j]*vertices[vertice].coordenadas[j];
       }
-      vertices[i][vertice] = soma;
+      vertices[vertice].coordenadas[i] = soma;
     }
   }
 
   void moveVertice(int vertice, float[][] translacao) {
     for (int i = 0; i < getQuantidadeDimensoes(); i++){
-      vertices[i][vertice] += translacao[i][0];
+      vertices[vertice].coordenadas[i] += translacao[i][0];
     }
   }
 

@@ -1,19 +1,16 @@
 public class Triangulo extends FiguraGeometrica {
 
-  public Triangulo(Vertice v1, Vertice v2, Vertice v3){
-    super(2, 3);
-    this.vertices[0][0] = v1.getX();
-    this.vertices[1][0] = v1.getY();
-    this.vertices[0][1] = v2.getX();
-    this.vertices[1][1] = v2.getY();
-    this.vertices[0][2] = v3.getX();
-    this.vertices[1][2] = v3.getY();
+  public Triangulo(Vertice[] verticesTriangulo){
+    super(2, verticesTriangulo.length);
+    this.vertices[0] = new Vertice(verticesTriangulo[0]);
+    this.vertices[1] = new Vertice(verticesTriangulo[1]);
+    this.vertices[2] = new Vertice(verticesTriangulo[2]);
   }
 
   public void drawTriangulo(){
-    line(vertices[0][0], vertices[1][0], vertices[0][1], vertices[1][1]);
-    line(vertices[0][0], vertices[1][0], vertices[0][2], vertices[1][2]);
-    line(vertices[0][1], vertices[1][1], vertices[0][2], vertices[1][2]);
+    line(vertices[0].getX(), vertices[0].getY(), vertices[1].getX(), vertices[1].getY());
+    line(vertices[0].getX(), vertices[0].getY(), vertices[2].getX(), vertices[2].getY());
+    line(vertices[1].getX(), vertices[1].getY(), vertices[2].getX(), vertices[2].getY());
   }
 
 }

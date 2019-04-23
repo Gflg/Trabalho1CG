@@ -1,51 +1,45 @@
 public class Estrela extends FiguraGeometrica {
   
+  public Estrela() {
+   super(2,10); 
+  }
+  
   public Estrela(Vertice v1) {
     super(2, 10);
-    this.vertices[0][0] = v1.getX();
-    this.vertices[1][0] = v1.getY();
-    Vertice segundoNivel = new Vertice(v1.getX(), v1.getY() + 50);
-    this.vertices[0][1] = segundoNivel.getX() - 25;
-    this.vertices[1][1] = segundoNivel.getY();
-    this.vertices[0][2] = segundoNivel.getX() + 25;
-    this.vertices[1][2] = segundoNivel.getY();
-    this.vertices[0][3] = this.vertices[0][1] - 50;
-    this.vertices[1][3] = segundoNivel.getY();
-    this.vertices[0][4] = this.vertices[0][2] + 50;
-    this.vertices[1][4] = segundoNivel.getY();
-    Vertice terceiroNivel = new Vertice(segundoNivel.getX(), segundoNivel.getY() + 40);
-    this.vertices[0][5] = terceiroNivel.getX() - 35;
-    this.vertices[1][5] = terceiroNivel.getY();
-    this.vertices[0][6] = terceiroNivel.getX() + 35;
-    this.vertices[1][6] = terceiroNivel.getY();
-    Vertice quartoNivel = new Vertice(terceiroNivel.getX(), terceiroNivel.getY() + 25);
-    this.vertices[0][7] = quartoNivel.getX();
-    this.vertices[1][7] = quartoNivel.getY();
-    this.vertices[0][8] = quartoNivel.getX() - 50;
-    this.vertices[1][8] = quartoNivel.getY() + 25;
-    this.vertices[0][9] = quartoNivel.getX() + 50;
-    this.vertices[1][9] = quartoNivel.getY() + 25;
+    this.vertices[0] = new Vertice(v1);
+    Vertice segundoNivel = new Vertice(v1.getX(), v1.getY() + 25);
+    this.vertices[1] = new Vertice(segundoNivel.getX() - 12.5, segundoNivel.getY());
+    this.vertices[2] = new Vertice(segundoNivel.getX() + 12.5, segundoNivel.getY());
+    this.vertices[3] = new Vertice(this.vertices[1].getX() - 25, segundoNivel.getY());
+    this.vertices[4] = new Vertice(this.vertices[2].getX() + 25, segundoNivel.getY());
+    Vertice terceiroNivel = new Vertice(segundoNivel.getX(), segundoNivel.getY() + 20);
+    this.vertices[5] = new Vertice(terceiroNivel.getX() - 17.5, terceiroNivel.getY());
+    this.vertices[6] = new Vertice(terceiroNivel.getX() + 17.5, terceiroNivel.getY());
+    Vertice quartoNivel = new Vertice(terceiroNivel.getX(), terceiroNivel.getY() + 12.5);
+    this.vertices[7] = new Vertice(quartoNivel);
+    this.vertices[8] = new Vertice(quartoNivel.getX() - 25, quartoNivel.getY() + 12.5);
+    this.vertices[9] = new Vertice(quartoNivel.getX() + 25, quartoNivel.getY() + 12.5);
   }
   
   public void drawEstrela() {
     // Partindo da ponta de cima
-    line(vertices[0][0], vertices[1][0], vertices[0][1], vertices[1][1]);
-    line(vertices[0][0], vertices[1][0], vertices[0][2], vertices[1][2]);
+    line(vertices[0].getX(), vertices[0].getY(), vertices[1].getX(), vertices[1].getY());
+    line(vertices[0].getX(), vertices[0].getY(), vertices[2].getX(), vertices[2].getY());
     
     // Retas na horizontal
-    line(vertices[0][1], vertices[1][1], vertices[0][3], vertices[1][3]);
-    line(vertices[0][2], vertices[1][2], vertices[0][4], vertices[1][4]);
-    
-    line(vertices[0][3], vertices[1][3], vertices[0][5], vertices[1][5]);
-    line(vertices[0][4], vertices[1][4], vertices[0][6], vertices[1][6]);
-    
+    line(vertices[1].getX(), vertices[1].getY(), vertices[3].getX(), vertices[3].getY());
+    line(vertices[2].getX(), vertices[2].getY(), vertices[4].getX(), vertices[4].getY());
+ 
+    line(vertices[3].getX(), vertices[3].getY(), vertices[5].getX(), vertices[5].getY());
+    line(vertices[4].getX(), vertices[4].getY(), vertices[6].getX(), vertices[6].getY());
+   
     // Juntando as pontas de baixo
-    line(vertices[0][5], vertices[1][5], vertices[0][8], vertices[1][8]);
-    line(vertices[0][6], vertices[1][6], vertices[0][9], vertices[1][9]);
+    line(vertices[5].getX(), vertices[5].getY(), vertices[8].getX(), vertices[8].getY());
+    line(vertices[6].getX(), vertices[6].getY(), vertices[9].getX(), vertices[9].getY());
     
     // Pontas de baixo
-    line(vertices[0][7], vertices[1][7], vertices[0][8], vertices[1][8]);
-    line(vertices[0][7], vertices[1][7], vertices[0][9], vertices[1][9]);
+    line(vertices[7].getX(), vertices[7].getY(), vertices[8].getX(), vertices[8].getY());
+    line(vertices[7].getX(), vertices[7].getY(), vertices[9].getX(), vertices[9].getY());
   }
   
 }
