@@ -18,10 +18,6 @@ public class Fase5 extends Tela {
     verticesTriangulo[1] = new Vertice(200, 350);
     verticesTriangulo[2] = new Vertice(150, 250);
     /*Triangulo t1 = new Triangulo(verticesTriangulo);
-<<<<<<< HEAD
-
-=======
->>>>>>> 508da67e28e5c63c5218e1b58c6e5235dc186aab
     //Draw do triângulo com os vértices
     t1.drawTriangulo();*/
     
