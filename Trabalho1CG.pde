@@ -6,10 +6,15 @@ int erros;
 int ultimoTempo;
 int pontuacao;
 int aux;
+int XuMax = 1300;
+int YuMax = 1000;
+
+void settings() {
+  size(XuMax, YuMax);
+}
 
 void setup() {
   cor = transicao = fase = acertos = erros = ultimoTempo = pontuacao = 0;
-  size(1300,1000);
   background(255);
 }
 
@@ -124,23 +129,6 @@ void draw() {
           Fase6 sextaFase = new Fase6();
           sextaFase.drawTela();
           estadoResposta = sextaFase.checkResposta();
-          if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
-              transicao = 1;
-              cor = 0;
-              acertos++;
-              aux = millis();
-              pontuacao += 100000000/(aux - ultimoTempo);
-              ultimoTempo = aux;
-          } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
-              transicao = 1;
-              cor = 0;
-              erros++;
-          }
-          break;
-        case 7:
-          Fase7 setimaFase = new Fase7();
-          setimaFase.drawTela();
-          estadoResposta = setimaFase.checkResposta();
           if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
               transicao = 1;
               cor = 0;
