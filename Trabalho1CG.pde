@@ -137,6 +137,23 @@ void draw() {
               erros++;
           }
           break;
+      case 8:
+          Fase8 oitavaFase = new Fase8();
+          oitavaFase.drawTela();
+          estadoResposta = oitavaFase.checkResposta();
+          if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
+              transicao = 1;
+              cor = 0;
+              acertos++;
+              aux = millis();
+              pontuacao += 100000000/(aux - ultimoTempo);
+              ultimoTempo = aux;
+          } else if(estadoResposta.equals(Estado.RESPOSTA_ERRADA)) {
+              transicao = 1;
+              cor = 0;
+              erros++;
+          }
+          break;
       default:
           fill(0, 0, 0);
           textSize(40);
