@@ -1,9 +1,13 @@
+import java.awt.Dimension;
+import java.awt.*;
+
 public class FiguraGeometrica {
 
   Vertice[] vertices;
   private int quantidadeDimensoes, quantidadeVertices;
-  private float XdMax = displayWidth;
-  private float YdMax = displayHeight;
+  Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+  private float XdMax = (float) screenSize.getWidth(); //private float XdMax = displayWidth;
+  private float YdMax = (float) screenSize.getHeight(); //private float YdMax = displayHeight;
   private float XuMax = width;
   private float YuMax = height;
 
