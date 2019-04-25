@@ -31,6 +31,10 @@ public class Fase8 extends Tela {
     
     s1.drawSeta();
     
+    fill(0,0,0);
+    textSize(40);
+    text("↓", translacao[0][0] + 0.005*displayWidth,  translacao[1][0] + 1.5*verticesSeta[6].getY() - verticesSeta[0].getY());
+    
     Seta s2 = new Seta(verticesSeta);
     
     translacao[1][0] += 175;
@@ -40,6 +44,10 @@ public class Fase8 extends Tela {
     }
     
     s2.drawSeta();
+    
+    fill(0,0,0);
+    textSize(40);
+    text("↓", translacao[0][0] + 0.005*displayWidth,  translacao[1][0] + 1.5*verticesSeta[6].getY() - verticesSeta[0].getY());
     
     Seta s3 = new Seta(verticesSeta);
     
@@ -51,6 +59,10 @@ public class Fase8 extends Tela {
     
     s3.drawSeta();
     
+    fill(0,0,0);
+    textSize(40);
+    text("↓", translacao[0][0] + 0.005*displayWidth,  translacao[1][0] + 1.5*verticesSeta[6].getY() - verticesSeta[0].getY());
+    
     Seta s4 = new Seta(verticesSeta);
     
     translacao[1][0] += 175;
@@ -60,6 +72,10 @@ public class Fase8 extends Tela {
     }
     
     s4.drawSeta();
+    
+    fill(0,0,0);
+    textSize(40);
+    text("↓", translacao[0][0] + 0.005*displayWidth,  translacao[1][0] + 1.5*verticesSeta[6].getY() - verticesSeta[0].getY());
   }
 
   private void drawTriangulo() {

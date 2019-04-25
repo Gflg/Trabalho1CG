@@ -44,6 +44,11 @@ public class Fase9 extends Tela {
     text("C", translacao[0][0] - (verticesGiro[3].getX() - verticesGiro[4].getX())/2.5, translacao[1][0] - (verticesGiro[5].getY() - verticesGiro[3].getY())/2); //Posição inicial do texto x e y
     text("D", translacao[0][0] + (verticesGiro[3].getX() - verticesGiro[4].getX())/3, translacao[1][0] - (verticesGiro[5].getY() - verticesGiro[3].getY())/2); //Posição inicial do texto x e y
     
+    fill(0,0,0);
+    textSize(40);
+    text("↓", translacao[0][0] - 0.005*displayWidth,  translacao[1][0] + (verticesGiro[5].getY() - verticesGiro[1].getY())/1.5);
+
+    
     translacao[1][0] += 250;
     
     Giro g2 = new Giro(verticesGiro);
@@ -67,7 +72,11 @@ public class Fase9 extends Tela {
     text("E", translacao[0][0] + (verticesGiro[3].getX() - verticesGiro[4].getX()), translacao[1][0] - (verticesGiro[5].getY() - verticesGiro[3].getY())/7); //Posição inicial do texto x e y
     text("D", translacao[0][0] - (verticesGiro[3].getX() - verticesGiro[4].getX())/2.5, translacao[1][0] - (verticesGiro[5].getY() - verticesGiro[3].getY())/2); //Posição inicial do texto x e y
     text("G", translacao[0][0] + (verticesGiro[3].getX() - verticesGiro[4].getX())/3, translacao[1][0] - (verticesGiro[5].getY() - verticesGiro[3].getY())/2); //Posição inicial do texto x e y
-
+    
+    fill(0,0,0);
+    textSize(40);
+    text("↓", translacao[0][0] - 0.005*displayWidth,  translacao[1][0] + (verticesGiro[5].getY() - verticesGiro[1].getY())/1.5);
+    
     translacao[1][0] += 250;
     
     Giro g3 = new Giro(verticesGiro);
@@ -92,6 +101,9 @@ public class Fase9 extends Tela {
     text("A", translacao[0][0] + (verticesGiro[3].getX() - verticesGiro[4].getX())/3, translacao[1][0] - (verticesGiro[5].getY() - verticesGiro[3].getY())/2); //Posição inicial do texto x e y
     text("E", translacao[0][0] - (verticesGiro[3].getX() - verticesGiro[4].getX())/2.5, translacao[1][0] - (verticesGiro[5].getY() - verticesGiro[3].getY())/2); //Posição inicial do texto x e y
     
+    fill(0,0,0);
+    textSize(40);
+    text("↓", translacao[0][0] - 0.005*displayWidth,  translacao[1][0] + (verticesGiro[5].getY() - verticesGiro[1].getY())/1.5);
   }
 
   protected void drawRespostas() {
