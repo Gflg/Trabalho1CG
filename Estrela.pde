@@ -1,9 +1,9 @@
 public class Estrela extends FiguraGeometrica {
-  
+
   public Estrela() {
-   super(2,10); 
+   super(2, 10);
   }
-  
+
   public Estrela(Vertice v1) {
     super(2, 10);
     this.vertices[0] = new Vertice(v1);
@@ -22,6 +22,9 @@ public class Estrela extends FiguraGeometrica {
   }
   
   public void drawEstrela() {
+
+    transformacaoCoordenadas(this.vertices);
+
     // Partindo da ponta de cima
     line(vertices[0].getX(), vertices[0].getY(), vertices[1].getX(), vertices[1].getY());
     line(vertices[0].getX(), vertices[0].getY(), vertices[2].getX(), vertices[2].getY());

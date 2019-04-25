@@ -6,10 +6,15 @@ int erros;
 int ultimoTempo;
 int pontuacao;
 int aux;
+int XuMax = 1300;
+int YuMax = 1000;
+
+void settings() {
+  size(XuMax, YuMax);
+}
 
 void setup() {
   cor = transicao = fase = acertos = erros = ultimoTempo = pontuacao = 0;
-  size(1300,1000);
   background(255);
 }
 
