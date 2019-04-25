@@ -133,6 +133,7 @@ public class Fase10 extends Tela {
     a1.drawAmpulheta();
     
     translacao[0][0] += 300;
+    translacao[1][0] -= 10;
     
     Ampulheta a2 = new Ampulheta(verticesAmpulheta);
     
@@ -146,6 +147,7 @@ public class Fase10 extends Tela {
     a2.drawAmpulheta();
     
     translacao[0][0] += 300;
+    translacao[1][0] += 10;
     
     Ampulheta a3 = new Ampulheta(verticesAmpulheta);
     
@@ -158,6 +160,7 @@ public class Fase10 extends Tela {
     a3.drawAmpulheta();
     
     translacao[0][0] += 300;
+    translacao[1][0] -= 20;
     
     Ampulheta a4 = new Ampulheta(verticesAmpulheta);
     
