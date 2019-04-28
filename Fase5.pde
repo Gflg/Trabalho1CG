@@ -11,12 +11,12 @@ public class Fase5 extends Tela {
   }
 
   private void drawTriangulo() {
-    float[][] translacao = {{450},{0}};
+    float[][] translacao = {{550},{350}};
     //Criando os vértices do Triângulo
     Vertice[] verticesTriangulo = new Vertice[3];
-    verticesTriangulo[0] = new Vertice(100, 350);
-    verticesTriangulo[1] = new Vertice(200, 350);
-    verticesTriangulo[2] = new Vertice(150, 250);
+    verticesTriangulo[0] = new Vertice(0, 0);
+    verticesTriangulo[1] = new Vertice(100, 0);
+    verticesTriangulo[2] = new Vertice(50, -100);
     /*Triangulo t1 = new Triangulo(verticesTriangulo);
     //Draw do triângulo com os vértices
     t1.drawTriangulo();*/
@@ -46,8 +46,8 @@ public class Fase5 extends Tela {
 
     float[][] reflexao = {{0},{2*(verticesTriangulo[0].getY() - verticesTriangulo[2].getY())}};
     
-    translacao[0][0] = 0;
-    translacao[1][0] = 100;
+    translacao[0][0] = verticesTriangulo[1].getX() - verticesTriangulo[0].getX();
+    translacao[1][0] += 100;
     Triangulo t2 = new Triangulo(verticesTriangulo);
 
     for (int i = 0; i < verticesTriangulo.length; i++){
@@ -82,16 +82,20 @@ public class Fase5 extends Tela {
     
     t10.drawTriangulo();*/
     
+    translacao[0][0] = 100;
+    translacao[1][0] = 350;    
     Vertice[] verticesTrianguloH = new Vertice[3];
-    verticesTrianguloH[0] = new Vertice(100, 350);
-    verticesTrianguloH[1] = new Vertice(100, 450);
-    verticesTrianguloH[2] = new Vertice(0, 400);
+    verticesTrianguloH[0] = new Vertice(0, 0);
+    verticesTrianguloH[1] = new Vertice(0, 100);
+    verticesTrianguloH[2] = new Vertice(-100, 50);
     Triangulo t3 = new Triangulo(verticesTrianguloH);
     
+    for (int i = 0; i < verticesTrianguloH.length; i++){
+      t3.moveVertice(i, translacao);
+    }
     t3.drawTriangulo();
     
-    translacao[0][0] = 450;
-    translacao[1][0] = 0;
+    translacao[0][0] += 450;
     
     Triangulo t7 = new Triangulo(verticesTrianguloH);
     
@@ -113,8 +117,7 @@ public class Fase5 extends Tela {
     
     reflexao[0][0] = 2*(verticesTrianguloH[0].getX() - verticesTrianguloH[2].getX());
     reflexao[1][0] = 0;
-    translacao[0][0] = 100;
-    translacao[1][0] = 0;
+    translacao[0][0] = 2*(verticesTrianguloH[0].getX() - verticesTrianguloH[2].getX());
     
     Triangulo t4 = new Triangulo(verticesTrianguloH);
     
@@ -152,15 +155,19 @@ public class Fase5 extends Tela {
   }
 
   private void drawQuadrado() {
+    float[][] translacao = {{100},{350}};
     //Criando vértices do Retângulo
     Vertice[] verticesQuadrilatero = new Vertice[4];
-    verticesQuadrilatero[0] = new Vertice(100, 350);
-    verticesQuadrilatero[1] = new Vertice(200, 350);
-    verticesQuadrilatero[2] = new Vertice(100, 450);
-    verticesQuadrilatero[3] = new Vertice(200, 450);
+    verticesQuadrilatero[0] = new Vertice(0, 0);
+    verticesQuadrilatero[1] = new Vertice(100, 0);
+    verticesQuadrilatero[2] = new Vertice(0, 100);
+    verticesQuadrilatero[3] = new Vertice(100, 100);
     Quadrilatero q1 = new Quadrilatero(verticesQuadrilatero);
 
     //Draw do quadrado com os vértices
+    for (int i = 0; i < verticesQuadrilatero.length; i++){
+      q1.moveVertice(i, translacao);
+    }
     q1.drawQuadrilatero();
     
     for(int i=100;i<200;i++){
@@ -173,15 +180,15 @@ public class Fase5 extends Tela {
     //Fonte do texto
     fill(0, 0, 0);
     textSize(40);
-    text("→", verticesQuadrilatero[0].getX() + 250, (verticesQuadrilatero[1].getY() + verticesQuadrilatero[2].getY()) / 2); //Posição inicial do texto x e y
+    text("→", translacao[0][0] + verticesQuadrilatero[0].getX() + 250, translacao[1][0] + (verticesQuadrilatero[1].getY() + verticesQuadrilatero[2].getY()) / 2); //Posição inicial do texto x e y
 
-    text("→", verticesQuadrilatero[0].getX() + 650, (verticesQuadrilatero[1].getY() + verticesQuadrilatero[2].getY()) / 2); //Posição inicial do texto x e y
+    text("→", translacao[0][0] + verticesQuadrilatero[0].getX() + 650, translacao[1][0] + (verticesQuadrilatero[1].getY() + verticesQuadrilatero[2].getY()) / 2); //Posição inicial do texto x e y
 
-    text("→", verticesQuadrilatero[0].getX() + 1150, (verticesQuadrilatero[1].getY() + verticesQuadrilatero[2].getY()) / 2); //Posição inicial do texto x e y
+    text("→", translacao[0][0] + verticesQuadrilatero[0].getX() + 1150, translacao[1][0] + (verticesQuadrilatero[1].getY() + verticesQuadrilatero[2].getY()) / 2); //Posição inicial do texto x e y
 
     //Translação no eixo x e aumento de escala no y para aumentar a altura do quadrado
 
-    float[][] translacao = {{450},{0}};
+    translacao[0][0] += 450;
 
     Quadrilatero q2 = new Quadrilatero(verticesQuadrilatero);
 
@@ -189,7 +196,7 @@ public class Fase5 extends Tela {
       q2.moveVertice(i, translacao);
     }
     
-    for(int i=150 + int(translacao[0][0]);i<200 + int(translacao[0][0]);i++){
+    for(int i=50 + int(translacao[0][0]);i<100 + int(translacao[0][0]);i++){
         stroke(0,0,255);
         line(i, 350, i, 450);
     }
@@ -205,7 +212,7 @@ public class Fase5 extends Tela {
       q3.moveVertice(i, translacao);
     }
     
-    for(int i=100 + int(translacao[0][0]);i<200 + int(translacao[0][0]);i++){
+    for(int i=0 + int(translacao[0][0]);i<100 + int(translacao[0][0]);i++){
         stroke(255,0,0);
         line(i, 400, i, 450);
     }
@@ -219,15 +226,17 @@ public class Fase5 extends Tela {
     // Desenhando área padrão de resposta
     super.drawRespostas();
     
-    float[][] translacao = {{300},{0}};
+    float[][] translacao = {{100},{825}};
     Vertice[] verticesQuadrilatero = new Vertice[4];
-    verticesQuadrilatero[0] = new Vertice(100, 825);
-    verticesQuadrilatero[1] = new Vertice(150, 825);
-    verticesQuadrilatero[2] = new Vertice(100, 875);
-    verticesQuadrilatero[3] = new Vertice(150, 875);
+    verticesQuadrilatero[0] = new Vertice(0, 0);
+    verticesQuadrilatero[1] = new Vertice(50, 0);
+    verticesQuadrilatero[2] = new Vertice(0, 50);
+    verticesQuadrilatero[3] = new Vertice(50, 50);
     
     Quadrilatero q1 = new Quadrilatero(verticesQuadrilatero);
-   
+    for (int i = 0; i < verticesQuadrilatero.length; i++){
+      q1.moveVertice(i, translacao);
+    }
     q1.drawQuadrilatero();
     
     for(int i=100; i<125; i++){
@@ -236,20 +245,24 @@ public class Fase5 extends Tela {
     }
     stroke(0,0,0);
     
+    translacao[0][0] = 100;
+    translacao[1][0] = 825;
     Vertice[] verticesTriangulo = new Vertice[3];
-    verticesTriangulo[0] = new Vertice(100, 825);
-    verticesTriangulo[1] = new Vertice(150, 825);
-    verticesTriangulo[2] = new Vertice(125, 775);
+    verticesTriangulo[0] = new Vertice(0, 0);
+    verticesTriangulo[1] = new Vertice(50, 0);
+    verticesTriangulo[2] = new Vertice(25, -50);
     Triangulo t1 = new Triangulo(verticesTriangulo);
 
     //Draw do triângulo com os vértices
+    for (int i = 0; i < verticesTriangulo.length; i++){
+      t1.moveVertice(i, translacao);
+    }
     t1.drawTriangulo();
     
     
     float[][] reflexao = {{0},{2*(verticesTriangulo[0].getY() - verticesTriangulo[2].getY())}};
     
-    translacao[0][0] = 0;
-    translacao[1][0] = 50;
+    translacao[1][0] += 50;
     Triangulo t2 = new Triangulo(verticesTriangulo);
 
     for (int i = 0; i < verticesTriangulo.length; i++){
@@ -260,18 +273,19 @@ public class Fase5 extends Tela {
 
     t2.drawTriangulo();
     
+    translacao[0][0] = 100;
+    translacao[1][0] = 825;
     Vertice[] verticesTrianguloH = new Vertice[3];
-    verticesTrianguloH[0] = new Vertice(100, 825);
-    verticesTrianguloH[1] = new Vertice(100, 875);
-    verticesTrianguloH[2] = new Vertice(50, 850);
+    verticesTrianguloH[0] = new Vertice(0, 0);
+    verticesTrianguloH[1] = new Vertice(0, 50);
+    verticesTrianguloH[2] = new Vertice(-50, 25);
     /*Triangulo t3 = new Triangulo(verticesTrianguloH);
     
     t3.drawTriangulo();*/
     
     reflexao[0][0] = 2*(verticesTrianguloH[0].getX() - verticesTrianguloH[2].getX());
     reflexao[1][0] = 0;
-    translacao[0][0] = 50;
-    translacao[1][0] = 0;
+    translacao[0][0] += 50;
     
     Triangulo t4 = new Triangulo(verticesTrianguloH);
     
@@ -285,8 +299,8 @@ public class Fase5 extends Tela {
     
     //Segunda resposta
     
-    translacao[0][0] = 300;
-    translacao[1][0] = 0;
+    translacao[0][0] = 400;
+    translacao[1][0] = 825;
     Quadrilatero q2 = new Quadrilatero(verticesQuadrilatero);
    
     for (int i = 0; i < verticesQuadrilatero.length; i++){
@@ -295,7 +309,7 @@ public class Fase5 extends Tela {
     
     q2.drawQuadrilatero();
     
-    for(int i=100 + int(translacao[0][0]); i<125 + int(translacao[0][0]); i++){
+    for(int i=0 + int(translacao[0][0]); i<25 + int(translacao[0][0]); i++){
         stroke(255,0,0);
         line(i, 825, i, 875);
     }
@@ -311,7 +325,7 @@ public class Fase5 extends Tela {
     
     reflexao[0][0] = 0;
     reflexao[1][0] = 2*(verticesTriangulo[0].getY() - verticesTriangulo[2].getY());
-    translacao[1][0] = 50;
+    translacao[1][0] += 50;
     Triangulo t6 = new Triangulo(verticesTriangulo);
     
     for (int i = 0; i < verticesTriangulo.length; i++){
@@ -322,8 +336,8 @@ public class Fase5 extends Tela {
     
     t6.drawTriangulo();
     
-    translacao[0][0] = 300;
-    translacao[1][0] = 0;
+    translacao[0][0] = 400;
+    translacao[1][0] = 825;
     
     Triangulo t7 = new Triangulo(verticesTrianguloH);
     
@@ -335,8 +349,7 @@ public class Fase5 extends Tela {
     
     reflexao[0][0] = 2*(verticesTrianguloH[0].getX() - verticesTrianguloH[2].getX());
     reflexao[1][0] = 0;
-    translacao[0][0] = 350;
-    translacao[1][0] = 0;
+    translacao[0][0] += 50;
     
     Triangulo t8 = new Triangulo(verticesTrianguloH);
     
@@ -349,8 +362,8 @@ public class Fase5 extends Tela {
     t8.drawTriangulo();
     
     //Terceira resposta
-    translacao[1][0] = 0;
-    translacao[0][0] = 600;
+    translacao[1][0] = 825;
+    translacao[0][0] = 700;
     Quadrilatero q3 = new Quadrilatero(verticesQuadrilatero);
    
     for (int i = 0; i < verticesQuadrilatero.length; i++){
@@ -359,7 +372,7 @@ public class Fase5 extends Tela {
     
     q3.drawQuadrilatero();
     
-    for(int i=100 + int(translacao[0][0]); i<125 + int(translacao[0][0]); i++){
+    for(int i=0 + int(translacao[0][0]); i<25 + int(translacao[0][0]); i++){
         stroke(0,0,255);
         line(i, 825, i, 875);
     }
@@ -375,7 +388,7 @@ public class Fase5 extends Tela {
     
     reflexao[0][0] = 0;
     reflexao[1][0] = 2*(verticesTriangulo[0].getY() - verticesTriangulo[2].getY());
-    translacao[1][0] = 50;
+    translacao[1][0] += 50;
     Triangulo t10 = new Triangulo(verticesTriangulo);
     
     for (int i = 0; i < verticesTriangulo.length; i++){
@@ -386,8 +399,8 @@ public class Fase5 extends Tela {
     
     t10.drawTriangulo();
     
-    translacao[0][0] = 600;
-    translacao[1][0] = 0;
+    translacao[0][0] = 700;
+    translacao[1][0] = 825;
     
     Triangulo t11 = new Triangulo(verticesTrianguloH);
     
@@ -396,11 +409,6 @@ public class Fase5 extends Tela {
     }
     
     t11.drawTriangulo();
-    
-    reflexao[0][0] = 2*(verticesTrianguloH[0].getX() - verticesTrianguloH[2].getX());
-    reflexao[1][0] = 0;
-    translacao[0][0] = 650;
-    translacao[1][0] = 0;
     
     /*Triangulo t12 = new Triangulo(verticesTrianguloH);
     
@@ -413,8 +421,8 @@ public class Fase5 extends Tela {
     t12.drawTriangulo();*/
     
     //Quarta resposta
-    translacao[1][0] = 0;
-    translacao[0][0] = 900;
+    translacao[1][0] = 825;
+    translacao[0][0] = 1000;
     Quadrilatero q4 = new Quadrilatero(verticesQuadrilatero);
    
     for (int i = 0; i < verticesQuadrilatero.length; i++){
@@ -423,7 +431,7 @@ public class Fase5 extends Tela {
     
     q4.drawQuadrilatero();
     
-    for(int i=100 + int(translacao[0][0]); i<125 + int(translacao[0][0]); i++){
+    for(int i=0 + int(translacao[0][0]); i<25 + int(translacao[0][0]); i++){
         stroke(255,0,255);
         line(i, 825, i, 875);
     }
@@ -437,7 +445,7 @@ public class Fase5 extends Tela {
     
     t13.drawTriangulo();
     
-    translacao[1][0] = 50;
+    translacao[1][0] += 50;
     
     Triangulo t14 = new Triangulo(verticesTriangulo);
 
@@ -452,8 +460,6 @@ public class Fase5 extends Tela {
     
     t14.drawTriangulo();
     
-    translacao[0][0] = 900;
-    translacao[1][0] = 0;
     
     /*Triangulo t15 = new Triangulo(verticesTrianguloH);
     
@@ -465,8 +471,8 @@ public class Fase5 extends Tela {
     
     reflexao[0][0] = 2*(verticesTrianguloH[0].getX() - verticesTrianguloH[2].getX());
     reflexao[1][0] = 0;
-    translacao[0][0] = 950;
-    translacao[1][0] = 0;
+    translacao[0][0] = 1050;
+    translacao[1][0] = 825;
     
     Triangulo t16 = new Triangulo(verticesTrianguloH);
     

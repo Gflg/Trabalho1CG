@@ -19,16 +19,17 @@ public class Fase3 extends Tela {
   }
 
   private void drawRetangulos() {
+    float[][] translacao = {{550},{0}};
     //Criando os vértices do Retângulo
     Vertice[] verticesRetangulo = new Vertice[4];
-    verticesRetangulo[0] = new Vertice(550, 0);
-    verticesRetangulo[1] = new Vertice(600, 0);
-    verticesRetangulo[2] = new Vertice(550, 100);
-    verticesRetangulo[3] = new Vertice(600, 100);
+    verticesRetangulo[0] = new Vertice(0, 0);
+    verticesRetangulo[1] = new Vertice(50, 0);
+    verticesRetangulo[2] = new Vertice(0, 100);
+    verticesRetangulo[3] = new Vertice(50, 100);
 
     Quadrilatero q1 = new Quadrilatero(verticesRetangulo);
 
-    float[][] translacao = {{200},{-250}};
+    translacao[0][0] += 200;
 
     setRotacao(PI/4);
 
@@ -43,10 +44,10 @@ public class Fase3 extends Tela {
     q1.drawQuadrilatero();
 
     fill(0);
-    text("↓", verticesRetangulo[0].getX() + (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/3, (2 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
+    text("↓", translacao[0][0] - (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/2, (1.5 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
 
-    translacao[0][0] = 1000;
-    translacao[1][0] = 570;
+    translacao[0][0] += 50;
+    translacao[1][0] += 300;
 
     setRotacao(3*(PI/4));
 
@@ -61,10 +62,10 @@ public class Fase3 extends Tela {
     q2.drawQuadrilatero();
 
     fill(0);
-    text("↓", verticesRetangulo[0].getX() + (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/3, (4 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
+    text("↓", translacao[0][0] - (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/2.8 - 50, (4 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
 
-    translacao[0][0] = 950;
-    translacao[1][0] = 200;
+    translacao[0][0] -= 75;
+    translacao[1][0] += 200;
 
     setRotacao(5*(PI/4));
 
@@ -79,37 +80,43 @@ public class Fase3 extends Tela {
     q3.drawQuadrilatero();
 
     fill(0);
-    text("↓", verticesRetangulo[0].getX() + (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/3, (6 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
-
+    text("↓", translacao[0][0] - (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/2.5 + 25, (6.5 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
+    
   }
 
   protected void drawRespostas() {
     // Desenhando área padrão de resposta
     super.drawRespostas();
-
+    
+    float[][] translacao = {{100},{800}};
     //Criando os vértices do Retângulo
     Vertice[] verticesRetangulo = new Vertice[4];
-    verticesRetangulo[0] = new Vertice(100, 800);
-    verticesRetangulo[1] = new Vertice(150, 800);
-    verticesRetangulo[2] = new Vertice(100, 900);
-    verticesRetangulo[3] = new Vertice(150, 900);
+    verticesRetangulo[0] = new Vertice(0, 0);
+    verticesRetangulo[1] = new Vertice(50, 0);
+    verticesRetangulo[2] = new Vertice(0, 100);
+    verticesRetangulo[3] = new Vertice(50, 100);
 
     Quadrilatero q1 = new Quadrilatero(verticesRetangulo);
-
+    
     // <!-- Resposta 1
     //Draw do retângulo com os vértices
+    for (int i = 0; i < verticesRetangulo.length; i++)
+      q1.moveVertice(i, translacao);
     q1.drawQuadrilatero();
     // -->
 
     // <!-- Resposta 2
-    float[][] translacao = {{250},{0}};
-
+    translacao[0][0] = 0;
+    translacao[1][0] = 0;
+    
     Vertice[] verticesRetangulo2 = new Vertice[4];
-    verticesRetangulo2[0] = new Vertice(100, 825);
-    verticesRetangulo2[1] = new Vertice(200, 825);
-    verticesRetangulo2[2] = new Vertice(100, 875);
-    verticesRetangulo2[3] = new Vertice(200, 875);
-
+    verticesRetangulo2[0] = new Vertice(0, 0);
+    verticesRetangulo2[1] = new Vertice(100, 0);
+    verticesRetangulo2[2] = new Vertice(0, 50);
+    verticesRetangulo2[3] = new Vertice(100, 50);
+    
+    translacao[0][0] += 375;
+    translacao[1][0] += 825;
     Quadrilatero q2 = new Quadrilatero(verticesRetangulo2);
 
     for (int i = 0; i < verticesRetangulo2.length; i++)
@@ -120,8 +127,7 @@ public class Fase3 extends Tela {
     // -->
 
     // <!-- Resposta 3
-    translacao[0][0] = 1250;
-    translacao[1][0] = 620;
+    translacao[0][0] += 375;
 
     setRotacao(PI/4);
 
@@ -137,8 +143,8 @@ public class Fase3 extends Tela {
     // -->
 
     // <!-- Resposta 4
-    translacao[0][0] = 370;
-    translacao[1][0] = 745;
+    translacao[0][0] += 250;
+    translacao[1][0] += 25;
 
     setRotacao(7*(PI/4));
 
