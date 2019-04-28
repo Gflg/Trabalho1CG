@@ -12,11 +12,15 @@ public class Fase11 extends Tela {
   private void drawDecagono() {
 
     //Criando os vértices do Decágono
-    Vertice pontaDoDecagono1 = new Vertice(240, 360);
+    float[][] translacao = {{240},{360}};
+    Vertice pontaDoDecagono1 = new Vertice(0, 0);
     Decagono decagono1 = new Decagono(pontaDoDecagono1);
 
     stroke(163, 16, 163);
 
+    for (int i = 0; i < decagono1.vertices.length; i++){
+      decagono1.moveVertice(i, translacao);
+    }
     decagono1.drawDecagono();
 
     fill(0, 0, 0);
@@ -25,8 +29,9 @@ public class Fase11 extends Tela {
 
     Decagono decagono2 = new Decagono(pontaDoDecagono1);
 
-    float[][] translacao = {{-80},{-145}};
-
+    translacao[0][0] -= 80;
+    translacao[1][0] -= 145;
+    
     for (int i = 0; i < decagono2.vertices.length; i++){
       decagono2.moveVertice(i, translacao);
       decagono2.transformaVertice(i, escala);
@@ -39,14 +44,19 @@ public class Fase11 extends Tela {
     //Fonte do texto
     fill(0, 0, 0);
     textSize(40);
-    text("→", pontaDoDecagono1.getX() + 200, 1.2 * pontaDoDecagono1.getY()); //Posição inicial do texto x e y
+    text("→", translacao[0][0] + 280, 1.25 * (translacao[1][0] + 145)); //Posição inicial do texto x e y
 
     //Criando os vértices do Decágono
-    Vertice pontaDoDecagono3 = new Vertice(650, 360);
+    translacao[0][0] = 650;
+    translacao[1][0] = 360;
+    Vertice pontaDoDecagono3 = new Vertice(0, 0);
     Decagono decagono3 = new Decagono(pontaDoDecagono3);
 
     stroke(0, 128, 0);
-
+    
+    for (int i = 0; i < decagono3.vertices.length; i++){
+      decagono3.moveVertice(i, translacao);
+    }
     decagono3.drawDecagono();
 
     fill(0, 0, 0);
@@ -54,11 +64,11 @@ public class Fase11 extends Tela {
     float[][] escala2 = {{1.2,0},{0,1.2}};
 
     Decagono decagono4 = new Decagono(pontaDoDecagono3);
-
-    float[][] translacao2 = {{-110},{-73}};
-
+    
+    translacao[0][0] -= 110;
+    translacao[1][0] -= 73;
     for (int i = 0; i < decagono4.vertices.length; i++){
-      decagono4.moveVertice(i, translacao2);
+      decagono4.moveVertice(i, translacao);
       decagono4.transformaVertice(i, escala2);
     }
 
@@ -69,14 +79,19 @@ public class Fase11 extends Tela {
     //Fonte do texto
     fill(0, 0, 0);
     textSize(40);
-    text("→", pontaDoDecagono3.getX() + 170, 1.2 * pontaDoDecagono3.getY()); //Posição inicial do texto x e y
+    text("→", translacao[0][0] + 280, 1.25 * (translacao[1][0] + 73)); //Posição inicial do texto x e y
 
     //Criando os vértices do Decágono
-    Vertice pontaDoDecagono5 = new Vertice(1000, 360);
+    translacao[0][0] = 1000;
+    translacao[1][0] = 360;
+    Vertice pontaDoDecagono5 = new Vertice(0, 0);
     Decagono decagono5 = new Decagono(pontaDoDecagono5);
 
     stroke(0, 128, 0);
-
+    
+    for (int i = 0; i < decagono5.vertices.length; i++){
+      decagono5.moveVertice(i, translacao);
+    }
     decagono5.drawDecagono();
 
     fill(0, 0, 0);
@@ -86,9 +101,12 @@ public class Fase11 extends Tela {
     Decagono decagono6 = new Decagono(pontaDoDecagono5);
 
     float[][] translacao3 = {{250},{110}};
-
+    
+    translacao[0][0] += 250;
+    translacao[1][0] += 110;
+    
     for (int i = 0; i < decagono6.vertices.length; i++){
-      decagono6.moveVertice(i, translacao3);
+      decagono6.moveVertice(i, translacao);
       decagono6.transformaVertice(i, escala3);
     }
 
@@ -99,7 +117,7 @@ public class Fase11 extends Tela {
     //Fonte do texto
     fill(0, 0, 0);
     textSize(40);
-    text("→", pontaDoDecagono3.getX() + 500, 1.2 * pontaDoDecagono3.getY()); //Posição inicial do texto x e y
+    text("→", 0.9 * translacao[0][0], 1.25 * (translacao[1][0] - 110)); //Posição inicial do texto x e y
 
   }
 
@@ -109,11 +127,16 @@ public class Fase11 extends Tela {
 
     //<---- RESPOSTA 1 ---->
     //Criando os vértices do Decágono
-    Vertice pontaDoDecagono1 = new Vertice(120, 800);
+    float[][] translacao = {{120},{800}};
+
+    Vertice pontaDoDecagono1 = new Vertice(0, 0);
     Decagono decagono1 = new Decagono(pontaDoDecagono1);
 
     stroke(0, 128, 0);
-
+    
+    for (int i = 0; i < decagono1.vertices.length; i++){
+      decagono1.moveVertice(i, translacao);
+    }
     decagono1.drawDecagono();
 
     fill(0, 0, 0);
@@ -122,8 +145,8 @@ public class Fase11 extends Tela {
 
     Decagono decagono2 = new Decagono(pontaDoDecagono1);
 
-    float[][] translacao = {{-40},{-298}};
-
+    translacao[0][0] -= 40;
+    translacao[1][0] -= 298;
     for (int i = 0; i < decagono2.vertices.length; i++){
       decagono2.moveVertice(i, translacao);
       decagono2.transformaVertice(i, escala);
@@ -136,11 +159,17 @@ public class Fase11 extends Tela {
 
     //<---- RESPOSTA 2 ---->
     //Criando os vértices do Decágono
-    Vertice pontaDoDecagono3 = new Vertice(400, 800);
+    translacao[0][0] = 400;
+    translacao[1][0] = 800;
+    
+    Vertice pontaDoDecagono3 = new Vertice(0, 0);
     Decagono decagono3 = new Decagono(pontaDoDecagono3);
 
     stroke(163, 16, 163);
 
+    for (int i = 0; i < decagono3.vertices.length; i++){
+      decagono3.moveVertice(i, translacao);
+    }
     decagono3.drawDecagono();
 
     fill(0, 0, 0);
@@ -149,10 +178,11 @@ public class Fase11 extends Tela {
 
     Decagono decagono4 = new Decagono(pontaDoDecagono3);
 
-    float[][] translacao3 = {{100},{220}};
-
+    translacao[0][0] += 100;
+    translacao[1][0] += 220;
+    
     for (int i = 0; i < decagono4.vertices.length; i++){
-      decagono4.moveVertice(i, translacao3);
+      decagono4.moveVertice(i, translacao);
       decagono4.transformaVertice(i, escala3);
     }
 
@@ -163,11 +193,16 @@ public class Fase11 extends Tela {
 
     //<---- RESPOSTA 3 ---->
     //Criando os vértices do Decágono
-    Vertice pontaDoDecagono5 = new Vertice(730, 800);
+    translacao[0][0] = 730;
+    translacao[1][0] = 800;
+    Vertice pontaDoDecagono5 = new Vertice(0, 0);
     Decagono decagono5 = new Decagono(pontaDoDecagono5);
 
     stroke(163, 16, 163);
 
+    for (int i = 0; i < decagono5.vertices.length; i++){
+      decagono5.moveVertice(i, translacao);
+    }
     decagono5.drawDecagono();
 
     fill(0, 0, 0);
@@ -176,10 +211,11 @@ public class Fase11 extends Tela {
 
     Decagono decagono6 = new Decagono(pontaDoDecagono5);
 
-    float[][] translacao4 = {{485},{580}};
-
+    translacao[0][0] += 485;
+    translacao[1][0] += 580;
+    
     for (int i = 0; i < decagono6.vertices.length; i++){
-      decagono6.moveVertice(i, translacao4);
+      decagono6.moveVertice(i, translacao);
       decagono6.transformaVertice(i, escala4);
     }
 
@@ -190,11 +226,16 @@ public class Fase11 extends Tela {
 
     //<---- RESPOSTA 4 ---->
     //Criando os vértices do Decágono
-    Vertice pontaDoDecagono7 = new Vertice(1030, 800);
+    translacao[0][0] = 1030;
+    translacao[1][0] = 800;
+    Vertice pontaDoDecagono7 = new Vertice(0, 0);
     Decagono decagono7 = new Decagono(pontaDoDecagono7);
 
     stroke(0, 128, 0);
-
+    
+    for (int i = 0; i < decagono7.vertices.length; i++){
+      decagono7.moveVertice(i, translacao);
+    }
     decagono7.drawDecagono();
 
     fill(0, 0, 0);
@@ -203,10 +244,11 @@ public class Fase11 extends Tela {
 
     Decagono decagono8 = new Decagono(pontaDoDecagono7);
 
-    float[][] translacao5 = {{685},{580}};
-
+    translacao[0][0] += 685;
+    translacao[1][0] += 580;
+    
     for (int i = 0; i < decagono8.vertices.length; i++){
-      decagono8.moveVertice(i, translacao5);
+      decagono8.moveVertice(i, translacao);
       decagono8.transformaVertice(i, escala5);
     }
 
