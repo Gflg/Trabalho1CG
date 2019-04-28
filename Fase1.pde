@@ -12,11 +12,13 @@ public class Fase1 extends Tela {
   }
 
   private void drawTriangulo() {
+    float[][] translacao = {{200},{200}};
     //Criando os vértices do Triângulo
+    
     Vertice[] verticesTriangulo = new Vertice[3];
-    verticesTriangulo[0] = new Vertice(400, 200);
-    verticesTriangulo[1] = new Vertice(500, 200);
-    verticesTriangulo[2] = new Vertice(450, 100);
+    verticesTriangulo[0] = new Vertice(200, 0);
+    verticesTriangulo[1] = new Vertice(300, 0);
+    verticesTriangulo[2] = new Vertice(250, -100);
     Triangulo t1 = new Triangulo(verticesTriangulo);
 
     float[][] escala = {{1,0},{0,0.7}};
@@ -25,6 +27,9 @@ public class Fase1 extends Tela {
     stroke(255, 0, 0);
 
     //Draw do triângulo com os vértices
+    for (int i = 0; i < verticesTriangulo.length; i++){
+      t1.moveVertice(i, translacao);
+    }
     t1.drawTriangulo();
 
     //As próximas coisas criadas serão pintadas de preto
@@ -32,13 +37,13 @@ public class Fase1 extends Tela {
 
     //Fonte do texto
     textSize(40);
-    text("→", verticesTriangulo[0].getX() + 200, (verticesTriangulo[1].getY() + verticesTriangulo[2].getY()) / 2); //Posição inicial do texto x e y
+    text("→", verticesTriangulo[0].getX() + 200 + translacao[0][0], translacao[1][0] + (verticesTriangulo[1].getY() + verticesTriangulo[2].getY()) / 2); //Posição inicial do texto x e y
 
     //Translação no eixo x e aumento de escala no y do vertice 3 para aumentar a altura do triângulo
 
     stroke(0, 0, 255);
 
-    float[][] translacao = {{350},{0}};
+    translacao[0][0] += 350;
 
     Triangulo t2 = new Triangulo(verticesTriangulo);
 
@@ -53,32 +58,37 @@ public class Fase1 extends Tela {
   }
 
   private void drawRetangulo() {
+    float[][] translacao = {{400},{350}};
     //Criando vértices do Retângulo
     Vertice[] verticesQuadrilatero = new Vertice[4];
-    verticesQuadrilatero[0] = new Vertice(400, 350);
-    verticesQuadrilatero[1] = new Vertice(500, 350);
-    verticesQuadrilatero[2] = new Vertice(400, 450);
-    verticesQuadrilatero[3] = new Vertice(500, 450);
+    verticesQuadrilatero[0] = new Vertice(0, 0);
+    verticesQuadrilatero[1] = new Vertice(100, 0);
+    verticesQuadrilatero[2] = new Vertice(0, 100);
+    verticesQuadrilatero[3] = new Vertice(100, 100);
     Quadrilatero q1 = new Quadrilatero(verticesQuadrilatero);
 
     float[][] escala = {{1,0},{0,0.75}};
 
     //As próximas coisas serão pintadas de verde
-    stroke(0, 128, 0);
+    stroke(0, 180, 0);
 
     //Draw do quadrado com os vértices
+    
+    for (int i = 0; i < verticesQuadrilatero.length; i++){
+      q1.moveVertice(i, translacao);
+    }
     q1.drawQuadrilatero();
 
     //Fonte do texto
     fill(0, 0, 0);
     textSize(40);
-    text("→", verticesQuadrilatero[0].getX() + 200, (verticesQuadrilatero[1].getY() + verticesQuadrilatero[2].getY()) / 2); //Posição inicial do texto x e y
+    text("→", verticesQuadrilatero[0].getX() + 200 + translacao[0][0], translacao[1][0] + (verticesQuadrilatero[1].getY() + verticesQuadrilatero[2].getY()) / 2); //Posição inicial do texto x e y
 
     //Translação no eixo x e aumento de escala no y para aumentar a altura do quadrado
 
     stroke(255, 0, 0);
 
-    float[][] translacao = {{350},{0}};
+    translacao[0][0] += 350;
 
     Quadrilatero q2 = new Quadrilatero(verticesQuadrilatero);
 
@@ -93,12 +103,13 @@ public class Fase1 extends Tela {
   }
 
   private void drawLosango() {
+    float[][] translacao = {{400},{550}};
     //Criando vértices do Losango
     Vertice[] verticesQuadrilatero2 = new Vertice[4];
-    verticesQuadrilatero2[0] = new Vertice(400, 550);
-    verticesQuadrilatero2[1] = new Vertice(500, 550);
-    verticesQuadrilatero2[2] = new Vertice(350, 650);
-    verticesQuadrilatero2[3] = new Vertice(550, 650);
+    verticesQuadrilatero2[0] = new Vertice(0, 0);
+    verticesQuadrilatero2[1] = new Vertice(100, 0);
+    verticesQuadrilatero2[2] = new Vertice(-50, 150);
+    verticesQuadrilatero2[3] = new Vertice(150, 150);
 
     Quadrilatero l1 = new Quadrilatero(verticesQuadrilatero2);
 
@@ -106,24 +117,29 @@ public class Fase1 extends Tela {
     stroke(0, 0, 255);
 
     //Draw do losango com os vértices
+    for (int i = 0; i < verticesQuadrilatero2.length; i++){
+      l1.moveVertice(i, translacao);
+    }
     l1.drawQuadrilatero();
 
     //Fonte do texto
     fill(0, 0, 0);
     textSize(40);
-    text("→", verticesQuadrilatero2[0].getX() + 200, (verticesQuadrilatero2[1].getY() + verticesQuadrilatero2[2].getY() ) / 2); //Posição inicial do texto x e y
+    text("→", verticesQuadrilatero2[0].getX() + 200 + translacao[0][0], translacao[1][0] + (verticesQuadrilatero2[1].getY() + verticesQuadrilatero2[2].getY() ) / 2); //Posição inicial do texto x e y
 
   }
 
   protected void drawRespostas() {
     // Desenhando área padrão de resposta
     super.drawRespostas();
+    float[][] translacao = {{80},{840}};
+
 
     Vertice[] verticesQuadrilatero3 = new Vertice[4];
-    verticesQuadrilatero3[0] = new Vertice(80, 840);
-    verticesQuadrilatero3[1] = new Vertice(180, 840);
-    verticesQuadrilatero3[2] = new Vertice(30, 940);
-    verticesQuadrilatero3[3] = new Vertice(230, 940);
+    verticesQuadrilatero3[0] = new Vertice(0, 0);
+    verticesQuadrilatero3[1] = new Vertice(100, 0);
+    verticesQuadrilatero3[2] = new Vertice(-50, 100);
+    verticesQuadrilatero3[3] = new Vertice(150, 100);
 
     Quadrilatero l1 = new Quadrilatero(verticesQuadrilatero3);
     float[][] escalaCerta = {{1,0},{0,0.9}};
@@ -134,11 +150,14 @@ public class Fase1 extends Tela {
     stroke(255, 0, 0);
 
     //Draw da resposta 1 com os vértices
+    for (int i = 0; i < verticesQuadrilatero3.length; i++){
+      l1.moveVertice(i, translacao);
+    }
     l1.drawQuadrilatero();
 
-    stroke(0, 128, 0);
+    stroke(0, 180, 0);
 
-    float[][] translacao = {{300},{0}};
+    translacao[0][0] += 300;
 
     Quadrilatero l2 = new Quadrilatero(verticesQuadrilatero3);
 
@@ -155,7 +174,7 @@ public class Fase1 extends Tela {
     //Draw da resposta 2 com os vértices
     l2.drawQuadrilatero();
 
-    stroke(0, 128, 0);
+    stroke(0, 180, 0);
 
     translacao[0][0] += 300;
 

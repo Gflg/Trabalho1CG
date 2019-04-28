@@ -28,7 +28,7 @@ public class Fase10 extends Tela {
   }
 
   private void drawAmpulheta() {
-    float[][] translacao = {{displayWidth/2},{100}};
+    float[][] translacao = {{600},{100}};
     //Criando os vértices do Triângulo
     Vertice[] verticesAmpulheta = new Vertice[5];
     verticesAmpulheta[0] = new Vertice(0, 0);

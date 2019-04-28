@@ -21,36 +21,40 @@ public class Fase4 extends Tela {
 
   private void drawSetas() {
     //Criando os vértices do Pentágono
+    float[][] translacao = {{600},{60}};
     Vertice[] verticesPentagono = new Vertice[5];
-    verticesPentagono[0] = new Vertice(600, 120);
-    verticesPentagono[1] = new Vertice(600, 60);
-    verticesPentagono[2] = new Vertice(660, 120);
-    verticesPentagono[3] = new Vertice(660, 60);
-    verticesPentagono[4] = new Vertice(630, 0);
+    verticesPentagono[0] = new Vertice(0, 60);
+    verticesPentagono[1] = new Vertice(0, 0);
+    verticesPentagono[2] = new Vertice(60, 60);
+    verticesPentagono[3] = new Vertice(60, 0);
+    verticesPentagono[4] = new Vertice(30, -60);
 
     fill(0);
-    text("↓", verticesPentagono[0].getX() + (verticesPentagono[3].getX() - verticesPentagono[0].getX())/3, (1.5 * (verticesPentagono[2].getY() - verticesPentagono[4].getY())));
+    text("↓",translacao[0][0] + verticesPentagono[0].getX() + (verticesPentagono[3].getX() - verticesPentagono[0].getX())/3, (1.5 * (verticesPentagono[2].getY() - verticesPentagono[4].getY())));
 
-    text("↓", verticesPentagono[0].getX() + (verticesPentagono[3].getX() - verticesPentagono[0].getX())/3, (3.15 * (verticesPentagono[2].getY() - verticesPentagono[4].getY())));
+    text("↓",translacao[0][0] + verticesPentagono[0].getX() + (verticesPentagono[3].getX() - verticesPentagono[0].getX())/3, (3.15 * (verticesPentagono[2].getY() - verticesPentagono[4].getY())));
 
-    text("↓", verticesPentagono[0].getX() + (verticesPentagono[3].getX() - verticesPentagono[0].getX())/3, (4.8 * (verticesPentagono[2].getY() - verticesPentagono[4].getY())));
+    text("↓",translacao[0][0] + verticesPentagono[0].getX() + (verticesPentagono[3].getX() - verticesPentagono[0].getX())/3, (4.8 * (verticesPentagono[2].getY() - verticesPentagono[4].getY())));
 
-    text("→", verticesPentagono[0].getX() + 125, (5.7 * (verticesPentagono[2].getY() - verticesPentagono[4].getY())));
+    text("→",translacao[0][0] + verticesPentagono[0].getX() + 125, (5.7 * (verticesPentagono[2].getY() - verticesPentagono[4].getY())));
 
   }
 
   private void drawTriangulos() {
 
-    float[][] translacao = {{0},{200}};
+    float[][] translacao = {{630},{60}};
 
     //Criando os vértices do Triângulo
     Vertice[] verticesTriangulo = new Vertice[3];
-    verticesTriangulo[0] = new Vertice(630, 60);
-    verticesTriangulo[1] = new Vertice(660, 60);
-    verticesTriangulo[2] = new Vertice(630, 0);
+    verticesTriangulo[0] = new Vertice(0, 0);
+    verticesTriangulo[1] = new Vertice(30, 0);
+    verticesTriangulo[2] = new Vertice(0, -60);
 
     Triangulo t1 = new Triangulo(verticesTriangulo);
-
+    for (int i = 0; i < verticesTriangulo.length; i++)
+      t1.moveVertice(i, translacao);
+    
+    translacao[1][0] += 200;
     Triangulo t5 = new Triangulo(verticesTriangulo);
 
     for (int i = 0; i < verticesTriangulo.length; i++)
@@ -71,14 +75,18 @@ public class Fase4 extends Tela {
       t13.moveVertice(i, translacao);
 
     //Criando os vértices do Triângulo
+    translacao[0][0] = 630;
+    translacao[1][0] = 60;
     Vertice[] verticesTriangulo2 = new Vertice[3];
-    verticesTriangulo2[0] = new Vertice(630, 60);
-    verticesTriangulo2[1] = new Vertice(verticesTriangulo[1].getX() - 2 * (verticesTriangulo[1].getX() - verticesTriangulo[0].getX()), 60); //Aplicando a reflexão no eixo X, mantendo o eixo Y intacto
-    verticesTriangulo2[2] = new Vertice(630, 0);
+    verticesTriangulo2[0] = new Vertice(0, 0);
+    verticesTriangulo2[1] = new Vertice(verticesTriangulo[1].getX() - 2 * (verticesTriangulo[1].getX() - verticesTriangulo[0].getX()), 0); //Aplicando a reflexão no eixo X, mantendo o eixo Y intacto
+    verticesTriangulo2[2] = new Vertice(0, -60);
 
     Triangulo t2 = new Triangulo(verticesTriangulo2);
+    for (int i = 0; i < verticesTriangulo2.length; i++)
+      t2.moveVertice(i, translacao);
 
-    translacao[1][0] = 200;
+    translacao[1][0] += 200;
 
     Triangulo t6 = new Triangulo(verticesTriangulo2);
 
@@ -100,14 +108,18 @@ public class Fase4 extends Tela {
       t14.moveVertice(i, translacao);
 
     //Criando os vértices do Triângulo
+    translacao[0][0] = 600;
+    translacao[1][0] = 120;
     Vertice[] verticesTriangulo3 = new Vertice[3];
-    verticesTriangulo3[0] = new Vertice(600, 120);
-    verticesTriangulo3[1] = new Vertice(660, 120);
-    verticesTriangulo3[2] = new Vertice(600, 60);
+    verticesTriangulo3[0] = new Vertice(0, 0);
+    verticesTriangulo3[1] = new Vertice(60, 0);
+    verticesTriangulo3[2] = new Vertice(0, -60);
 
     Triangulo t3 = new Triangulo(verticesTriangulo3);
+    for (int i = 0; i < verticesTriangulo3.length; i++)
+      t3.moveVertice(i, translacao);
 
-    translacao[1][0] = 200;
+    translacao[1][0] += 200;
 
     Triangulo t7 = new Triangulo(verticesTriangulo3);
 
@@ -129,14 +141,18 @@ public class Fase4 extends Tela {
       t15.moveVertice(i, translacao);
 
     //Criando os vértices do Triângulo
+    translacao[0][0] = 600;
+    translacao[1][0] = 120;
     Vertice[] verticesTriangulo4 = new Vertice[3];
     verticesTriangulo4[0] = new Vertice(verticesTriangulo3[0].getX() + (verticesTriangulo3[1].getX() - verticesTriangulo3[0].getX()), verticesTriangulo3[1].getY() - (verticesTriangulo3[1].getY() - verticesTriangulo3[2].getY()));
-    verticesTriangulo4[1] = new Vertice(660, 120);
-    verticesTriangulo4[2] = new Vertice(600, 60);
+    verticesTriangulo4[1] = new Vertice(60, 0);
+    verticesTriangulo4[2] = new Vertice(0, -60);
 
     Triangulo t4 = new Triangulo(verticesTriangulo4);
+    for (int i = 0; i < verticesTriangulo4.length; i++)
+      t4.moveVertice(i, translacao);
 
-    translacao[1][0] = 200;
+    translacao[1][0] += 200;
 
     Triangulo t8 = new Triangulo(verticesTriangulo4);
 
@@ -217,14 +233,15 @@ public class Fase4 extends Tela {
     // Desenhando área padrão de resposta
     super.drawRespostas();
 
-    float[][] translacao = {{-500},{800}};
+    float[][] translacao = {{130},{60}};
 
     //Criando os vértices do Triângulo do Topo (Direita)
     Vertice[] verticesTrianguloTopoDireita = new Vertice[3];
-    verticesTrianguloTopoDireita[0] = new Vertice(630, 60);
-    verticesTrianguloTopoDireita[1] = new Vertice(660, 60);
-    verticesTrianguloTopoDireita[2] = new Vertice(630, 0);
-
+    verticesTrianguloTopoDireita[0] = new Vertice(0, 0);
+    verticesTrianguloTopoDireita[1] = new Vertice(30, 0);
+    verticesTrianguloTopoDireita[2] = new Vertice(0, -60);
+    
+    translacao[1][0] += 800;
     Triangulo t1 = new Triangulo(verticesTrianguloTopoDireita);
 
     for (int i = 0; i < verticesTrianguloTopoDireita.length; i++)
@@ -252,12 +269,14 @@ public class Fase4 extends Tela {
       t13.moveVertice(i, translacao);
 
     //Criando os vértices do Triângulo do Topo (Esquerda)
+    translacao[0][0] = 130;
+    translacao[1][0] = 60;
     Vertice[] verticesTrianguloTopoEsquerda = new Vertice[3];
-    verticesTrianguloTopoEsquerda[0] = new Vertice(630, 60);
-    verticesTrianguloTopoEsquerda[1] = new Vertice(verticesTrianguloTopoDireita[1].getX() - 2*(verticesTrianguloTopoDireita[1].getX() - verticesTrianguloTopoDireita[0].getX()), 60); //Aplicando a reflexão no eixo X, mantendo o eixo Y intacto
-    verticesTrianguloTopoEsquerda[2] = new Vertice(630, 0);
+    verticesTrianguloTopoEsquerda[0] = new Vertice(0, 0);
+    verticesTrianguloTopoEsquerda[1] = new Vertice(verticesTrianguloTopoDireita[1].getX() - 2*(verticesTrianguloTopoDireita[1].getX() - verticesTrianguloTopoDireita[0].getX()), 0); //Aplicando a reflexão no eixo X, mantendo o eixo Y intacto
+    verticesTrianguloTopoEsquerda[2] = new Vertice(0, -60);
 
-    translacao[0][0] = -500;
+    translacao[1][0] += 800;
 
     Triangulo t2 = new Triangulo(verticesTrianguloTopoEsquerda);
 
@@ -286,12 +305,12 @@ public class Fase4 extends Tela {
       t14.moveVertice(i, translacao);
 
     //Criando os vértices do Triângulo da Base (Esquerda)
+    translacao[0][0] = 100;
+    translacao[1][0] = 920;
     Vertice[] verticesTrianguloBaseEsquerda = new Vertice[3];
-    verticesTrianguloBaseEsquerda[0] = new Vertice(600, 120);
-    verticesTrianguloBaseEsquerda[1] = new Vertice(660, 120);
-    verticesTrianguloBaseEsquerda[2] = new Vertice(600, 60);
-
-    translacao[0][0] = -500;
+    verticesTrianguloBaseEsquerda[0] = new Vertice(0, 0);
+    verticesTrianguloBaseEsquerda[1] = new Vertice(60, 0);
+    verticesTrianguloBaseEsquerda[2] = new Vertice(0, -60);
 
     Triangulo t3 = new Triangulo(verticesTrianguloBaseEsquerda);
 
@@ -320,12 +339,12 @@ public class Fase4 extends Tela {
       t15.moveVertice(i, translacao);
 
     //Criando os vértices do Triângulo da Base (Direita)
+    translacao[0][0] = 100;
+    translacao[1][0] = 920;
     Vertice[] verticesTrianguloBaseDireita = new Vertice[3];
     verticesTrianguloBaseDireita[0] = new Vertice(verticesTrianguloBaseEsquerda[0].getX() + (verticesTrianguloBaseEsquerda[1].getX() - verticesTrianguloBaseEsquerda[0].getX()), verticesTrianguloBaseEsquerda[1].getY() - (verticesTrianguloBaseEsquerda[1].getY() - verticesTrianguloBaseEsquerda[2].getY()));
-    verticesTrianguloBaseDireita[1] = new Vertice(660, 120);
-    verticesTrianguloBaseDireita[2] = new Vertice(600, 60);
-
-    translacao[0][0] = -500;
+    verticesTrianguloBaseDireita[1] = new Vertice(60, 0);
+    verticesTrianguloBaseDireita[2] = new Vertice(0, -60);
 
     Triangulo t4 = new Triangulo(verticesTrianguloBaseDireita);
 
