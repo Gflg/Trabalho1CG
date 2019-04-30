@@ -4,6 +4,7 @@ import java.awt.*;
 public class FiguraGeometrica {
 
   Vertice[] vertices;
+  Face[] faces;
   private int quantidadeDimensoes, quantidadeVertices;
   Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
   private float XdMax = (float) screenSize.getWidth(); //private float XdMax = displayWidth;
@@ -67,6 +68,15 @@ public class FiguraGeometrica {
 
   private void setYuMax(float YuMax) {
     this.YuMax = YuMax;
+  }
+  
+  public void drawFigura() {
+    for (int i = 0; i < this.faces.length; i++) {
+       for (int j = 0; j < this.faces[i].arestas.length; j++) {
+           this.faces[i].arestas[j].drawAresta();
+       }
+    }
+    
   }
 
 /*
