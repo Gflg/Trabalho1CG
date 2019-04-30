@@ -10,7 +10,7 @@ public class Fase7 extends Tela {
   }
   
   public void drawTela() {
-      drawFiguras();
+      drawEstrelas();
       drawPentagonos();
       drawRespostas();
   }
@@ -29,7 +29,7 @@ public class Fase7 extends Tela {
     cisalhamentoY[1][1] = 1;
   }
   
-  public void drawFiguras() {
+  public void drawEstrelas() {
     
       float[][] translacao = {{510},{90}};
       fill(0, 0, 0);
@@ -92,7 +92,7 @@ public class Fase7 extends Tela {
      for (int i = 0; i < pentagono1.vertices.length; i++) {
         pentagono1.moveVertice(i, translacao);
       }
-     pentagono1.drawPentagono();
+     pentagono1.drawFigura();
      
      stroke(0, 0, 0);
      text("→", 650, 290); //Posição inicial do texto x e y
@@ -104,7 +104,7 @@ public class Fase7 extends Tela {
         pentagono1.moveVertice(i, translacao);
       }
       stroke(0, 255, 0);
-      pentagono1.drawPentagono();
+      pentagono1.drawFigura();
      
      translacao[0][0] = 510;
      translacao[1][0] = 540;
@@ -113,7 +113,7 @@ public class Fase7 extends Tela {
      for (int i = 0; i < pentagono2.vertices.length; i++) {
         pentagono2.moveVertice(i, translacao);
       }
-     pentagono2.drawPentagono();
+     pentagono2.drawFigura();
      
      stroke(0, 0, 0);
      text("→", 650, 590); //Posição inicial do texto x e y
@@ -141,7 +141,7 @@ public class Fase7 extends Tela {
         pentagono1.moveVertice(i, translacao);
       }
       stroke(0, 0, 255);
-      pentagono1.drawPentagono();
+      pentagono1.drawFigura();
       
       
       translacao[0][0] += 350;
@@ -151,7 +151,7 @@ public class Fase7 extends Tela {
         pentagono2.moveVertice(i, translacao);
       }
       stroke(20, 186, 50);
-      pentagono2.drawPentagono();
+      pentagono2.drawFigura();
       
       translacao[0][0] += 300;
       Pentagono pentagono3 = new Pentagono(pontaDoPentagono);
@@ -159,7 +159,7 @@ public class Fase7 extends Tela {
         pentagono3.moveVertice(i, translacao);
       }
       stroke(163, 16, 163);
-      pentagono3.drawPentagono();
+      pentagono3.drawFigura();
   }
   
 }

@@ -23,11 +23,11 @@ public class Fase10 extends Tela {
   }
   
   public void drawTela() {
-    drawFigura();
+    drawAmpulhetas();
     drawRespostas();
   }
 
-  private void drawFigura() {
+  private void drawAmpulhetas() {
     float[][] translacao = {{600},{100}};
     //Criando os vértices do Triângulo
     Vertice[] verticesAmpulheta = new Vertice[5];

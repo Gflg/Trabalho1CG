@@ -5,11 +5,11 @@ public class Fase11 extends Tela {
   }
 
   public void drawTela() {
-    drawFigura();
+    drawDecagonos();
     drawRespostas();
   }
 
-  private void drawFigura() {
+  private void drawDecagonos() {
 
     //Criando os vértices do Decágono
     float[][] translacao = {{240},{360}};

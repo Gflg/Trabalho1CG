@@ -31,7 +31,7 @@ public class Fase6 extends Tela {
       l1.moveVertice(i, translacao);
     }
     
-    l1.drawLouTouZ();
+    l1.drawFigura();
     
     int i,j;
     for(j=0; j<8; j+=4){
@@ -53,7 +53,7 @@ public class Fase6 extends Tela {
     for (i = 0; i < verticesL.length; i++){
       l2.moveVertice(i, translacao);
     }
-    l2.drawLouTouZ();
+    l2.drawFigura();
     
     
     for(i=int(verticesL[0].getX()+translacao[0][0]);i<int((verticesL[1].getX()+translacao[0][0])-((verticesL[1].getX() - verticesL[0].getX())*2/3));i++){
@@ -79,7 +79,7 @@ public class Fase6 extends Tela {
     for (i = 0; i < verticesL.length; i++){
       l3.moveVertice(i, translacao);
     }
-    l3.drawLouTouZ();
+    l3.drawFigura();
     
     for(j=0; j<4; j+=4){
       for(i=int((verticesL[j+1].getX()+translacao[0][0])-((verticesL[j+1].getX() - verticesL[j].getX())*2/3));i<int(verticesL[j+1].getX()+translacao[0][0]);i++){
@@ -110,7 +110,7 @@ public class Fase6 extends Tela {
       l1.moveVertice(i, translacao);
     }
     
-    l1.drawLouTouZ();
+    l1.drawFigura();
     
     int i,j;
     for(j=0; j<8; j+=4){
@@ -132,7 +132,7 @@ public class Fase6 extends Tela {
     for (i = 0; i < verticesT.length; i++){
       l2.moveVertice(i, translacao);
     }
-    l2.drawLouTouZ();
+    l2.drawFigura();
     
     for(i=int(verticesT[0].getX()+translacao[0][0]);i<int((verticesT[1].getX()+translacao[0][0])-((verticesT[1].getX() - verticesT[0].getX())*2/3));i++){
       stroke(0,255,0);
@@ -157,7 +157,7 @@ public class Fase6 extends Tela {
     for (i = 0; i < verticesT.length; i++){
       l3.moveVertice(i, translacao);
     }
-    l3.drawLouTouZ();
+    l3.drawFigura();
     
     for(j=0; j<4; j+=4){
       for(i=int((verticesT[j+1].getX()+translacao[0][0])-((verticesT[j+1].getX() - verticesT[j].getX())*2/3));i<int(verticesT[j+1].getX()+translacao[0][0]);i++){
@@ -188,7 +188,7 @@ public class Fase6 extends Tela {
       l1.moveVertice(i, translacao);
     }
     
-    l1.drawLouTouZ();
+    l1.drawFigura();
     
     int i,j;
     for(j=0; j<8; j+=4){
@@ -210,7 +210,7 @@ public class Fase6 extends Tela {
     for (i = 0; i < verticesZ.length; i++){
       l2.moveVertice(i, translacao);
     }
-    l2.drawLouTouZ();
+    l2.drawFigura();
     
     for(j=0; j<8; j+=4){
       for(i=int(verticesZ[j].getX()+translacao[0][0]);i<int(verticesZ[j+1].getX()+translacao[0][0])-((verticesZ[j+1].getX() - verticesZ[j].getX())/2);i++){
@@ -219,7 +219,7 @@ public class Fase6 extends Tela {
       }
     }
     stroke(0,0,0);
-    l2.drawLouTouZ();
+    l2.drawFigura();
     
     fill(0, 0, 0);
     textSize(40);
@@ -252,7 +252,7 @@ public class Fase6 extends Tela {
       z1.moveVertice(i, translacao);
     }
     
-    z1.drawLouTouZ();
+    z1.drawFigura();
     
     int i,j;
     for(j=0; j<4; j+=4){
@@ -270,7 +270,7 @@ public class Fase6 extends Tela {
     for (i = 0; i < verticesZ.length; i++){
       z2.moveVertice(i, translacao);
     }
-    z2.drawLouTouZ();
+    z2.drawFigura();
     
     for(j=4; j<8; j+=4){
       for(i=int(verticesZ[j].getX()+translacao[0][0]);i<int(verticesZ[j+1].getX()+translacao[0][0]);i++){
@@ -287,7 +287,7 @@ public class Fase6 extends Tela {
     for (i = 0; i < verticesZ.length; i++){
       z3.moveVertice(i, translacao);
     }
-    z3.drawLouTouZ();
+    z3.drawFigura();
     
     for(j=0; j<4; j+=4){
       for(i=int(verticesZ[j].getX()+translacao[0][0]);i<int(verticesZ[j+1].getX()+translacao[0][0]);i++){
@@ -304,7 +304,7 @@ public class Fase6 extends Tela {
     for (i = 0; i < verticesZ.length; i++){
       z4.moveVertice(i, translacao);
     }
-    z4.drawLouTouZ();
+    z4.drawFigura();
     
     for(j=0; j<8; j+=4){
       for(i=int((verticesZ[j+1].getX()+translacao[0][0])-((verticesZ[j+1].getX() - verticesZ[j].getX())/2));i<int(verticesZ[j+1].getX()+translacao[0][0]);i++){

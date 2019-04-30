@@ -5,11 +5,11 @@ public class Fase9 extends Tela {
   }
 
   public void drawTela() {
-    drawGiro();
+    drawGiros();
     drawRespostas();
   }
 
-  private void drawGiro() {
+  private void drawGiros() {
     float[][] translacao = {{600},{100}};
     //Criando os vértices do Triângulo
     Vertice[] verticesGiro = new Vertice[9];
@@ -31,7 +31,7 @@ public class Fase9 extends Tela {
     }
     
     stroke(0,0,0);
-    g1.drawGiro();
+    g1.drawFigura();
     
     fill(0,0,0);
     textSize(20);
@@ -60,7 +60,7 @@ public class Fase9 extends Tela {
     }
     
     stroke(0,0,0);
-    g2.drawGiro();
+    g2.drawFigura();
     
     fill(0,0,0);
     textSize(20);
@@ -88,7 +88,7 @@ public class Fase9 extends Tela {
     }
     
     stroke(0,0,0);
-    g3.drawGiro();
+    g3.drawFigura();
     
     fill(0,0,0);
     textSize(20);
@@ -130,7 +130,7 @@ public class Fase9 extends Tela {
       g1.moveVertice(i, translacao);
     }
     
-    g1.drawGiro();
+    g1.drawFigura();
     
     fill(0,0,0);
     textSize(20);
@@ -154,7 +154,7 @@ public class Fase9 extends Tela {
       g2.moveVertice(i, translacao);
     }
     
-    g2.drawGiro();
+    g2.drawFigura();
     
     fill(0,0,0);
     textSize(20);
@@ -178,7 +178,7 @@ public class Fase9 extends Tela {
       g3.moveVertice(i, translacao);
     }
     
-    g3.drawGiro();
+    g3.drawFigura();
     
     fill(0,0,0);
     textSize(20);
@@ -202,7 +202,7 @@ public class Fase9 extends Tela {
       g4.moveVertice(i, translacao);
     }
     
-    g4.drawGiro();
+    g4.drawFigura();
     
     text("B", translacao[0][0] - (verticesGiro[3].getX() - verticesGiro[4].getX()), translacao[1][0] - (verticesGiro[5].getY() - verticesGiro[3].getY())/7); //Posição inicial do texto x e y
     text("F", translacao[0][0] - (verticesGiro[3].getX() - verticesGiro[4].getX()), translacao[1][0] + (verticesGiro[5].getY() - verticesGiro[3].getY())/3.5); //Posição inicial do texto x e y
