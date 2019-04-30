@@ -23,11 +23,11 @@ public class Fase10 extends Tela {
   }
   
   public void drawTela() {
-    drawAmpulheta();
+    drawFigura();
     drawRespostas();
   }
 
-  private void drawAmpulheta() {
+  private void drawFigura() {
     float[][] translacao = {{600},{100}};
     //Criando os vértices do Triângulo
     Vertice[] verticesAmpulheta = new Vertice[5];
@@ -44,7 +44,7 @@ public class Fase10 extends Tela {
       a1.moveVertice(i, translacao);
     }
     
-    a1.drawAmpulheta();
+    a1.drawFigura();
     
     fill(0,0,0);
     textSize(40);
@@ -60,7 +60,7 @@ public class Fase10 extends Tela {
       a5.moveVertice(i, translacao);
     }
     
-    a5.drawAmpulheta();
+    a5.drawFigura();
     
     translacao[0][0] -= 250;
     translacao[1][0] += 250;
@@ -74,7 +74,7 @@ public class Fase10 extends Tela {
       a2.moveVertice(i, translacao);
     }
     
-    a2.drawAmpulheta();
+    a2.drawFigura();
     
     fill(0,0,0);
     textSize(40);
@@ -92,7 +92,7 @@ public class Fase10 extends Tela {
       a3.moveVertice(i, translacao);
     }
     
-    a3.drawAmpulheta();
+    a3.drawFigura();
     
     translacao[0][0] -= 250;
     translacao[1][0] += 250;
@@ -105,7 +105,7 @@ public class Fase10 extends Tela {
       a4.moveVertice(i, translacao);
     }
     
-    a4.drawAmpulheta();
+    a4.drawFigura();
     
     fill(0,0,0);
     textSize(40);
@@ -130,7 +130,7 @@ public class Fase10 extends Tela {
       a1.moveVertice(i, translacao);
     }
     
-    a1.drawAmpulheta();
+    a1.drawFigura();
     
     translacao[0][0] += 300;
     translacao[1][0] -= 10;
@@ -144,7 +144,7 @@ public class Fase10 extends Tela {
       a2.moveVertice(i, translacao);
     }
     
-    a2.drawAmpulheta();
+    a2.drawFigura();
     
     translacao[0][0] += 300;
     translacao[1][0] += 10;
@@ -157,7 +157,7 @@ public class Fase10 extends Tela {
       a3.moveVertice(i, translacao);
     }
     
-    a3.drawAmpulheta();
+    a3.drawFigura();
     
     translacao[0][0] += 300;
     translacao[1][0] -= 20;
@@ -170,7 +170,7 @@ public class Fase10 extends Tela {
       a4.moveVertice(i, translacao);
     }
     
-    a4.drawAmpulheta();
+    a4.drawFigura();
     
   }
 

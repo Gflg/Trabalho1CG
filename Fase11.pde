@@ -5,11 +5,11 @@ public class Fase11 extends Tela {
   }
 
   public void drawTela() {
-    drawDecagono();
+    drawFigura();
     drawRespostas();
   }
 
-  private void drawDecagono() {
+  private void drawFigura() {
 
     //Criando os vértices do Decágono
     float[][] translacao = {{240},{360}};
@@ -21,7 +21,7 @@ public class Fase11 extends Tela {
     for (int i = 0; i < decagono1.vertices.length; i++){
       decagono1.moveVertice(i, translacao);
     }
-    decagono1.drawDecagono();
+    decagono1.drawFigura();
 
     fill(0, 0, 0);
 
@@ -39,7 +39,7 @@ public class Fase11 extends Tela {
 
     stroke(0, 128, 0);
 
-    decagono2.drawDecagono();
+    decagono2.drawFigura();
 
     //Fonte do texto
     fill(0, 0, 0);
@@ -57,7 +57,7 @@ public class Fase11 extends Tela {
     for (int i = 0; i < decagono3.vertices.length; i++){
       decagono3.moveVertice(i, translacao);
     }
-    decagono3.drawDecagono();
+    decagono3.drawFigura();
 
     fill(0, 0, 0);
 
@@ -74,7 +74,7 @@ public class Fase11 extends Tela {
 
     stroke(163, 16, 163);
 
-    decagono4.drawDecagono();
+    decagono4.drawFigura();
 
     //Fonte do texto
     fill(0, 0, 0);
@@ -92,7 +92,7 @@ public class Fase11 extends Tela {
     for (int i = 0; i < decagono5.vertices.length; i++){
       decagono5.moveVertice(i, translacao);
     }
-    decagono5.drawDecagono();
+    decagono5.drawFigura();
 
     fill(0, 0, 0);
 
@@ -112,7 +112,7 @@ public class Fase11 extends Tela {
 
     stroke(163, 16, 163);
 
-    decagono6.drawDecagono();
+    decagono6.drawFigura();
 
     //Fonte do texto
     fill(0, 0, 0);
@@ -137,7 +137,7 @@ public class Fase11 extends Tela {
     for (int i = 0; i < decagono1.vertices.length; i++){
       decagono1.moveVertice(i, translacao);
     }
-    decagono1.drawDecagono();
+    decagono1.drawFigura();
 
     fill(0, 0, 0);
 
@@ -154,7 +154,7 @@ public class Fase11 extends Tela {
 
     stroke(163, 16, 163);
 
-    decagono2.drawDecagono();
+    decagono2.drawFigura();
     //<---- RESPOSTA 1 ---->
 
     //<---- RESPOSTA 2 ---->
@@ -170,7 +170,7 @@ public class Fase11 extends Tela {
     for (int i = 0; i < decagono3.vertices.length; i++){
       decagono3.moveVertice(i, translacao);
     }
-    decagono3.drawDecagono();
+    decagono3.drawFigura();
 
     fill(0, 0, 0);
 
@@ -188,7 +188,7 @@ public class Fase11 extends Tela {
 
     stroke(0, 128, 0);
 
-    decagono4.drawDecagono();
+    decagono4.drawFigura();
     //<---- RESPOSTA 2 ---->
 
     //<---- RESPOSTA 3 ---->
@@ -203,7 +203,7 @@ public class Fase11 extends Tela {
     for (int i = 0; i < decagono5.vertices.length; i++){
       decagono5.moveVertice(i, translacao);
     }
-    decagono5.drawDecagono();
+    decagono5.drawFigura();
 
     fill(0, 0, 0);
 
@@ -221,7 +221,7 @@ public class Fase11 extends Tela {
 
     stroke(0, 128, 0);
 
-    decagono6.drawDecagono();
+    decagono6.drawFigura();
     //<---- RESPOSTA 3 ---->
 
     //<---- RESPOSTA 4 ---->
@@ -236,7 +236,7 @@ public class Fase11 extends Tela {
     for (int i = 0; i < decagono7.vertices.length; i++){
       decagono7.moveVertice(i, translacao);
     }
-    decagono7.drawDecagono();
+    decagono7.drawFigura();
 
     fill(0, 0, 0);
 
@@ -254,7 +254,7 @@ public class Fase11 extends Tela {
 
     stroke(163, 16, 163);
 
-    decagono8.drawDecagono();
+    decagono8.drawFigura();
     //<---- RESPOSTA 4 ---->
 
   }

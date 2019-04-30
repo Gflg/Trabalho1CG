@@ -10,7 +10,7 @@ public class Fase7 extends Tela {
   }
   
   public void drawTela() {
-      drawEstrelas();
+      drawFiguras();
       drawPentagonos();
       drawRespostas();
   }
@@ -29,7 +29,7 @@ public class Fase7 extends Tela {
     cisalhamentoY[1][1] = 1;
   }
   
-  public void drawEstrelas() {
+  public void drawFiguras() {
     
       float[][] translacao = {{510},{90}};
       fill(0, 0, 0);
@@ -41,7 +41,7 @@ public class Fase7 extends Tela {
       for (int i = 0; i < estrela1.vertices.length; i++) {
         estrela1.moveVertice(i, translacao);
       }
-      estrela1.drawEstrela();
+      estrela1.drawFigura();
       
       stroke(0,0,0);
       text("→", 650, 140); //Posição inicial do texto x e y
@@ -55,7 +55,7 @@ public class Fase7 extends Tela {
       }
       
       stroke(0, 0, 255);
-      estrela1.drawEstrela();
+      estrela1.drawFigura();
       
       translacao[0][0] = 510;
       translacao[1][0] = 390;
@@ -65,7 +65,7 @@ public class Fase7 extends Tela {
       for (int i = 0; i < estrela2.vertices.length; i++) {
         estrela2.moveVertice(i, translacao);
       }
-      estrela2.drawEstrela();
+      estrela2.drawFigura();
             
       translacao[0][0] = 320;
       translacao[1][0] = -250;
@@ -80,7 +80,7 @@ public class Fase7 extends Tela {
       text("→", 650, 440); //Posição inicial do texto x e y
       
       stroke(0, 255, 0);
-      estrela2.drawEstrela();
+      estrela2.drawFigura();
   }
   
   public void drawPentagonos() {
@@ -130,7 +130,7 @@ public class Fase7 extends Tela {
       for (int i = 0; i < estrela.vertices.length; i++) {
         estrela.moveVertice(i, translacao);
       }
-      estrela.drawEstrela();
+      estrela.drawFigura();
       
       
       Vertice pontaDoPentagono = new Vertice(0, 0);
