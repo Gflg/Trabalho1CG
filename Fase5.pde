@@ -168,7 +168,7 @@ public class Fase5 extends Tela {
     for (int i = 0; i < verticesQuadrilatero.length; i++){
       q1.moveVertice(i, translacao);
     }
-    q1.drawQuadrilatero();
+    q1.drawFigura();
     
     for(int i=100;i<200;i++){
         stroke(0,255,0);
@@ -202,7 +202,7 @@ public class Fase5 extends Tela {
     }
     
     stroke(0,0,0);
-    q2.drawQuadrilatero();
+    q2.drawFigura();
     
     translacao[0][0] += 450;
     
@@ -218,7 +218,7 @@ public class Fase5 extends Tela {
     }
     
     stroke(0,0,0);
-    q3.drawQuadrilatero();
+    q3.drawFigura();
 
   }
 
@@ -237,7 +237,7 @@ public class Fase5 extends Tela {
     for (int i = 0; i < verticesQuadrilatero.length; i++){
       q1.moveVertice(i, translacao);
     }
-    q1.drawQuadrilatero();
+    q1.drawFigura();
     
     for(int i=100; i<125; i++){
         stroke(0,255,0);
@@ -307,7 +307,7 @@ public class Fase5 extends Tela {
       q2.moveVertice(i, translacao);
     }
     
-    q2.drawQuadrilatero();
+    q2.drawFigura();
     
     for(int i=0 + int(translacao[0][0]); i<25 + int(translacao[0][0]); i++){
         stroke(255,0,0);
@@ -370,7 +370,7 @@ public class Fase5 extends Tela {
       q3.moveVertice(i, translacao);
     }
     
-    q3.drawQuadrilatero();
+    q3.drawFigura();
     
     for(int i=0 + int(translacao[0][0]); i<25 + int(translacao[0][0]); i++){
         stroke(0,0,255);
@@ -429,7 +429,7 @@ public class Fase5 extends Tela {
       q4.moveVertice(i, translacao);
     }
     
-    q4.drawQuadrilatero();
+    q4.drawFigura();
     
     for(int i=0 + int(translacao[0][0]); i<25 + int(translacao[0][0]); i++){
         stroke(255,0,255);

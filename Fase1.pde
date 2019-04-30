@@ -77,7 +77,7 @@ public class Fase1 extends Tela {
     for (int i = 0; i < verticesQuadrilatero.length; i++){
       q1.moveVertice(i, translacao);
     }
-    q1.drawQuadrilatero();
+    q1.drawFigura();
 
     //Fonte do texto
     fill(0, 0, 0);
@@ -98,7 +98,7 @@ public class Fase1 extends Tela {
         q2.transformaVertice(i, escala);
     }
 
-    q2.drawQuadrilatero();
+    q2.drawFigura();
 
   }
 
@@ -120,7 +120,7 @@ public class Fase1 extends Tela {
     for (int i = 0; i < verticesQuadrilatero2.length; i++){
       l1.moveVertice(i, translacao);
     }
-    l1.drawQuadrilatero();
+    l1.drawFigura();
 
     //Fonte do texto
     fill(0, 0, 0);
@@ -153,7 +153,7 @@ public class Fase1 extends Tela {
     for (int i = 0; i < verticesQuadrilatero3.length; i++){
       l1.moveVertice(i, translacao);
     }
-    l1.drawQuadrilatero();
+    l1.drawFigura();
 
     stroke(0, 180, 0);
 
@@ -172,7 +172,7 @@ public class Fase1 extends Tela {
     }
 
     //Draw da resposta 2 com os vértices
-    l2.drawQuadrilatero();
+    l2.drawFigura();
 
     stroke(0, 180, 0);
 
@@ -187,7 +187,7 @@ public class Fase1 extends Tela {
     }
 
     //Draw da resposta 3 com os vértices
-    l3.drawQuadrilatero();
+    l3.drawFigura();
 
     stroke(0, 0, 255);
 
@@ -204,7 +204,7 @@ public class Fase1 extends Tela {
     }
 
     //Draw da resposta 4 com os vértices
-    l4.drawQuadrilatero();
+    l4.drawFigura();
 
   }
 

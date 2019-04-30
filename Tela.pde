@@ -29,24 +29,24 @@ public abstract class Tela {
   protected void drawRespostas() {
     stroke(0,0,0);
     Quadrilatero fundo = new Quadrilatero(25, 750, 1235, 220);
-    fundo.drawQuadrilatero();
+    fundo.drawFigura();
     stroke(180);
     fundo.pintaFundo();
     
     stroke(125, 255, 255);
-    resposta1.drawQuadrilatero();
+    resposta1.drawFigura();
     resposta1.pintaFundo();
     
     stroke(125, 255, 255);
-    resposta2.drawQuadrilatero();
+    resposta2.drawFigura();
     resposta2.pintaFundo();
     
     stroke(125, 255, 255);
-    resposta3.drawQuadrilatero();
+    resposta3.drawFigura();
     resposta3.pintaFundo();
     
     stroke(125, 255, 255);
-    resposta4.drawQuadrilatero();
+    resposta4.drawFigura();
     resposta4.pintaFundo();
   }
 

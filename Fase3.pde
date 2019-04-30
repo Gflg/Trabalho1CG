@@ -41,7 +41,7 @@ public class Fase3 extends Tela {
     }
 
     //Draw do retângulo com os vértices
-    q1.drawQuadrilatero();
+    q1.drawFigura();
 
     fill(0);
     text("↓", translacao[0][0] - (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/2, (1.5 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
@@ -59,7 +59,7 @@ public class Fase3 extends Tela {
     }
 
     //Draw do retângulo com os vértices
-    q2.drawQuadrilatero();
+    q2.drawFigura();
 
     fill(0);
     text("↓", translacao[0][0] - (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/2.8 - 50, (4 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
@@ -77,7 +77,7 @@ public class Fase3 extends Tela {
     }
 
     //Draw do retângulo com os vértices
-    q3.drawQuadrilatero();
+    q3.drawFigura();
 
     fill(0);
     text("↓", translacao[0][0] - (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/2.5 + 25, (6.5 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
@@ -102,7 +102,7 @@ public class Fase3 extends Tela {
     //Draw do retângulo com os vértices
     for (int i = 0; i < verticesRetangulo.length; i++)
       q1.moveVertice(i, translacao);
-    q1.drawQuadrilatero();
+    q1.drawFigura();
     // -->
 
     // <!-- Resposta 2
@@ -123,7 +123,7 @@ public class Fase3 extends Tela {
       q2.moveVertice(i, translacao);
 
     //Draw do retângulo com os vértices
-    q2.drawQuadrilatero();
+    q2.drawFigura();
     // -->
 
     // <!-- Resposta 3
@@ -139,7 +139,7 @@ public class Fase3 extends Tela {
     }
 
     //Draw do retângulo com os vértices
-    q3.drawQuadrilatero();
+    q3.drawFigura();
     // -->
 
     // <!-- Resposta 4
@@ -156,7 +156,7 @@ public class Fase3 extends Tela {
     }
 
     //Draw do retângulo com os vértices
-    q4.drawQuadrilatero();
+    q4.drawFigura();
     //-->
 
   }

@@ -25,7 +25,7 @@ public class Fase2 extends Tela {
     //Draw do retângulo com os vértices
     for (int i = 0; i < verticesRetangulo.length; i++)
       q1.moveVertice(i, translacao);
-    q1.drawQuadrilatero();
+    q1.drawFigura();
     
     fill(0);
     text("↓",translacao[0][0] + verticesRetangulo[0].getX() + 90, verticesRetangulo[3].getY() - verticesRetangulo[1].getY() + 60); //Posição inicial do texto x e y
@@ -43,7 +43,7 @@ public class Fase2 extends Tela {
       q2.moveVertice(i, translacao);
 
     //Draw do retângulo com os vértices
-    q2.drawQuadrilatero();
+    q2.drawFigura();
 
     //Segunda linha de retângulos
     translacao[0][0] = 650;
@@ -55,7 +55,7 @@ public class Fase2 extends Tela {
       q3.moveVertice(i, translacao);
 
     //Draw do retângulo com os vértices
-    q3.drawQuadrilatero();
+    q3.drawFigura();
 
     translacao[0][0] = 550;
 
@@ -65,7 +65,7 @@ public class Fase2 extends Tela {
       q4.moveVertice(i, translacao);
 
     //Draw do retângulo com os vértices
-    q4.drawQuadrilatero();
+    q4.drawFigura();
 
     fill(255,0,0);
     text("R",translacao[0][0] + verticesRetangulo[0].getX() + 35, (verticesRetangulo[0].getY() + 2 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) + 60); //Posição inicial do texto x e y
@@ -88,7 +88,7 @@ public class Fase2 extends Tela {
       q5.moveVertice(i, translacao);
 
     //Draw do retângulo com os vértices
-    q5.drawQuadrilatero();
+    q5.drawFigura();
 
     translacao[0][0] = 550;
 
@@ -98,7 +98,7 @@ public class Fase2 extends Tela {
       q6.moveVertice(i, translacao);
 
     //Draw do retângulo com os vértices
-    q6.drawQuadrilatero();
+    q6.drawFigura();
 
     fill(139,0,255);
     text("V",translacao[0][0] + verticesRetangulo[0].getX() + 35, (verticesRetangulo[0].getY() + 6 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) + 60); //Posição inicial do texto x e y
@@ -126,7 +126,7 @@ public class Fase2 extends Tela {
     //Draw do retângulo 1 da resposta 1 com os vértices
     for (int i = 0; i < verticesRetangulo.length; i++)
       q1.moveVertice(i, translacao);
-    q1.drawQuadrilatero();
+    q1.drawFigura();
     
     fill(74, 132, 232);
     textSize(40);
@@ -141,7 +141,7 @@ public class Fase2 extends Tela {
       q2.moveVertice(i, translacao);
 
     //Draw do retângulo 2 da resposta 1 com os vértices
-    q2.drawQuadrilatero();
+    q2.drawFigura();
 
     // -->
 
@@ -154,7 +154,7 @@ public class Fase2 extends Tela {
       q3.moveVertice(i, translacao);
 
     //Draw do retângulo 1 da resposta 2 com os vértices
-    q3.drawQuadrilatero();
+    q3.drawFigura();
     
     fill(48,213,200);
     textSize(40);
@@ -169,7 +169,7 @@ public class Fase2 extends Tela {
       q4.moveVertice(i, translacao);
 
     //Draw do retângulo 2 da resposta 2 com os vértices
-    q4.drawQuadrilatero();
+    q4.drawFigura();
 
     // -->
 
@@ -182,7 +182,7 @@ public class Fase2 extends Tela {
       q5.moveVertice(i, translacao);
 
     //Draw do retângulo 1 da resposta 3 com os vértices
-    q5.drawQuadrilatero();
+    q5.drawFigura();
 
     fill(255, 255, 0);
     textSize(40);
@@ -197,7 +197,7 @@ public class Fase2 extends Tela {
       q6.moveVertice(i, translacao);
 
     //Draw do retângulo 2 da resposta 3 com os vértices
-    q6.drawQuadrilatero();
+    q6.drawFigura();
 
     // -->
 
@@ -210,7 +210,7 @@ public class Fase2 extends Tela {
       q7.moveVertice(i, translacao);
 
     //Draw do retângulo 1 da resposta 4 com os vértices
-    q7.drawQuadrilatero();
+    q7.drawFigura();
     
     fill(48,213,200);
     textSize(40);
@@ -225,7 +225,7 @@ public class Fase2 extends Tela {
       q8.moveVertice(i, translacao);
 
     //Draw do retângulo 2 da resposta 4 com os vértices
-    q8.drawQuadrilatero();
+    q8.drawFigura();
 
     //-->
 
