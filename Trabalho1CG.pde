@@ -12,8 +12,6 @@ int aux;
 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 private int XuMax = (int) screenSize.getWidth();
 private int YuMax = (int) screenSize.getHeight();
-//int XuMax = 1300;
-//int YuMax = 1000;
 
 void settings() {
   size(XuMax, YuMax);

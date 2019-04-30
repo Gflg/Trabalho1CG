@@ -107,7 +107,7 @@ public class FiguraGeometrica {
     for(int i = 0; i < vertices.length; i++){
       float Xu = vertices[i].coordenadas[0];
       float Yu = vertices[i].coordenadas[1];
-      //vertices[i].coordenadas[0] = (Xu * XdMax) / XuMax;
+      vertices[i].coordenadas[0] = (Xu * XdMax) / XuMax;
       //vertices[i].coordenadas[1] = ((Yu * (-YdMax)) / YuMax) + YdMax;
     }
   }
