@@ -176,53 +176,53 @@ public class Fase4 extends Tela {
     //---> Começo do desenho da primeira imagem
     stroke(0);
 
-    t2.drawTriangulo();
-    t3.drawTriangulo();
-    t4.drawTriangulo();
+    t2.drawFigura();
+    t3.drawFigura();
+    t4.drawFigura();
 
     //As próximas coisas criadas serão pintadas de vermelho
     stroke(255, 0, 0);
 
-    t1.drawTriangulo();
+    t1.drawFigura();
     //<--- Fim da primeira imagem
 
     //---> Começo do desenho da segunda imagem
     stroke(0);
 
-    t5.drawTriangulo();
-    t6.drawTriangulo();
-    t7.drawTriangulo();
+    t5.drawFigura();
+    t6.drawFigura();
+    t7.drawFigura();
 
     //As próximas coisas criadas serão pintadas de vermelho
     stroke(255, 0, 0);
 
-    t8.drawTriangulo();
+    t8.drawFigura();
     //<--- Fim da segunda imagem
 
     //---> Começo do desenho da terceira imagem
     stroke(0);
 
-    t9.drawTriangulo();
-    t11.drawTriangulo();
-    t12.drawTriangulo();
+    t9.drawFigura();
+    t11.drawFigura();
+    t12.drawFigura();
 
     //As próximas coisas criadas serão pintadas de vermelho
     stroke(255, 0, 0);
 
-    t10.drawTriangulo();
+    t10.drawFigura();
     //<--- Fim da terceira imagem
 
     //---> Começo do desenho da quarta imagem
     stroke(0);
 
-    t13.drawTriangulo();
-    t14.drawTriangulo();
-    t15.drawTriangulo();
+    t13.drawFigura();
+    t14.drawFigura();
+    t15.drawFigura();
 
     //As próximas coisas criadas serão pintadas de vermelho
     stroke(255, 0, 0);
 
-    t16.drawTriangulo();
+    t16.drawFigura();
     //<--- Fim da quarta imagem
 
     stroke(0);
@@ -373,39 +373,39 @@ public class Fase4 extends Tela {
       t16.moveVertice(i, translacao);
 
     // <!-- Resposta 1
-    t1.drawTriangulo();
-    t2.drawTriangulo();
-    t3.drawTriangulo();
+    t1.drawFigura();
+    t2.drawFigura();
+    t3.drawFigura();
     stroke(255,0,0);
-    t4.drawTriangulo();
+    t4.drawFigura();
     stroke(0);
     // -->
 
     // <!-- Resposta 2
-    t5.drawTriangulo();
+    t5.drawFigura();
     stroke(255,0,0);
-    t6.drawTriangulo();
+    t6.drawFigura();
     stroke(0);
-    t7.drawTriangulo();
-    t8.drawTriangulo();
+    t7.drawFigura();
+    t8.drawFigura();
     // -->
 
     // <!-- Resposta 3
     stroke(255,0,0);
-    t9.drawTriangulo();
+    t9.drawFigura();
     stroke(0);
-    t10.drawTriangulo();
-    t11.drawTriangulo();
-    t12.drawTriangulo();
+    t10.drawFigura();
+    t11.drawFigura();
+    t12.drawFigura();
     // -->
 
     // <!-- Resposta 4
-    t13.drawTriangulo();
-    t14.drawTriangulo();
+    t13.drawFigura();
+    t14.drawFigura();
     stroke(255,0,0);
-    t15.drawTriangulo();
+    t15.drawFigura();
     stroke(0);
-    t16.drawTriangulo();
+    t16.drawFigura();
     //-->
 
   }

@@ -29,7 +29,7 @@ public class Fase8 extends Tela {
       s1.moveVertice(i, translacao);
     }
     
-    s1.drawSeta();
+    s1.drawFigura();
     
     fill(0,0,0);
     textSize(40);
@@ -43,7 +43,7 @@ public class Fase8 extends Tela {
       s2.moveVertice(i, translacao);
     }
     
-    s2.drawSeta();
+    s2.drawFigura();
     
     fill(0,0,0);
     textSize(40);
@@ -57,7 +57,7 @@ public class Fase8 extends Tela {
       s3.moveVertice(i, translacao);
     }
     
-    s3.drawSeta();
+    s3.drawFigura();
     
     fill(0,0,0);
     textSize(40);
@@ -71,7 +71,7 @@ public class Fase8 extends Tela {
       s4.moveVertice(i, translacao);
     }
     
-    s4.drawSeta();
+    s4.drawFigura();
     
     fill(0,0,0);
     textSize(40);
@@ -95,7 +95,7 @@ public class Fase8 extends Tela {
       l1.moveVertice(i, translacao);
     }
     
-    l1.drawTriangulo();
+    l1.drawFigura();
     
     Triangulo l13 = new Triangulo(verticesT);
     translacao[0][0] += 20;
@@ -111,7 +111,7 @@ public class Fase8 extends Tela {
       l13.moveVertice(i, translacao);
     }
     
-    l13.drawTriangulo();
+    l13.drawFigura();
     
     Triangulo l14 = new Triangulo(verticesT);
     translacao[1][0] += 30;
@@ -126,7 +126,7 @@ public class Fase8 extends Tela {
       l14.moveVertice(i, translacao);
     }
     
-    l14.drawTriangulo();
+    l14.drawFigura();
     
     Triangulo l15 = new Triangulo(verticesT);
     translacao[1][0] += 30;
@@ -141,7 +141,7 @@ public class Fase8 extends Tela {
       l15.moveVertice(i, translacao);
     }
     
-    l15.drawTriangulo();
+    l15.drawFigura();
     
     Triangulo l16 = new Triangulo(verticesT);
     translacao[1][0] += 115;
@@ -156,7 +156,7 @@ public class Fase8 extends Tela {
       l16.moveVertice(i, translacao);
     }
     
-    l16.drawTriangulo();
+    l16.drawFigura();
     
     Triangulo l17 = new Triangulo(verticesT);
     translacao[1][0] += 30;
@@ -171,7 +171,7 @@ public class Fase8 extends Tela {
       l17.moveVertice(i, translacao);
     }
     
-    l17.drawTriangulo();
+    l17.drawFigura();
     
     Triangulo l18 = new Triangulo(verticesT);
     translacao[1][0] += 30;
@@ -186,7 +186,7 @@ public class Fase8 extends Tela {
       l18.moveVertice(i, translacao);
     }
     
-    l18.drawTriangulo();
+    l18.drawFigura();
     
     Triangulo l19 = new Triangulo(verticesT);
     translacao[1][0] += 115;
@@ -201,7 +201,7 @@ public class Fase8 extends Tela {
       l19.moveVertice(i, translacao);
     }
     
-    l19.drawTriangulo();
+    l19.drawFigura();
     
     Triangulo l20 = new Triangulo(verticesT);
     translacao[1][0] += 30;
@@ -216,7 +216,7 @@ public class Fase8 extends Tela {
       l20.moveVertice(i, translacao);
     }
     
-    l20.drawTriangulo();
+    l20.drawFigura();
     
     Triangulo l23 = new Triangulo(verticesT);
     translacao[1][0] += 175;
@@ -231,7 +231,7 @@ public class Fase8 extends Tela {
       l23.moveVertice(i, translacao);
     }
     
-    l23.drawTriangulo();
+    l23.drawFigura();
     
     translacao[0][0] -= 20;
     
@@ -244,7 +244,7 @@ public class Fase8 extends Tela {
       l2.moveVertice(i, translacao);
     }
     
-    l2.drawTriangulo();
+    l2.drawFigura();
     
     Triangulo l5 = new Triangulo(verticesT);
 
@@ -254,7 +254,7 @@ public class Fase8 extends Tela {
       l5.moveVertice(i, translacao);
     }
     
-    l5.drawTriangulo();
+    l5.drawFigura();
     
     Triangulo l8 = new Triangulo(verticesT);
 
@@ -264,7 +264,7 @@ public class Fase8 extends Tela {
       l8.moveVertice(i, translacao);
     }
     
-    l8.drawTriangulo();
+    l8.drawFigura();
     
     Triangulo l11 = new Triangulo(verticesT);
 
@@ -274,7 +274,7 @@ public class Fase8 extends Tela {
       l11.moveVertice(i, translacao);
     }
     
-    l11.drawTriangulo();
+    l11.drawFigura();
     
     Triangulo l3 = new Triangulo(verticesT);
 
@@ -284,7 +284,7 @@ public class Fase8 extends Tela {
       l3.moveVertice(i, translacao);
     }
     
-    l3.drawTriangulo();
+    l3.drawFigura();
     
     Triangulo l6 = new Triangulo(verticesT);
 
@@ -294,7 +294,7 @@ public class Fase8 extends Tela {
       l6.moveVertice(i, translacao);
     }
     
-    l6.drawTriangulo();
+    l6.drawFigura();
     
     Triangulo l9 = new Triangulo(verticesT);
 
@@ -304,7 +304,7 @@ public class Fase8 extends Tela {
       l9.moveVertice(i, translacao);
     }
     
-    l9.drawTriangulo();
+    l9.drawFigura();
     
     Triangulo l12 = new Triangulo(verticesT);
 
@@ -314,7 +314,7 @@ public class Fase8 extends Tela {
       l12.moveVertice(i, translacao);
     }
     
-    l12.drawTriangulo();
+    l12.drawFigura();
     
 
   }
@@ -345,7 +345,7 @@ public class Fase8 extends Tela {
       s1.moveVertice(i, translacao);
     }
     
-    s1.drawSeta();
+    s1.drawFigura();
     
     Triangulo l13 = new Triangulo(verticesT);
     translacao[0][0] += 35;
@@ -361,7 +361,7 @@ public class Fase8 extends Tela {
       l13.moveVertice(i, translacao);
     }
     
-    l13.drawTriangulo();
+    l13.drawFigura();
     
     translacao[1][0] += 30;
     
@@ -378,7 +378,7 @@ public class Fase8 extends Tela {
       l15.moveVertice(i, translacao);
     }
     
-    l15.drawTriangulo();
+    l15.drawFigura();
     
     translacao[0][0] += 300;
     translacao[1][0] = 830;
@@ -396,7 +396,7 @@ public class Fase8 extends Tela {
       l17.moveVertice(i, translacao);
     }
     
-    l17.drawTriangulo();
+    l17.drawFigura();
     
     Triangulo l18 = new Triangulo(verticesT);
     translacao[1][0] += 30;
@@ -411,7 +411,7 @@ public class Fase8 extends Tela {
       l18.moveVertice(i, translacao);
     }
     
-    l18.drawTriangulo();
+    l18.drawFigura();
 
     translacao[0][0] += 300;
     translacao[1][0] = 830;
@@ -432,7 +432,7 @@ public class Fase8 extends Tela {
       l21.moveVertice(i, translacao);
     }
     
-    l21.drawTriangulo();
+    l21.drawFigura();
     
     translacao[0][0] += 300;
     translacao[1][0] = 830;
@@ -450,7 +450,7 @@ public class Fase8 extends Tela {
       l23.moveVertice(i, translacao);
     }
     
-    l23.drawTriangulo();
+    l23.drawFigura();
     
     Triangulo l1 = new Triangulo(verticesT);
 
@@ -461,7 +461,7 @@ public class Fase8 extends Tela {
       l1.moveVertice(i, translacao);
     }
     
-    l1.drawTriangulo();
+    l1.drawFigura();
     
     Triangulo l11 = new Triangulo(verticesT);
 
@@ -471,7 +471,7 @@ public class Fase8 extends Tela {
       l11.moveVertice(i, translacao);
     }
     
-    l11.drawTriangulo();
+    l11.drawFigura();
     
     Triangulo l12 = new Triangulo(verticesT);
 
@@ -481,7 +481,7 @@ public class Fase8 extends Tela {
       l12.moveVertice(i, translacao);
     }
     
-    l12.drawTriangulo();
+    l12.drawFigura();
     
     Triangulo l2 = new Triangulo(verticesT);
 
@@ -492,7 +492,7 @@ public class Fase8 extends Tela {
       l2.moveVertice(i, translacao);
     }
     
-    l2.drawTriangulo();
+    l2.drawFigura();
     
     Triangulo l3 = new Triangulo(verticesT);
 
@@ -502,7 +502,7 @@ public class Fase8 extends Tela {
       l3.moveVertice(i, translacao);
     }
     
-    l3.drawTriangulo();
+    l3.drawFigura();
     
     translacao[1][0] += 30;
     
@@ -515,7 +515,7 @@ public class Fase8 extends Tela {
       l5.moveVertice(i, translacao);
     }
     
-    l5.drawTriangulo();
+    l5.drawFigura();
     
     Triangulo l6 = new Triangulo(verticesT);
 
@@ -525,7 +525,7 @@ public class Fase8 extends Tela {
       l6.moveVertice(i, translacao);
     }
     
-    l6.drawTriangulo();
+    l6.drawFigura();
 
     //Draw do triângulo com os vértices
     translacao[1][0] += 30;
@@ -543,7 +543,7 @@ public class Fase8 extends Tela {
       l9.moveVertice(i, translacao);
     }
     
-    l9.drawTriangulo();
+    l9.drawFigura();
     
     //Segunda resposta com a seta
     translacao[0][0] = 400;
@@ -555,7 +555,7 @@ public class Fase8 extends Tela {
       s2.moveVertice(i, translacao);
     }
     
-    s2.drawSeta();
+    s2.drawFigura();
     
     //Terceira resposta com a seta
     translacao[0][0] += 300;
@@ -566,7 +566,7 @@ public class Fase8 extends Tela {
       s3.moveVertice(i, translacao);
     }
     
-    s3.drawSeta();
+    s3.drawFigura();
     
     //Quarta resposta com a seta
     
@@ -578,7 +578,7 @@ public class Fase8 extends Tela {
       s4.moveVertice(i, translacao);
     }
     
-    s4.drawSeta();
+    s4.drawFigura();
   }
 
 }

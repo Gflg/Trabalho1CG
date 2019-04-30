@@ -30,7 +30,7 @@ public class Fase1 extends Tela {
     for (int i = 0; i < verticesTriangulo.length; i++){
       t1.moveVertice(i, translacao);
     }
-    t1.drawTriangulo();
+    t1.drawFigura();
 
     //As próximas coisas criadas serão pintadas de preto
     fill(0, 0, 0);
@@ -53,7 +53,7 @@ public class Fase1 extends Tela {
         t2.transformaVertice(i, escala);
     }
 
-    t2.drawTriangulo();
+    t2.drawFigura();
 
   }
 

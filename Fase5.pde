@@ -19,7 +19,7 @@ public class Fase5 extends Tela {
     verticesTriangulo[2] = new Vertice(50, -100);
     /*Triangulo t1 = new Triangulo(verticesTriangulo);
     //Draw do triângulo com os vértices
-    t1.drawTriangulo();*/
+    t1.drawFigura();*/
     
     Triangulo t5 = new Triangulo(verticesTriangulo);
     
@@ -27,7 +27,7 @@ public class Fase5 extends Tela {
       t5.moveVertice(i, translacao);
     }
     
-    t5.drawTriangulo();
+    t5.drawFigura();
     
     translacao[0][0] += 450;
     
@@ -37,7 +37,7 @@ public class Fase5 extends Tela {
       t9.moveVertice(i, translacao);
     }
     
-    t9.drawTriangulo();
+    t9.drawFigura();
     
     //As próximas coisas criadas serão pintadas de preto
     fill(0, 0, 0);
@@ -56,7 +56,7 @@ public class Fase5 extends Tela {
         t2.moveVertice(i, reflexao);
     }
 
-    t2.drawTriangulo();
+    t2.drawFigura();
     
     translacao[0][0] += 450;
     
@@ -68,7 +68,7 @@ public class Fase5 extends Tela {
         t6.moveVertice(i, reflexao);
     }
     
-    t6.drawTriangulo();
+    t6.drawFigura();
     
     translacao[0][0] += 450;
     
@@ -80,7 +80,7 @@ public class Fase5 extends Tela {
         t10.moveVertice(i, reflexao);
     }
     
-    t10.drawTriangulo();*/
+    t10.drawFigura();*/
     
     translacao[0][0] = 100;
     translacao[1][0] = 350;    
@@ -93,7 +93,7 @@ public class Fase5 extends Tela {
     for (int i = 0; i < verticesTrianguloH.length; i++){
       t3.moveVertice(i, translacao);
     }
-    t3.drawTriangulo();
+    t3.drawFigura();
     
     translacao[0][0] += 450;
     
@@ -103,7 +103,7 @@ public class Fase5 extends Tela {
       t7.moveVertice(i, translacao);
     }
     
-    t7.drawTriangulo();
+    t7.drawFigura();
     
     translacao[0][0] += 450;
     
@@ -113,7 +113,7 @@ public class Fase5 extends Tela {
       t11.moveVertice(i, translacao);
     }
     
-    t11.drawTriangulo();
+    t11.drawFigura();
     
     reflexao[0][0] = 2*(verticesTrianguloH[0].getX() - verticesTrianguloH[2].getX());
     reflexao[1][0] = 0;
@@ -127,7 +127,7 @@ public class Fase5 extends Tela {
         t4.moveVertice(i, reflexao);
     }
     
-    t4.drawTriangulo();
+    t4.drawFigura();
     
     translacao[0][0] += 450;
     
@@ -139,7 +139,7 @@ public class Fase5 extends Tela {
         t8.moveVertice(i, reflexao);
     }
     
-    t8.drawTriangulo();*/
+    t8.drawFigura();*/
     
     translacao[0][0] += 450;
     
@@ -151,7 +151,7 @@ public class Fase5 extends Tela {
         t12.moveVertice(i, reflexao);
     }
     
-    t12.drawTriangulo();
+    t12.drawFigura();
   }
 
   private void drawQuadrado() {
@@ -257,7 +257,7 @@ public class Fase5 extends Tela {
     for (int i = 0; i < verticesTriangulo.length; i++){
       t1.moveVertice(i, translacao);
     }
-    t1.drawTriangulo();
+    t1.drawFigura();
     
     
     float[][] reflexao = {{0},{2*(verticesTriangulo[0].getY() - verticesTriangulo[2].getY())}};
@@ -271,7 +271,7 @@ public class Fase5 extends Tela {
         t2.moveVertice(i, reflexao);
     }
 
-    t2.drawTriangulo();
+    t2.drawFigura();
     
     translacao[0][0] = 100;
     translacao[1][0] = 825;
@@ -281,7 +281,7 @@ public class Fase5 extends Tela {
     verticesTrianguloH[2] = new Vertice(-50, 25);
     /*Triangulo t3 = new Triangulo(verticesTrianguloH);
     
-    t3.drawTriangulo();*/
+    t3.drawFigura();*/
     
     reflexao[0][0] = 2*(verticesTrianguloH[0].getX() - verticesTrianguloH[2].getX());
     reflexao[1][0] = 0;
@@ -295,7 +295,7 @@ public class Fase5 extends Tela {
         t4.moveVertice(i, reflexao);
     }
     
-    t4.drawTriangulo();
+    t4.drawFigura();
     
     //Segunda resposta
     
@@ -321,7 +321,7 @@ public class Fase5 extends Tela {
       t5.moveVertice(i, translacao);
     }
     
-    t5.drawTriangulo();*/
+    t5.drawFigura();*/
     
     reflexao[0][0] = 0;
     reflexao[1][0] = 2*(verticesTriangulo[0].getY() - verticesTriangulo[2].getY());
@@ -334,7 +334,7 @@ public class Fase5 extends Tela {
         t6.moveVertice(i, reflexao);
     }
     
-    t6.drawTriangulo();
+    t6.drawFigura();
     
     translacao[0][0] = 400;
     translacao[1][0] = 825;
@@ -345,7 +345,7 @@ public class Fase5 extends Tela {
       t7.moveVertice(i, translacao);
     }
     
-    t7.drawTriangulo();
+    t7.drawFigura();
     
     reflexao[0][0] = 2*(verticesTrianguloH[0].getX() - verticesTrianguloH[2].getX());
     reflexao[1][0] = 0;
@@ -359,7 +359,7 @@ public class Fase5 extends Tela {
         t8.moveVertice(i, reflexao);
     }
     
-    t8.drawTriangulo();
+    t8.drawFigura();
     
     //Terceira resposta
     translacao[1][0] = 825;
@@ -384,7 +384,7 @@ public class Fase5 extends Tela {
       t9.moveVertice(i, translacao);
     }
     
-    t9.drawTriangulo();
+    t9.drawFigura();
     
     reflexao[0][0] = 0;
     reflexao[1][0] = 2*(verticesTriangulo[0].getY() - verticesTriangulo[2].getY());
@@ -397,7 +397,7 @@ public class Fase5 extends Tela {
         t10.moveVertice(i, reflexao);
     }
     
-    t10.drawTriangulo();
+    t10.drawFigura();
     
     translacao[0][0] = 700;
     translacao[1][0] = 825;
@@ -408,7 +408,7 @@ public class Fase5 extends Tela {
       t11.moveVertice(i, translacao);
     }
     
-    t11.drawTriangulo();
+    t11.drawFigura();
     
     /*Triangulo t12 = new Triangulo(verticesTrianguloH);
     
@@ -418,7 +418,7 @@ public class Fase5 extends Tela {
         t12.moveVertice(i, reflexao);
     }
     
-    t12.drawTriangulo();*/
+    t12.drawFigura();*/
     
     //Quarta resposta
     translacao[1][0] = 825;
@@ -443,7 +443,7 @@ public class Fase5 extends Tela {
       t13.moveVertice(i, translacao);
     }
     
-    t13.drawTriangulo();
+    t13.drawFigura();
     
     translacao[1][0] += 50;
     
@@ -458,7 +458,7 @@ public class Fase5 extends Tela {
         t14.moveVertice(i, reflexao);
     }
     
-    t14.drawTriangulo();
+    t14.drawFigura();
     
     
     /*Triangulo t15 = new Triangulo(verticesTrianguloH);
@@ -467,7 +467,7 @@ public class Fase5 extends Tela {
       t15.moveVertice(i, translacao);
     }
     
-    t15.drawTriangulo();*/
+    t15.drawFigura();*/
     
     reflexao[0][0] = 2*(verticesTrianguloH[0].getX() - verticesTrianguloH[2].getX());
     reflexao[1][0] = 0;
@@ -482,7 +482,7 @@ public class Fase5 extends Tela {
         t16.moveVertice(i, reflexao);
     }
     
-    t16.drawTriangulo();
+    t16.drawFigura();
   }
 
 }
