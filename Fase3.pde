@@ -1,6 +1,6 @@
 public class Fase3 extends Tela {
 
-  float[][] rotacao = new float[2][2];
+  float[][] rotacao = new float[3][3];
 
   public Fase3() {
     super(4); //Parâmetro para o construtor da super classe é a posição (número) da resposta correta
@@ -16,16 +16,18 @@ public class Fase3 extends Tela {
     rotacao[0][1] = -sin(angulo);
     rotacao[1][0] = sin(angulo);
     rotacao[1][1] = cos(angulo);
+    rotacao[2][0] = 0;
+    rotacao[2][1] = 0;
   }
 
   private void drawRetangulos() {
-    float[][] translacao = {{550},{0}};
+    float[][] translacao = {{550}, {0}, {0}};
     //Criando os vértices do Retângulo
     Vertice[] verticesRetangulo = new Vertice[4];
-    verticesRetangulo[0] = new Vertice(0, 0);
-    verticesRetangulo[1] = new Vertice(50, 0);
-    verticesRetangulo[2] = new Vertice(0, 100);
-    verticesRetangulo[3] = new Vertice(50, 100);
+    verticesRetangulo[0] = new Vertice(0, 0, 0);
+    verticesRetangulo[1] = new Vertice(50, 0, 0);
+    verticesRetangulo[2] = new Vertice(0, 100, 0);
+    verticesRetangulo[3] = new Vertice(50, 100, 0);
 
     Quadrilatero q1 = new Quadrilatero(verticesRetangulo);
 
@@ -88,13 +90,13 @@ public class Fase3 extends Tela {
     // Desenhando área padrão de resposta
     super.drawRespostas();
     
-    float[][] translacao = {{100},{800}};
+    float[][] translacao = {{100}, {800}, {0}};
     //Criando os vértices do Retângulo
     Vertice[] verticesRetangulo = new Vertice[4];
-    verticesRetangulo[0] = new Vertice(0, 0);
-    verticesRetangulo[1] = new Vertice(50, 0);
-    verticesRetangulo[2] = new Vertice(0, 100);
-    verticesRetangulo[3] = new Vertice(50, 100);
+    verticesRetangulo[0] = new Vertice(0, 0, 0);
+    verticesRetangulo[1] = new Vertice(50, 0, 0);
+    verticesRetangulo[2] = new Vertice(0, 100, 0);
+    verticesRetangulo[3] = new Vertice(50, 100, 0);
 
     Quadrilatero q1 = new Quadrilatero(verticesRetangulo);
     
@@ -110,10 +112,10 @@ public class Fase3 extends Tela {
     translacao[1][0] = 0;
     
     Vertice[] verticesRetangulo2 = new Vertice[4];
-    verticesRetangulo2[0] = new Vertice(0, 0);
-    verticesRetangulo2[1] = new Vertice(100, 0);
-    verticesRetangulo2[2] = new Vertice(0, 50);
-    verticesRetangulo2[3] = new Vertice(100, 50);
+    verticesRetangulo2[0] = new Vertice(0, 0, 0);
+    verticesRetangulo2[1] = new Vertice(100, 0, 0);
+    verticesRetangulo2[2] = new Vertice(0, 50, 0);
+    verticesRetangulo2[3] = new Vertice(100, 50, 0);
     
     translacao[0][0] += 375;
     translacao[1][0] += 825;

@@ -12,16 +12,16 @@ public class Fase1 extends Tela {
   }
 
   private void drawTriangulo() {
-    float[][] translacao = {{200},{200}};
+    float[][] translacao = {{200}, {200}, {0}};
     //Criando os vértices do Triângulo
     
     Vertice[] verticesTriangulo = new Vertice[3];
-    verticesTriangulo[0] = new Vertice(200, 0);
-    verticesTriangulo[1] = new Vertice(300, 0);
-    verticesTriangulo[2] = new Vertice(250, -100);
+    verticesTriangulo[0] = new Vertice(200, 0, 0);
+    verticesTriangulo[1] = new Vertice(300, 0, 0);
+    verticesTriangulo[2] = new Vertice(250, -100, 0);
     Triangulo t1 = new Triangulo(verticesTriangulo);
 
-    float[][] escala = {{1,0},{0,0.7}};
+    float[][] escala = {{1, 0}, {0, 0.7}, {0, 0}};
 
     //As próximas coisas criadas serão pintadas de vermelho
     stroke(255, 0, 0);
@@ -58,16 +58,16 @@ public class Fase1 extends Tela {
   }
 
   private void drawRetangulo() {
-    float[][] translacao = {{400},{350}};
+    float[][] translacao = {{400}, {350}, {0}};
     //Criando vértices do Retângulo
     Vertice[] verticesQuadrilatero = new Vertice[4];
-    verticesQuadrilatero[0] = new Vertice(0, 0);
-    verticesQuadrilatero[1] = new Vertice(100, 0);
-    verticesQuadrilatero[2] = new Vertice(0, 100);
-    verticesQuadrilatero[3] = new Vertice(100, 100);
+    verticesQuadrilatero[0] = new Vertice(0, 0, 0);
+    verticesQuadrilatero[1] = new Vertice(100, 0, 0);
+    verticesQuadrilatero[2] = new Vertice(0, 100, 0);
+    verticesQuadrilatero[3] = new Vertice(100, 100, 0);
     Quadrilatero q1 = new Quadrilatero(verticesQuadrilatero);
 
-    float[][] escala = {{1,0},{0,0.75}};
+    float[][] escala = {{1, 0}, {0, 0.75}, {0, 0}};
 
     //As próximas coisas serão pintadas de verde
     stroke(0, 180, 0);
@@ -103,13 +103,13 @@ public class Fase1 extends Tela {
   }
 
   private void drawLosango() {
-    float[][] translacao = {{400},{550}};
+    float[][] translacao = {{400}, {550}, {0}};
     //Criando vértices do Losango
     Vertice[] verticesQuadrilatero2 = new Vertice[4];
-    verticesQuadrilatero2[0] = new Vertice(0, 0);
-    verticesQuadrilatero2[1] = new Vertice(100, 0);
-    verticesQuadrilatero2[2] = new Vertice(-50, 150);
-    verticesQuadrilatero2[3] = new Vertice(150, 150);
+    verticesQuadrilatero2[0] = new Vertice(0, 0, 0);
+    verticesQuadrilatero2[1] = new Vertice(100, 0, 0);
+    verticesQuadrilatero2[2] = new Vertice(-50, 150, 0);
+    verticesQuadrilatero2[3] = new Vertice(150, 150, 0);
 
     Quadrilatero l1 = new Quadrilatero(verticesQuadrilatero2);
 
@@ -132,19 +132,19 @@ public class Fase1 extends Tela {
   protected void drawRespostas() {
     // Desenhando área padrão de resposta
     super.drawRespostas();
-    float[][] translacao = {{80},{840}};
+    float[][] translacao = {{80}, {840}, {0}};
 
 
     Vertice[] verticesQuadrilatero3 = new Vertice[4];
-    verticesQuadrilatero3[0] = new Vertice(0, 0);
-    verticesQuadrilatero3[1] = new Vertice(100, 0);
-    verticesQuadrilatero3[2] = new Vertice(-50, 100);
-    verticesQuadrilatero3[3] = new Vertice(150, 100);
+    verticesQuadrilatero3[0] = new Vertice(0, 0, 0);
+    verticesQuadrilatero3[1] = new Vertice(100, 0, 0);
+    verticesQuadrilatero3[2] = new Vertice(-50, 100, 0);
+    verticesQuadrilatero3[3] = new Vertice(150, 100, 0);
 
     Quadrilatero l1 = new Quadrilatero(verticesQuadrilatero3);
-    float[][] escalaCerta = {{1,0},{0,0.9}};
-    float[][] escalaErrada = {{0.9,0},{0,1}};
-    float[][] escalaErrada2 = {{1.1,0},{0,1}};
+    float[][] escalaCerta = {{1, 0}, {0, 0.9}, {0, 0}};
+    float[][] escalaErrada = {{0.9, 0}, {0, 1}, {0, 0}};
+    float[][] escalaErrada2 = {{1.1, 0},{0, 1}, {0, 0}};
 
     //As próximas coisas serão pintadas de azul
     stroke(255, 0, 0);

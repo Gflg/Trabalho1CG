@@ -15,12 +15,12 @@ public abstract class Tela {
   public Tela(int idResposta) {
     this.idResposta = idResposta;
     this.deslocamentoX = 315;
-    this.baseRespostaMin = new Vertice(225, 775);
-    this.baseRespostaMax = new Vertice(275, 825);
-    this.resposta1 = new Quadrilatero(baseRespostaMin.getX(), baseRespostaMin.getY(), 50, 50);
-    this.resposta2 = new Quadrilatero(baseRespostaMin.getX() + deslocamentoX, baseRespostaMin.getY(), 50, 50);
-    this.resposta3 = new Quadrilatero(baseRespostaMin.getX() + deslocamentoX * 2, baseRespostaMin.getY(), 50, 50);
-    this.resposta4 = new Quadrilatero(baseRespostaMin.getX() + deslocamentoX * 3, baseRespostaMin.getY(), 50, 50);
+    this.baseRespostaMin = new Vertice(225, 775, 0);
+    this.baseRespostaMax = new Vertice(275, 825, 0);
+    this.resposta1 = new Quadrilatero(baseRespostaMin.getX(), baseRespostaMin.getY(), baseRespostaMin.getZ(), 50, 50);
+    this.resposta2 = new Quadrilatero(baseRespostaMin.getX() + deslocamentoX, baseRespostaMin.getY(), baseRespostaMin.getZ(), 50, 50);
+    this.resposta3 = new Quadrilatero(baseRespostaMin.getX() + deslocamentoX * 2, baseRespostaMin.getY(), baseRespostaMin.getZ(), 50, 50);
+    this.resposta4 = new Quadrilatero(baseRespostaMin.getX() + deslocamentoX * 3, baseRespostaMin.getY(), baseRespostaMin.getZ(), 50, 50);
   }
 
   public abstract void drawTela();
@@ -28,7 +28,7 @@ public abstract class Tela {
   // Desenha área padrão de respostas
   protected void drawRespostas() {
     stroke(0,0,0);
-    Quadrilatero fundo = new Quadrilatero(25, 750, 1235, 220);
+    Quadrilatero fundo = new Quadrilatero(25, 750, 0, 1235, 220);
     fundo.drawFigura();
     stroke(180);
     fundo.pintaFundo();

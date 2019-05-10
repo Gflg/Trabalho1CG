@@ -1,7 +1,7 @@
 public class Seta extends FiguraGeometrica {
 
   public Seta(Vertice[] verticesSeta){
-    super(2, verticesSeta.length);
+    super(3, verticesSeta.length);
     this.vertices[0] = new Vertice(verticesSeta[0]);
     this.vertices[1] = new Vertice(verticesSeta[1]);
     this.vertices[2] = new Vertice(verticesSeta[2]);

@@ -12,8 +12,8 @@ public class Fase11 extends Tela {
   private void drawDecagonos() {
 
     //Criando os vértices do Decágono
-    float[][] translacao = {{240},{360}};
-    Vertice pontaDoDecagono1 = new Vertice(0, 0);
+    float[][] translacao = {{240}, {360}, {0}};
+    Vertice pontaDoDecagono1 = new Vertice(0, 0, 0);
     Decagono decagono1 = new Decagono(pontaDoDecagono1);
 
     stroke(163, 16, 163);
@@ -25,12 +25,13 @@ public class Fase11 extends Tela {
 
     fill(0, 0, 0);
 
-    float[][] escala = {{1.5,0},{0,1.5}};
+    float[][] escala = {{1.5, 0}, {0, 1.5}, {0, 0}};
 
     Decagono decagono2 = new Decagono(pontaDoDecagono1);
 
     translacao[0][0] -= 80;
     translacao[1][0] -= 145;
+    translacao[2][0] -= 0;
     
     for (int i = 0; i < decagono2.vertices.length; i++){
       decagono2.moveVertice(i, translacao);
@@ -49,7 +50,7 @@ public class Fase11 extends Tela {
     //Criando os vértices do Decágono
     translacao[0][0] = 650;
     translacao[1][0] = 360;
-    Vertice pontaDoDecagono3 = new Vertice(0, 0);
+    Vertice pontaDoDecagono3 = new Vertice(0, 0, 0);
     Decagono decagono3 = new Decagono(pontaDoDecagono3);
 
     stroke(0, 128, 0);
@@ -61,7 +62,7 @@ public class Fase11 extends Tela {
 
     fill(0, 0, 0);
 
-    float[][] escala2 = {{1.2,0},{0,1.2}};
+    float[][] escala2 = {{1.2, 0}, {0, 1.2}, {0, 0}};
 
     Decagono decagono4 = new Decagono(pontaDoDecagono3);
     
@@ -84,7 +85,7 @@ public class Fase11 extends Tela {
     //Criando os vértices do Decágono
     translacao[0][0] = 1000;
     translacao[1][0] = 360;
-    Vertice pontaDoDecagono5 = new Vertice(0, 0);
+    Vertice pontaDoDecagono5 = new Vertice(0, 0, 0);
     Decagono decagono5 = new Decagono(pontaDoDecagono5);
 
     stroke(0, 128, 0);
@@ -96,12 +97,10 @@ public class Fase11 extends Tela {
 
     fill(0, 0, 0);
 
-    float[][] escala3 = {{0.8,0},{0,0.8}};
+    float[][] escala3 = {{0.8, 0}, {0, 0.8}, {0, 0}};
 
     Decagono decagono6 = new Decagono(pontaDoDecagono5);
 
-    float[][] translacao3 = {{250},{110}};
-    
     translacao[0][0] += 250;
     translacao[1][0] += 110;
     
@@ -127,9 +126,9 @@ public class Fase11 extends Tela {
 
     //<---- RESPOSTA 1 ---->
     //Criando os vértices do Decágono
-    float[][] translacao = {{120},{800}};
+    float[][] translacao = {{120}, {800}, {0}};
 
-    Vertice pontaDoDecagono1 = new Vertice(0, 0);
+    Vertice pontaDoDecagono1 = new Vertice(0, 0, 0);
     Decagono decagono1 = new Decagono(pontaDoDecagono1);
 
     stroke(0, 128, 0);
@@ -141,7 +140,7 @@ public class Fase11 extends Tela {
 
     fill(0, 0, 0);
 
-    float[][] escala = {{1.5,0},{0,1.5}};
+    float[][] escala = {{1.5, 0}, {0, 1.5}, {0, 0}};
 
     Decagono decagono2 = new Decagono(pontaDoDecagono1);
 
@@ -162,7 +161,7 @@ public class Fase11 extends Tela {
     translacao[0][0] = 400;
     translacao[1][0] = 800;
     
-    Vertice pontaDoDecagono3 = new Vertice(0, 0);
+    Vertice pontaDoDecagono3 = new Vertice(0, 0, 0);
     Decagono decagono3 = new Decagono(pontaDoDecagono3);
 
     stroke(163, 16, 163);
@@ -174,7 +173,7 @@ public class Fase11 extends Tela {
 
     fill(0, 0, 0);
 
-    float[][] escala3 = {{0.8,0},{0,0.8}};
+    float[][] escala3 = {{0.8, 0}, {0, 0.8}, {0, 0}};
 
     Decagono decagono4 = new Decagono(pontaDoDecagono3);
 
@@ -195,7 +194,7 @@ public class Fase11 extends Tela {
     //Criando os vértices do Decágono
     translacao[0][0] = 730;
     translacao[1][0] = 800;
-    Vertice pontaDoDecagono5 = new Vertice(0, 0);
+    Vertice pontaDoDecagono5 = new Vertice(0, 0, 0);
     Decagono decagono5 = new Decagono(pontaDoDecagono5);
 
     stroke(163, 16, 163);
@@ -207,7 +206,7 @@ public class Fase11 extends Tela {
 
     fill(0, 0, 0);
 
-    float[][] escala4 = {{0.6,0},{0,0.6}};
+    float[][] escala4 = {{0.6, 0}, {0, 0.6}, {0, 0}};
 
     Decagono decagono6 = new Decagono(pontaDoDecagono5);
 
@@ -228,7 +227,7 @@ public class Fase11 extends Tela {
     //Criando os vértices do Decágono
     translacao[0][0] = 1030;
     translacao[1][0] = 800;
-    Vertice pontaDoDecagono7 = new Vertice(0, 0);
+    Vertice pontaDoDecagono7 = new Vertice(0, 0, 0);
     Decagono decagono7 = new Decagono(pontaDoDecagono7);
 
     stroke(0, 128, 0);
@@ -240,7 +239,7 @@ public class Fase11 extends Tela {
 
     fill(0, 0, 0);
 
-    float[][] escala5 = {{0.6,0},{0,0.6}};
+    float[][] escala5 = {{0.6, 0}, {0, 0.6}, {0, 0}};
 
     Decagono decagono8 = new Decagono(pontaDoDecagono7);
 

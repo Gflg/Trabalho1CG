@@ -1,17 +1,17 @@
 public class Decagono extends FiguraGeometrica {
 
   public Decagono(Vertice pontaDecagono){
-    super(2, 10);
+    super(3, 10);
     this.vertices[0] = new Vertice(pontaDecagono);
-    this.vertices[1] = new Vertice(pontaDecagono.getX() - 40, pontaDecagono.getY() + 30);
-    this.vertices[2] = new Vertice(pontaDecagono.getX() + 40, pontaDecagono.getY() + 30);
-    this.vertices[3] = new Vertice(pontaDecagono.getX() - 60, pontaDecagono.getY() + 60);
-    this.vertices[4] = new Vertice(pontaDecagono.getX() + 60, pontaDecagono.getY() + 60);
-    this.vertices[5] = new Vertice(pontaDecagono.getX() - 60, pontaDecagono.getY() + 90);
-    this.vertices[6] = new Vertice(pontaDecagono.getX() + 60, pontaDecagono.getY() + 90);
-    this.vertices[7] = new Vertice(pontaDecagono.getX() - 40, pontaDecagono.getY() + 120);
-    this.vertices[8] = new Vertice(pontaDecagono.getX() + 40, pontaDecagono.getY() + 120);
-    this.vertices[9] = new Vertice(pontaDecagono.getX(), pontaDecagono.getY() + 130);
+    this.vertices[1] = new Vertice(pontaDecagono.getX() - 40, pontaDecagono.getY() + 30, pontaDecagono.getZ());
+    this.vertices[2] = new Vertice(pontaDecagono.getX() + 40, pontaDecagono.getY() + 30, pontaDecagono.getZ());
+    this.vertices[3] = new Vertice(pontaDecagono.getX() - 60, pontaDecagono.getY() + 60, pontaDecagono.getZ());
+    this.vertices[4] = new Vertice(pontaDecagono.getX() + 60, pontaDecagono.getY() + 60, pontaDecagono.getZ());
+    this.vertices[5] = new Vertice(pontaDecagono.getX() - 60, pontaDecagono.getY() + 90, pontaDecagono.getZ());
+    this.vertices[6] = new Vertice(pontaDecagono.getX() + 60, pontaDecagono.getY() + 90, pontaDecagono.getZ());
+    this.vertices[7] = new Vertice(pontaDecagono.getX() - 40, pontaDecagono.getY() + 120, pontaDecagono.getZ());
+    this.vertices[8] = new Vertice(pontaDecagono.getX() + 40, pontaDecagono.getY() + 120, pontaDecagono.getZ());
+    this.vertices[9] = new Vertice(pontaDecagono.getX(), pontaDecagono.getY() + 130, pontaDecagono.getZ());
     Aresta[] arestas = new Aresta[10];
     arestas[0] = new Aresta(vertices[0], vertices[1]);
     arestas[1] = new Aresta(vertices[0], vertices[2]);

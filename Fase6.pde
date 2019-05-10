@@ -12,17 +12,17 @@ public class Fase6 extends Tela {
   }
 
   private void drawL() {
-    float[][] translacao = {{200},{50}};
+    float[][] translacao = {{200}, {50}, {0}};
     //Criando os vértices do Triângulo
     Vertice[] verticesL = new Vertice[8];
-    verticesL[0] = new Vertice(0, 0);
-    verticesL[1] = new Vertice(120, 0);
-    verticesL[2] = new Vertice(0, 40);
-    verticesL[3] = new Vertice(120, 40);
-    verticesL[4] = new Vertice(80, 40);
-    verticesL[5] = new Vertice(120, 40);
-    verticesL[6] = new Vertice(80, 80);
-    verticesL[7] = new Vertice(120, 80);
+    verticesL[0] = new Vertice(0, 0, 0);
+    verticesL[1] = new Vertice(120, 0, 0);
+    verticesL[2] = new Vertice(0, 40, 0);
+    verticesL[3] = new Vertice(120, 40, 0);
+    verticesL[4] = new Vertice(80, 40, 0);
+    verticesL[5] = new Vertice(120, 40, 0);
+    verticesL[6] = new Vertice(80, 80, 0);
+    verticesL[7] = new Vertice(120, 80, 0);
     LouTouZ l1 = new LouTouZ(verticesL);
 
     //Draw do triângulo com os vértices
@@ -91,17 +91,17 @@ public class Fase6 extends Tela {
   }
 
   private void drawT() {
-    float[][] translacao = {{200},{250}};
+    float[][] translacao = {{200}, {250}, {0}};
     //Criando os vértices do Triângulo
     Vertice[] verticesT = new Vertice[8];
-    verticesT[0] = new Vertice(0, 0);
-    verticesT[1] = new Vertice(120, 0);
-    verticesT[2] = new Vertice(0, 40);
-    verticesT[3] = new Vertice(120, 40);
-    verticesT[4] = new Vertice(40, 40);
-    verticesT[5] = new Vertice(80, 40);
-    verticesT[6] = new Vertice(40, 80);
-    verticesT[7] = new Vertice(80, 80);
+    verticesT[0] = new Vertice(0, 0, 0);
+    verticesT[1] = new Vertice(120, 0, 0);
+    verticesT[2] = new Vertice(0, 40, 0);
+    verticesT[3] = new Vertice(120, 40, 0);
+    verticesT[4] = new Vertice(40, 40, 0);
+    verticesT[5] = new Vertice(80, 40, 0);
+    verticesT[6] = new Vertice(40, 80, 0);
+    verticesT[7] = new Vertice(80, 80, 0);
     LouTouZ l1 = new LouTouZ(verticesT);
 
     //Draw do triângulo com os vértices
@@ -169,17 +169,17 @@ public class Fase6 extends Tela {
   }
   
   private void drawZ() {
-    float[][] translacao = {{200},{500}};
+    float[][] translacao = {{200}, {500}, {0}};
     //Criando os vértices do Triângulo
     Vertice[] verticesZ = new Vertice[8];
-    verticesZ[0] = new Vertice(0, 0);
-    verticesZ[1] = new Vertice(80, 0);
-    verticesZ[2] = new Vertice(0, 40);
-    verticesZ[3] = new Vertice(80, 40);
-    verticesZ[4] = new Vertice(40, 40);
-    verticesZ[5] = new Vertice(120, 40);
-    verticesZ[6] = new Vertice(40, 80);
-    verticesZ[7] = new Vertice(120, 80);
+    verticesZ[0] = new Vertice(0, 0, 0);
+    verticesZ[1] = new Vertice(80, 0, 0);
+    verticesZ[2] = new Vertice(0, 40, 0);
+    verticesZ[3] = new Vertice(80, 40, 0);
+    verticesZ[4] = new Vertice(40, 40, 0);
+    verticesZ[5] = new Vertice(120, 40, 0);
+    verticesZ[6] = new Vertice(40, 80, 0);
+    verticesZ[7] = new Vertice(120, 80, 0);
     LouTouZ l1 = new LouTouZ(verticesZ);
 
     //Draw do triângulo com os vértices
@@ -231,17 +231,17 @@ public class Fase6 extends Tela {
     // Desenhando área padrão de resposta
     super.drawRespostas();
     
-    float[][] translacao = {{100},{850}};
+    float[][] translacao = {{100}, {850}, {0}};
     //Criando os vértices do Triângulo
     Vertice[] verticesZ = new Vertice[8];
-    verticesZ[0] = new Vertice(0, 0);
-    verticesZ[1] = new Vertice(80, 0);
-    verticesZ[2] = new Vertice(0, 40);
-    verticesZ[3] = new Vertice(80, 40);
-    verticesZ[4] = new Vertice(40, 40);
-    verticesZ[5] = new Vertice(120, 40);
-    verticesZ[6] = new Vertice(40, 80);
-    verticesZ[7] = new Vertice(120, 80);
+    verticesZ[0] = new Vertice(0, 0, 0);
+    verticesZ[1] = new Vertice(80, 0, 0);
+    verticesZ[2] = new Vertice(0, 40, 0);
+    verticesZ[3] = new Vertice(80, 40, 0);
+    verticesZ[4] = new Vertice(40, 40, 0);
+    verticesZ[5] = new Vertice(120, 40, 0);
+    verticesZ[6] = new Vertice(40, 80, 0);
+    verticesZ[7] = new Vertice(120, 80, 0);
     
     //Primeira resposta
     LouTouZ z1 = new LouTouZ(verticesZ);

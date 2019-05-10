@@ -28,14 +28,14 @@ public class Fase10 extends Tela {
   }
 
   private void drawAmpulhetas() {
-    float[][] translacao = {{600},{100}};
+    float[][] translacao = {{600}, {100}, {0}};
     //Criando os vértices do Triângulo
     Vertice[] verticesAmpulheta = new Vertice[5];
-    verticesAmpulheta[0] = new Vertice(0, 0);
-    verticesAmpulheta[1] = new Vertice(-25, -50);
-    verticesAmpulheta[2] = new Vertice(25, -50);
-    verticesAmpulheta[3] = new Vertice(25, 50);
-    verticesAmpulheta[4] = new Vertice(-25, 50);
+    verticesAmpulheta[0] = new Vertice(0, 0, 0);
+    verticesAmpulheta[1] = new Vertice(-25, -50, 0);
+    verticesAmpulheta[2] = new Vertice(25, -50, 0);
+    verticesAmpulheta[3] = new Vertice(25, 50, 0);
+    verticesAmpulheta[4] = new Vertice(-25, 50, 0);
     Ampulheta a1 = new Ampulheta(verticesAmpulheta);
 
     //Draw do triângulo com os vértices
@@ -116,13 +116,13 @@ public class Fase10 extends Tela {
     // Desenhando área padrão de resposta
     super.drawRespostas();
     
-    float[][] translacao = {{displayWidth/11},{0.8*displayHeight}};
+    float[][] translacao = {{displayWidth/11}, {0.8*displayHeight}, {0}};
     Vertice[] verticesAmpulheta = new Vertice[5];
-    verticesAmpulheta[0] = new Vertice(0, 0);
-    verticesAmpulheta[1] = new Vertice(-25, -50);
-    verticesAmpulheta[2] = new Vertice(25, -50);
-    verticesAmpulheta[3] = new Vertice(25, 50);
-    verticesAmpulheta[4] = new Vertice(-25, 50);
+    verticesAmpulheta[0] = new Vertice(0, 0, 0);
+    verticesAmpulheta[1] = new Vertice(-25, -50, 0);
+    verticesAmpulheta[2] = new Vertice(25, -50, 0);
+    verticesAmpulheta[3] = new Vertice(25, 50, 0);
+    verticesAmpulheta[4] = new Vertice(-25, 50, 0);
     
     Ampulheta a1 = new Ampulheta(verticesAmpulheta);
     

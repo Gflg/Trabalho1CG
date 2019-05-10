@@ -11,16 +11,16 @@ public class Fase8 extends Tela {
   }
 
   private void drawSeta() {
-    float[][] translacao = {{600},{0}};
+    float[][] translacao = {{600}, {0}, {0}};
     //Criando os vértices do Triângulo
     Vertice[] verticesSeta = new Vertice[7];
-    verticesSeta[0] = new Vertice(0, 0);
-    verticesSeta[1] = new Vertice(0, 50);
-    verticesSeta[2] = new Vertice(50, 0);
-    verticesSeta[3] = new Vertice(50, 50);
-    verticesSeta[4] = new Vertice(-50, 50);
-    verticesSeta[5] = new Vertice(100, 50);
-    verticesSeta[6] = new Vertice(25, 100);
+    verticesSeta[0] = new Vertice(0, 0, 0);
+    verticesSeta[1] = new Vertice(0, 50, 0);
+    verticesSeta[2] = new Vertice(50, 0, 0);
+    verticesSeta[3] = new Vertice(50, 50, 0);
+    verticesSeta[4] = new Vertice(-50, 50, 0);
+    verticesSeta[5] = new Vertice(100, 50, 0);
+    verticesSeta[6] = new Vertice(25, 100, 0);
     Seta s1 = new Seta(verticesSeta);
 
     //Draw do triângulo com os vértices
@@ -79,14 +79,14 @@ public class Fase8 extends Tela {
   }
 
   private void drawTriangulo() {
-    float[][] translacao = {{615},{10}};
-    float[][] reflexaoY = {{1,0},{0,-1}};
-    float[][] reflexaoX = {{-1,0},{0,1}};
+    float[][] translacao = {{615}, {10}, {0}};
+    float[][] reflexaoY = {{1, 0},{0, -1}, {0}};
+    float[][] reflexaoX = {{-1, 0},{0, 1}, {0}};
     //Criando os vértices do Triângulo
     Vertice[] verticesT = new Vertice[3];
-    verticesT[0] = new Vertice(0, 0);
-    verticesT[1] = new Vertice(20, 0);
-    verticesT[2] = new Vertice(0, 20);
+    verticesT[0] = new Vertice(0, 0, 0);
+    verticesT[1] = new Vertice(20, 0, 0);
+    verticesT[2] = new Vertice(0, 20, 0);
     Triangulo l1 = new Triangulo(verticesT);
 
     //Draw do triângulo com os vértices
@@ -323,22 +323,22 @@ public class Fase8 extends Tela {
     // Desenhando área padrão de resposta
     super.drawRespostas();
     
-    float[][] translacao = {{100},{800}};
+    float[][] translacao = {{100}, {800}, {0}};
     float[][] reflexaoY = {{1,0},{0,-1}};
     float[][] reflexaoX = {{-1,0},{0,1}};
     //Criando os vértices do Triângulo
     Vertice[] verticesT = new Vertice[3];
-    verticesT[0] = new Vertice(0, 0);
-    verticesT[1] = new Vertice(20, 0);
-    verticesT[2] = new Vertice(0, 20);
+    verticesT[0] = new Vertice(0, 0, 0);
+    verticesT[1] = new Vertice(20, 0, 0);
+    verticesT[2] = new Vertice(0, 20, 0);
     Vertice[] verticesSeta = new Vertice[7];
-    verticesSeta[0] = new Vertice(0, 0);
-    verticesSeta[1] = new Vertice(0, 50);
-    verticesSeta[2] = new Vertice(50, 0);
-    verticesSeta[3] = new Vertice(50, 50);
-    verticesSeta[4] = new Vertice(-50, 50);
-    verticesSeta[5] = new Vertice(100, 50);
-    verticesSeta[6] = new Vertice(25, 100);
+    verticesSeta[0] = new Vertice(0, 0, 0);
+    verticesSeta[1] = new Vertice(0, 50, 0);
+    verticesSeta[2] = new Vertice(50, 0, 0);
+    verticesSeta[3] = new Vertice(50, 50, 0);
+    verticesSeta[4] = new Vertice(-50, 50, 0);
+    verticesSeta[5] = new Vertice(100, 50, 0);
+    verticesSeta[6] = new Vertice(25, 100, 0);
     Seta s1 = new Seta(verticesSeta);
     
     for (int i = 0; i < verticesSeta.length; i++){

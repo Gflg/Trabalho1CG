@@ -1,7 +1,7 @@
 public class Giro extends FiguraGeometrica {
 
   public Giro(Vertice[] verticesGiro){
-    super(2, verticesGiro.length);
+    super(3, verticesGiro.length);
     this.vertices[0] = new Vertice(verticesGiro[0]);
     this.vertices[1] = new Vertice(verticesGiro[1]);
     this.vertices[2] = new Vertice(verticesGiro[2]);

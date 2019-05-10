@@ -1,7 +1,7 @@
 public class Quadrilatero extends FiguraGeometrica {
 
   public Quadrilatero(Vertice[] verticesQuadrilatero){
-    super(2, verticesQuadrilatero.length);
+    super(3, verticesQuadrilatero.length);
     this.vertices[0] = new Vertice(verticesQuadrilatero[0]);
     this.vertices[1] = new Vertice(verticesQuadrilatero[1]);
     this.vertices[2] = new Vertice(verticesQuadrilatero[2]);
@@ -16,12 +16,12 @@ public class Quadrilatero extends FiguraGeometrica {
     transformacaoCoordenadas(this.vertices);
   }
   
-  public Quadrilatero(float primeiroPontoX, float primeiroPontoY, float largura, float altura) {
-    super(2, 4);
-    this.vertices[0] = new Vertice(primeiroPontoX, primeiroPontoY);
-    this.vertices[1] = new Vertice(primeiroPontoX + largura, primeiroPontoY);
-    this.vertices[2] = new Vertice(primeiroPontoX, primeiroPontoY + altura);
-    this.vertices[3] = new Vertice(primeiroPontoX + largura, primeiroPontoY + altura);
+  public Quadrilatero(float primeiroPontoX, float primeiroPontoY, float primeiroPontoZ, float largura, float altura) {
+    super(3, 4);
+    this.vertices[0] = new Vertice(primeiroPontoX, primeiroPontoY, primeiroPontoZ);
+    this.vertices[1] = new Vertice(primeiroPontoX + largura, primeiroPontoY, primeiroPontoZ);
+    this.vertices[2] = new Vertice(primeiroPontoX, primeiroPontoY + altura, primeiroPontoZ);
+    this.vertices[3] = new Vertice(primeiroPontoX + largura, primeiroPontoY + altura, primeiroPontoZ);
     Aresta[] arestas = new Aresta[4];
     arestas[0] = new Aresta(vertices[0], vertices[1]);
     arestas[1] = new Aresta(vertices[0], vertices[2]);

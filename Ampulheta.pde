@@ -1,7 +1,7 @@
 public class Ampulheta extends FiguraGeometrica {
 
   public Ampulheta(Vertice[] verticesAmpulheta){
-    super(2, verticesAmpulheta.length);
+    super(3, verticesAmpulheta.length);
     this.vertices[0] = new Vertice(verticesAmpulheta[0]);
     this.vertices[1] = new Vertice(verticesAmpulheta[1]);
     this.vertices[2] = new Vertice(verticesAmpulheta[2]);

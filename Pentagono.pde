@@ -1,12 +1,12 @@
 public class Pentagono extends FiguraGeometrica {
 
   public Pentagono(Vertice pontaPentagono){
-    super(2, 5);
+    super(3, 5);
     this.vertices[0] = new Vertice(pontaPentagono);
-    this.vertices[1] = new Vertice(pontaPentagono.getX() - 35, pontaPentagono.getY() + 30);
-    this.vertices[2] = new Vertice(pontaPentagono.getX() + 35, pontaPentagono.getY() + 30);
-    this.vertices[3] = new Vertice(pontaPentagono.getX() - 25, pontaPentagono.getY() + 70);
-    this.vertices[4] = new Vertice(pontaPentagono.getX() + 25, pontaPentagono.getY() + 70);
+    this.vertices[1] = new Vertice(pontaPentagono.getX() - 35, pontaPentagono.getY() + 30, pontaPentagono.getZ());
+    this.vertices[2] = new Vertice(pontaPentagono.getX() + 35, pontaPentagono.getY() + 30, pontaPentagono.getZ());
+    this.vertices[3] = new Vertice(pontaPentagono.getX() - 25, pontaPentagono.getY() + 70, pontaPentagono.getZ());
+    this.vertices[4] = new Vertice(pontaPentagono.getX() + 25, pontaPentagono.getY() + 70, pontaPentagono.getZ());
     
     Aresta[] arestas = new Aresta[5];
     arestas[0] = new Aresta(vertices[0], vertices[1]);

@@ -10,13 +10,13 @@ public class Fase2 extends Tela {
   }
 
   private void drawRetangulos() {
-    float[][] translacao = {{550},{0}};
+    float[][] translacao = {{550}, {0}, {0}};
     //Criando os vértices do Retângulo
     Vertice[] verticesRetangulo = new Vertice[4];
-    verticesRetangulo[0] = new Vertice(0, 0);
-    verticesRetangulo[1] = new Vertice(100, 0);
-    verticesRetangulo[2] = new Vertice(0, 100);
-    verticesRetangulo[3] = new Vertice(100, 100);
+    verticesRetangulo[0] = new Vertice(0, 0, 0);
+    verticesRetangulo[1] = new Vertice(100, 0, 0);
+    verticesRetangulo[2] = new Vertice(0, 100, 0);
+    verticesRetangulo[3] = new Vertice(100, 100, 0);
 
     Quadrilatero q1 = new Quadrilatero(verticesRetangulo);
 
@@ -109,14 +109,14 @@ public class Fase2 extends Tela {
   protected void drawRespostas() {
     // Desenhando área padrão de resposta
     super.drawRespostas();
-    float[][] translacao = {{60},{800}};
+    float[][] translacao = {{60}, {800}, {0}};
 
     //Criando os vértices do Retângulo
     Vertice[] verticesRetangulo = new Vertice[4];
-    verticesRetangulo[0] = new Vertice(0, 0);
-    verticesRetangulo[1] = new Vertice(80, 0);
-    verticesRetangulo[2] = new Vertice(0, 100);
-    verticesRetangulo[3] = new Vertice(80, 100);
+    verticesRetangulo[0] = new Vertice(0, 0, 0);
+    verticesRetangulo[1] = new Vertice(80, 0, 0);
+    verticesRetangulo[2] = new Vertice(0, 100, 0);
+    verticesRetangulo[3] = new Vertice(80, 100, 0);
 
     Quadrilatero q1 = new Quadrilatero(verticesRetangulo);
 

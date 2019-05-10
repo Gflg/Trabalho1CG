@@ -1,7 +1,7 @@
 public class LouTouZ extends FiguraGeometrica {
 
   public LouTouZ(Vertice[] verticesLouTouZ){
-    super(2, verticesLouTouZ.length);
+    super(3, verticesLouTouZ.length);
     this.vertices[0] = new Vertice(verticesLouTouZ[0]);
     this.vertices[1] = new Vertice(verticesLouTouZ[1]);
     this.vertices[2] = new Vertice(verticesLouTouZ[2]);

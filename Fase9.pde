@@ -10,18 +10,18 @@ public class Fase9 extends Tela {
   }
 
   private void drawGiros() {
-    float[][] translacao = {{600},{100}};
+    float[][] translacao = {{600}, {100}, {0}};
     //Criando os vértices do Triângulo
     Vertice[] verticesGiro = new Vertice[9];
-    verticesGiro[0] = new Vertice(0, 0);
-    verticesGiro[1] = new Vertice(0, -100);
-    verticesGiro[2] = new Vertice(50, -50);
-    verticesGiro[3] = new Vertice(100, 0);
-    verticesGiro[4] = new Vertice(50, 50);
-    verticesGiro[5] = new Vertice(0, 100);
-    verticesGiro[6] = new Vertice(-50, 50);
-    verticesGiro[7] = new Vertice(-100, 0);
-    verticesGiro[8] = new Vertice(-50, -50);
+    verticesGiro[0] = new Vertice(0, 0, 0);
+    verticesGiro[1] = new Vertice(0, -100, 0);
+    verticesGiro[2] = new Vertice(50, -50, 0);
+    verticesGiro[3] = new Vertice(100, 0, 0);
+    verticesGiro[4] = new Vertice(50, 50, 0);
+    verticesGiro[5] = new Vertice(0, 100, 0);
+    verticesGiro[6] = new Vertice(-50, 50, 0);
+    verticesGiro[7] = new Vertice(-100, 0, 0);
+    verticesGiro[8] = new Vertice(-50, -50, 0);
     Giro g1 = new Giro(verticesGiro);
 
     //Draw do triângulo com os vértices
@@ -110,21 +110,21 @@ public class Fase9 extends Tela {
     // Desenhando área padrão de resposta
     super.drawRespostas();
     
-    float[][] translacao = {{140},{850}};
-    //Criando os vértices do Triângulo
+    float[][] translacao = {{140}, {850}, {0}};
+    //Criando os vértices do Giro
     Vertice[] verticesGiro = new Vertice[9];
-    verticesGiro[0] = new Vertice(0, 0);
-    verticesGiro[1] = new Vertice(0, -100);
-    verticesGiro[2] = new Vertice(50, -50);
-    verticesGiro[3] = new Vertice(100, 0);
-    verticesGiro[4] = new Vertice(50, 50);
-    verticesGiro[5] = new Vertice(0, 100);
-    verticesGiro[6] = new Vertice(-50, 50);
-    verticesGiro[7] = new Vertice(-100, 0);
-    verticesGiro[8] = new Vertice(-50, -50);
+    verticesGiro[0] = new Vertice(0, 0, 0);
+    verticesGiro[1] = new Vertice(0, -100, 0);
+    verticesGiro[2] = new Vertice(50, -50, 0);
+    verticesGiro[3] = new Vertice(100, 0, 0);
+    verticesGiro[4] = new Vertice(50, 50, 0);
+    verticesGiro[5] = new Vertice(0, 100, 0);
+    verticesGiro[6] = new Vertice(-50, 50, 0);
+    verticesGiro[7] = new Vertice(-100, 0, 0);
+    verticesGiro[8] = new Vertice(-50, -50, 0);
     Giro g1 = new Giro(verticesGiro);
 
-    //Draw do triângulo com os vértices
+    //Draw do giro com os vértices
     
     for (int i = 0; i < verticesGiro.length; i++){
       g1.moveVertice(i, translacao);

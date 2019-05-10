@@ -31,11 +31,11 @@ public class Fase7 extends Tela {
   
   public void drawEstrelas() {
     
-      float[][] translacao = {{510},{90}};
+      float[][] translacao = {{510}, {90}, {0}};
       fill(0, 0, 0);
       textSize(40);
       
-      Vertice pontaDaEstrela = new Vertice(0, 0);
+      Vertice pontaDaEstrela = new Vertice(0, 0, 0);
       Estrela estrela1 = new Estrela(pontaDaEstrela);      
       stroke(255, 0, 0);
       for (int i = 0; i < estrela1.vertices.length; i++) {
@@ -84,8 +84,8 @@ public class Fase7 extends Tela {
   }
   
   public void drawPentagonos() {
-     float[][] translacao = {{510},{240}};
-     Vertice pontaPentagono = new Vertice(0, 0);
+     float[][] translacao = {{510}, {240}, {0}};
+     Vertice pontaPentagono = new Vertice(0, 0, 0);
      
      Pentagono pentagono1 = new Pentagono(pontaPentagono);
      stroke(163, 16, 163);
@@ -122,9 +122,9 @@ public class Fase7 extends Tela {
   
   public void drawRespostas() {
       super.drawRespostas();
-      float[][] translacao = {{120},{800}};
+      float[][] translacao = {{120}, {800}, {0}};
       
-      Vertice pontaDaEstrela = new Vertice(0, 0);
+      Vertice pontaDaEstrela = new Vertice(0, 0, 0);
       Estrela estrela = new Estrela(pontaDaEstrela);
       stroke(255, 0, 0);
       for (int i = 0; i < estrela.vertices.length; i++) {
@@ -133,7 +133,7 @@ public class Fase7 extends Tela {
       estrela.drawFigura();
       
       
-      Vertice pontaDoPentagono = new Vertice(0, 0);
+      Vertice pontaDoPentagono = new Vertice(0, 0, 0);
       Pentagono pentagono1 = new Pentagono(pontaDoPentagono);
       translacao[0][0] += 300;
       for (int i = 0; i < pentagono1.vertices.length; i++) {
