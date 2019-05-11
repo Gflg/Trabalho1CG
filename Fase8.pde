@@ -105,9 +105,10 @@ public class Fase8 extends Tela {
     verticesT[1] = new Vertice(20, 0, 0);
     verticesT[2] = new Vertice(0, 20, 0);
 
-    Triangulo l1 = new Triangulo(verticesT);
+    //Desenhando triângulos da seta 1
+    Triangulo t1s1 = new Triangulo(verticesT);
 
-    translacao[0][0] = 610;
+    translacao[0][0] = 615;
     translacao[0][1] = 0;
     translacao[1][0] = 10;
     translacao[1][1] = 0;
@@ -115,12 +116,12 @@ public class Fase8 extends Tela {
     translacao[2][1] = 0;
 
     for (int i = 0; i < verticesT.length; i++){
-      l1.moveVertice(i, translacao);
+      t1s1.moveVertice(i, translacao);
     }
 
-    l1.drawFigura();
+    t1s1.drawFigura();
 
-    Triangulo l13 = new Triangulo(verticesT);
+    Triangulo t2s1 = new Triangulo(verticesT);
 
     translacao[0][0] += 20;
     translacao[1][0] += 20;
@@ -141,226 +142,239 @@ public class Fase8 extends Tela {
 
     for (int i = 0; i < verticesT.length; i++){
       if(i==1){
-        l13.transformaVertice(i, reflexaoX);
+        t2s1.transformaVertice(i, reflexaoX);
       }
       else if(i==2){
-        l13.transformaVertice(i, reflexaoY);
+        t2s1.transformaVertice(i, reflexaoY);
       }
-      l13.moveVertice(i, translacao);
+      t2s1.moveVertice(i, translacao);
     }
 
-    l13.drawFigura();
+    t2s1.drawFigura();
 
-    Triangulo l14 = new Triangulo(verticesT);
-
-    translacao[1][0] += 30;
-
-    for (int i = 0; i < verticesT.length; i++){
-      if(i==1){
-        l14.transformaVertice(i, reflexaoX);
-      }
-      else if(i==2){
-        l14.transformaVertice(i, reflexaoY);
-      }
-      l14.moveVertice(i, translacao);
-    }
-
-    l14.drawFigura();
-
-    Triangulo l15 = new Triangulo(verticesT);
-
-    translacao[1][0] += 30;
-
-    for (int i = 0; i < verticesT.length; i++){
-      if(i==1){
-        l15.transformaVertice(i, reflexaoX);
-      }
-      else if(i==2){
-        l15.transformaVertice(i, reflexaoY);
-      }
-      l15.moveVertice(i, translacao);
-    }
-
-    l15.drawFigura();
-
-    Triangulo l16 = new Triangulo(verticesT);
-
-    translacao[1][0] += 115;
-
-    for (int i = 0; i < verticesT.length; i++){
-      if(i==1){
-        l16.transformaVertice(i, reflexaoX);
-      }
-      else if(i==2){
-        l16.transformaVertice(i, reflexaoY);
-      }
-      l16.moveVertice(i, translacao);
-    }
-
-    l16.drawFigura();
-
-    Triangulo l17 = new Triangulo(verticesT);
-
-    translacao[1][0] += 30;
-
-    for (int i = 0; i < verticesT.length; i++){
-      if(i==1){
-        l17.transformaVertice(i, reflexaoX);
-      }
-      else if(i==2){
-        l17.transformaVertice(i, reflexaoY);
-      }
-      l17.moveVertice(i, translacao);
-    }
-
-    l17.drawFigura();
-
-    Triangulo l18 = new Triangulo(verticesT);
-
-    translacao[1][0] += 30;
-
-    for (int i = 0; i < verticesT.length; i++){
-      if(i==1){
-        l18.transformaVertice(i, reflexaoX);
-      }
-      else if(i==2){
-        l18.transformaVertice(i, reflexaoY);
-      }
-      l18.moveVertice(i, translacao);
-    }
-
-    l18.drawFigura();
-
-    Triangulo l19 = new Triangulo(verticesT);
-
-    translacao[1][0] += 115;
-
-    for (int i = 0; i < verticesT.length; i++){
-      if(i==1){
-        l19.transformaVertice(i, reflexaoX);
-      }
-      else if(i==2){
-        l19.transformaVertice(i, reflexaoY);
-      }
-      l19.moveVertice(i, translacao);
-    }
-
-    l19.drawFigura();
-
-    Triangulo l20 = new Triangulo(verticesT);
-
-    translacao[1][0] += 30;
-
-    for (int i = 0; i < verticesT.length; i++){
-      if(i==1){
-        l20.transformaVertice(i, reflexaoX);
-      }
-      else if(i==2){
-        l20.transformaVertice(i, reflexaoY);
-      }
-      l20.moveVertice(i, translacao);
-    }
-
-    l20.drawFigura();
-
-    Triangulo l23 = new Triangulo(verticesT);
-
-    translacao[1][0] += 175;
-
-    for (int i = 0; i < verticesT.length; i++){
-      if(i==1){
-        l23.transformaVertice(i, reflexaoX);
-      }
-      else if(i==2){
-        l23.transformaVertice(i, reflexaoY);
-      }
-      l23.moveVertice(i, translacao);
-    }
-
-    l23.drawFigura();
-
-    Triangulo l2 = new Triangulo(verticesT);
+    Triangulo t3s1 = new Triangulo(verticesT);
 
     translacao[0][0] -= 20;
-    translacao[1][0] = 40;
+    translacao[1][0] += 10;
 
     for (int i = 0; i < verticesT.length; i++){
-      l2.moveVertice(i, translacao);
+      t3s1.moveVertice(i, translacao);
     }
 
-    l2.drawFigura();
+    t3s1.drawFigura();
 
-    Triangulo l5 = new Triangulo(verticesT);
+    Triangulo t4s1 = new Triangulo(verticesT);
 
-    translacao[1][0] += 175;
+    translacao[0][0] += 20;
+    translacao[1][0] += 20;
 
     for (int i = 0; i < verticesT.length; i++){
-      l5.moveVertice(i, translacao);
+      if(i==1){
+        t4s1.transformaVertice(i, reflexaoX);
+      }
+      else if(i==2){
+        t4s1.transformaVertice(i, reflexaoY);
+      }
+      t4s1.moveVertice(i, translacao);
     }
 
-    l5.drawFigura();
+    t4s1.drawFigura();
 
-    Triangulo l8 = new Triangulo(verticesT);
+    Triangulo t5s1 = new Triangulo(verticesT);
 
-    translacao[1][0] += 175;
+    translacao[0][0] -= 20;
+    translacao[1][0] += 10;
 
     for (int i = 0; i < verticesT.length; i++){
-      l8.moveVertice(i, translacao);
+      t5s1.moveVertice(i, translacao);
     }
 
-    l8.drawFigura();
+    t5s1.drawFigura();
 
-    Triangulo l11 = new Triangulo(verticesT);
+    Triangulo t6s1 = new Triangulo(verticesT);
 
-    translacao[1][0] = 840;
-    translacao[0][0] = 115;
+    translacao[0][0] += 20;
+    translacao[1][0] += 20;
 
     for (int i = 0; i < verticesT.length; i++){
-      l11.moveVertice(i, translacao);
+      if(i==1){
+        t6s1.transformaVertice(i, reflexaoX);
+      }
+      else if(i==2){
+        t6s1.transformaVertice(i, reflexaoY);
+      }
+      t6s1.moveVertice(i, translacao);
     }
 
-    l11.drawFigura();
+    t6s1.drawFigura();
 
-    Triangulo l3 = new Triangulo(verticesT);
+    //Desenhando triângulos da seta 2
+    Triangulo t1s2 = new Triangulo(verticesT);
 
-    translacao[1][0] = 70;
+    translacao[1][0] += 115;
 
     for (int i = 0; i < verticesT.length; i++){
-      l3.moveVertice(i, translacao);
+      if(i==1){
+        t1s2.transformaVertice(i, reflexaoX);
+      }
+      else if(i==2){
+        t1s2.transformaVertice(i, reflexaoY);
+      }
+      t1s2.moveVertice(i, translacao);
     }
 
-    l3.drawFigura();
+    t1s2.drawFigura();
 
-    Triangulo l6 = new Triangulo(verticesT);
+    Triangulo t2s2 = new Triangulo(verticesT);
 
-    translacao[1][0] += 175;
+    translacao[0][0] -= 20;
+    translacao[1][0] += 10;
 
     for (int i = 0; i < verticesT.length; i++){
-      l6.moveVertice(i, translacao);
+      t2s2.moveVertice(i, translacao);
     }
 
-    l6.drawFigura();
+    t2s2.drawFigura();
 
-    Triangulo l9 = new Triangulo(verticesT);
+    Triangulo t3s2 = new Triangulo(verticesT);
 
-    translacao[1][0] += 175;
+    translacao[0][0] += 20;
+    translacao[1][0] += 20;
 
     for (int i = 0; i < verticesT.length; i++){
-      l9.moveVertice(i, translacao);
+      if(i==1){
+        t3s2.transformaVertice(i, reflexaoX);
+      }
+      else if(i==2){
+        t3s2.transformaVertice(i, reflexaoY);
+      }
+      t3s2.moveVertice(i, translacao);
     }
 
-    l9.drawFigura();
+    t3s2.drawFigura();
 
-    Triangulo l12 = new Triangulo(verticesT);
+    Triangulo t4s2 = new Triangulo(verticesT);
 
-    translacao[1][0] = 870;
-    translacao[0][0] = 115;
+    translacao[0][0] -= 20;
+    translacao[1][0] += 10;
 
     for (int i = 0; i < verticesT.length; i++){
-      l12.moveVertice(i, translacao);
+      t4s2.moveVertice(i, translacao);
     }
 
-    l12.drawFigura();
+    t4s2.drawFigura();
+
+    Triangulo t5s2 = new Triangulo(verticesT);
+
+    translacao[0][0] += 20;
+    translacao[1][0] += 20;
+
+    for (int i = 0; i < verticesT.length; i++){
+      if(i==1){
+        t5s2.transformaVertice(i, reflexaoX);
+      }
+      else if(i==2){
+        t5s2.transformaVertice(i, reflexaoY);
+      }
+      t5s2.moveVertice(i, translacao);
+    }
+
+    t5s2.drawFigura();
+
+    //Desenhando triângulos da seta 3
+    Triangulo t1s3 = new Triangulo(verticesT);
+
+    translacao[1][0] += 115;
+
+    for (int i = 0; i < verticesT.length; i++){
+      if(i==1){
+        t1s3.transformaVertice(i, reflexaoX);
+      }
+      else if(i==2){
+        t1s3.transformaVertice(i, reflexaoY);
+      }
+      t1s3.moveVertice(i, translacao);
+    }
+
+    t1s3.drawFigura();
+
+    Triangulo t2s3 = new Triangulo(verticesT);
+
+    translacao[0][0] -= 20;
+    translacao[1][0] += 10;
+
+    for (int i = 0; i < verticesT.length; i++){
+      t2s3.moveVertice(i, translacao);
+    }
+
+    t2s3.drawFigura();
+
+    Triangulo t3s3 = new Triangulo(verticesT);
+
+    translacao[0][0] += 20;
+    translacao[1][0] += 20;
+
+    for (int i = 0; i < verticesT.length; i++){
+      if(i==1){
+        t3s3.transformaVertice(i, reflexaoX);
+      }
+      else if(i==2){
+        t3s3.transformaVertice(i, reflexaoY);
+      }
+      t3s3.moveVertice(i, translacao);
+    }
+
+    t3s3.drawFigura();
+
+    Triangulo t4s3 = new Triangulo(verticesT);
+
+    translacao[0][0] -= 20;
+    translacao[1][0] += 10;
+
+    for (int i = 0; i < verticesT.length; i++){
+      t4s3.moveVertice(i, translacao);
+    }
+
+    t4s3.drawFigura();
+
+    //Desenhando triângulos da seta 4
+    Triangulo t1s4 = new Triangulo(verticesT);
+
+    translacao[1][0] += 145;
+
+    for (int i = 0; i < verticesT.length; i++){
+      t1s4.moveVertice(i, translacao);
+    }
+
+    t1s4.drawFigura();
+
+    Triangulo t2s4 = new Triangulo(verticesT);
+
+    translacao[0][0] += 20;
+    translacao[1][0] += 20;
+
+    for (int i = 0; i < verticesT.length; i++){
+      if(i==1){
+        t2s4.transformaVertice(i, reflexaoX);
+      }
+      else if(i==2){
+        t2s4.transformaVertice(i, reflexaoY);
+      }
+      t2s4.moveVertice(i, translacao);
+    }
+
+    t2s4.drawFigura();
+
+    Triangulo t3s4 = new Triangulo(verticesT);
+
+    translacao[0][0] -= 20;
+    translacao[1][0] += 10;
+
+    for (int i = 0; i < verticesT.length; i++){
+      t3s4.moveVertice(i, translacao);
+    }
+
+    t3s4.drawFigura();
 
   }
 
@@ -396,7 +410,7 @@ public class Fase8 extends Tela {
 
   /* <---- INICIO DA RESPOSTA 1 ----> */
 
-    Seta s1 = new Seta(verticesSeta);
+    Seta s1r1 = new Seta(verticesSeta);
 
     translacao[0][0] = 100;
     translacao[0][1] = 0;
@@ -406,26 +420,26 @@ public class Fase8 extends Tela {
     translacao[2][1] = 0;
 
     for (int i = 0; i < verticesSeta.length; i++){
-      s1.moveVertice(i, translacao);
+      s1r1.moveVertice(i, translacao);
     }
 
-    s1.drawFigura();
+    s1r1.drawFigura();
 
-    Triangulo l1 = new Triangulo(verticesT);
+    Triangulo t1r1 = new Triangulo(verticesT);
 
-    translacao[1][0] = 810;
-    translacao[0][0] = 115;
+    translacao[0][0] += 15;
+    translacao[1][0] += 10;
 
     for (int i = 0; i < verticesT.length; i++){
-      l1.moveVertice(i, translacao);
+      t1r1.moveVertice(i, translacao);
     }
 
-    l1.drawFigura();
+    t1r1.drawFigura();
 
-    Triangulo l13 = new Triangulo(verticesT);
+    Triangulo t2r1 = new Triangulo(verticesT);
 
-    translacao[1][0] += 20;
     translacao[0][0] += 20;
+    translacao[1][0] += 20;
 
     reflexaoX[0][0] = -1;
     reflexaoX[0][1] = 0;
@@ -443,219 +457,219 @@ public class Fase8 extends Tela {
 
     for (int i = 0; i < verticesT.length; i++){
       if(i==1){
-        l13.transformaVertice(i, reflexaoX);
+        t2r1.transformaVertice(i, reflexaoX);
       }
       else if(i==2){
-        l13.transformaVertice(i, reflexaoY);
+        t2r1.transformaVertice(i, reflexaoY);
       }
-      l13.moveVertice(i, translacao);
+      t2r1.moveVertice(i, translacao);
     }
 
-    l13.drawFigura();
+    t2r1.drawFigura();
 
-    Triangulo l11 = new Triangulo(verticesT);
+    Triangulo t3r1 = new Triangulo(verticesT);
 
-    translacao[1][0] += 10;
     translacao[0][0] -= 20;
+    translacao[1][0] += 10;
 
     for (int i = 0; i < verticesT.length; i++){
-      l11.moveVertice(i, translacao);
+      t3r1.moveVertice(i, translacao);
     }
 
-    l11.drawFigura();
+    t3r1.drawFigura();
 
-    Triangulo l12 = new Triangulo(verticesT);
+    Triangulo t4r1 = new Triangulo(verticesT);
 
     translacao[1][0] += 30;
 
     for (int i = 0; i < verticesT.length; i++){
-      l12.moveVertice(i, translacao);
+      t4r1.moveVertice(i, translacao);
     }
 
-    l12.drawFigura();
+    t4r1.drawFigura();
 
-    Triangulo l15 = new Triangulo(verticesT);
+    Triangulo t5r1 = new Triangulo(verticesT);
 
-    translacao[1][0] += 20;
     translacao[0][0] += 20;
+    translacao[1][0] += 20;
 
     for (int i = 0; i < verticesT.length; i++){
       if(i==1){
-        l15.transformaVertice(i, reflexaoX);
+        t5r1.transformaVertice(i, reflexaoX);
       }
       else if(i==2){
-        l15.transformaVertice(i, reflexaoY);
+        t5r1.transformaVertice(i, reflexaoY);
       }
-      l15.moveVertice(i, translacao);
+      t5r1.moveVertice(i, translacao);
     }
 
-    l15.drawFigura();
+    t5r1.drawFigura();
 
   /* <---- FIM DA RESPOSTA 1 ----> */
 
   /* <---- INICIO DA RESPOSTA 2 ----> */
 
-    Seta s2 = new Seta(verticesSeta);
+    Seta s1r2 = new Seta(verticesSeta);
 
-    translacao[0][0] = 400;
-    translacao[1][0] = 800;
+    translacao[0][0] += 265;
+    translacao[1][0] -= 90;
 
     for (int i = 0; i < verticesSeta.length; i++){
-      s2.moveVertice(i, translacao);
+      s1r2.moveVertice(i, translacao);
     }
 
-    s2.drawFigura();
+    s1r2.drawFigura();
 
-    Triangulo l2 = new Triangulo(verticesT);
+    Triangulo t1r2 = new Triangulo(verticesT);
 
-    translacao[1][0] = 810;
-    translacao[0][0] = 415;
+    translacao[0][0] += 15;
+    translacao[1][0] += 10;
 
     for (int i = 0; i < verticesT.length; i++){
-      l2.moveVertice(i, translacao);
+      t1r2.moveVertice(i, translacao);
     }
 
-    l2.drawFigura();
+    t1r2.drawFigura();
 
-    Triangulo l3 = new Triangulo(verticesT);
+    Triangulo t2r2 = new Triangulo(verticesT);
 
     translacao[1][0] += 30;
 
     for (int i = 0; i < verticesT.length; i++){
-      l3.moveVertice(i, translacao);
+      t2r2.moveVertice(i, translacao);
     }
 
-    l3.drawFigura();
+    t2r2.drawFigura();
 
-    Triangulo l17 = new Triangulo(verticesT);
+    Triangulo t3r2 = new Triangulo(verticesT);
 
     translacao[0][0] += 20;
     translacao[1][0] += 20;
 
     for (int i = 0; i < verticesT.length; i++){
       if(i==1){
-        l17.transformaVertice(i, reflexaoX);
+        t3r2.transformaVertice(i, reflexaoX);
       }
       else if(i==2){
-        l17.transformaVertice(i, reflexaoY);
+        t3r2.transformaVertice(i, reflexaoY);
       }
-      l17.moveVertice(i, translacao);
+      t3r2.moveVertice(i, translacao);
     }
 
-    l17.drawFigura();
+    t3r2.drawFigura();
 
-    Triangulo l18 = new Triangulo(verticesT);
+    Triangulo t4r2 = new Triangulo(verticesT);
 
     translacao[1][0] += 30;
 
     for (int i = 0; i < verticesT.length; i++){
       if(i==1){
-        l18.transformaVertice(i, reflexaoX);
+        t4r2.transformaVertice(i, reflexaoX);
       }
       else if(i==2){
-        l18.transformaVertice(i, reflexaoY);
+        t4r2.transformaVertice(i, reflexaoY);
       }
-      l18.moveVertice(i, translacao);
+      t4r2.moveVertice(i, translacao);
     }
 
-    l18.drawFigura();
+    t4r2.drawFigura();
 
   /* <---- FIM DA RESPOSTA 2 ----> */
 
   /* <---- INICIO DA RESPOSTA 3 ----> */
 
-    Seta s3 = new Seta(verticesSeta);
+    Seta s1r3 = new Seta(verticesSeta);
 
-    translacao[0][0] = 700;
-    translacao[1][0] = 800;
+    translacao[0][0] += 265;
+    translacao[1][0] -= 90;
 
     for (int i = 0; i < verticesSeta.length; i++){
-      s3.moveVertice(i, translacao);
+      s1r3.moveVertice(i, translacao);
     }
 
-    s3.drawFigura();
+    s1r3.drawFigura();
 
-    Triangulo l5 = new Triangulo(verticesT);
+    Triangulo t1r3 = new Triangulo(verticesT);
 
-    translacao[1][0] = 810;
-    translacao[0][0] = 715;
+    translacao[0][0] += 15;
+    translacao[1][0] += 10;
 
     for (int i = 0; i < verticesT.length; i++){
-      l5.moveVertice(i, translacao);
+      t1r3.moveVertice(i, translacao);
     }
 
-    l5.drawFigura();
+    t1r3.drawFigura();
 
-    Triangulo l6 = new Triangulo(verticesT);
+    Triangulo t2r3 = new Triangulo(verticesT);
 
     translacao[1][0] += 30;
 
     for (int i = 0; i < verticesT.length; i++){
-      l6.moveVertice(i, translacao);
+      t2r3.moveVertice(i, translacao);
     }
 
-    l6.drawFigura();
+    t2r3.drawFigura();
 
-    Triangulo l21 = new Triangulo(verticesT);
+    Triangulo t3r3 = new Triangulo(verticesT);
 
     translacao[0][0] += 20;
     translacao[1][0] += 50;
 
     for (int i = 0; i < verticesT.length; i++){
       if(i==1){
-        l21.transformaVertice(i, reflexaoX);
+        t3r3.transformaVertice(i, reflexaoX);
       }
       else if(i==2){
-        l21.transformaVertice(i, reflexaoY);
+        t3r3.transformaVertice(i, reflexaoY);
       }
-      l21.moveVertice(i, translacao);
+      t3r3.moveVertice(i, translacao);
     }
 
-    l21.drawFigura();
+    t3r3.drawFigura();
 
   /* <---- FIM DA RESPOSTA 3 ----> */
 
   /* <---- INICIO DA RESPOSTA 4 ----> */
 
-    Seta s4 = new Seta(verticesSeta);
+    Seta s1r4 = new Seta(verticesSeta);
 
-    translacao[0][0] = 1000;
-    translacao[1][0] = 800;
+    translacao[0][0] += 265;
+    translacao[1][0] -= 90;
 
     for (int i = 0; i < verticesSeta.length; i++){
-      s4.moveVertice(i, translacao);
+      s1r4.moveVertice(i, translacao);
     }
 
-    s4.drawFigura();
+    s1r4.drawFigura();
 
-    Triangulo l9 = new Triangulo(verticesT);
+    Triangulo t1r4 = new Triangulo(verticesT);
 
-    translacao[1][0] = 840;
-    translacao[0][0] = 1015;
+    translacao[0][0] += 15;
+    translacao[1][0] += 40;
 
     for (int i = 0; i < verticesT.length; i++){
-      l9.moveVertice(i, translacao);
+      t1r4.moveVertice(i, translacao);
     }
 
-    l9.drawFigura();
+    t1r4.drawFigura();
 
 
-    Triangulo l23 = new Triangulo(verticesT);
+    Triangulo t2r4 = new Triangulo(verticesT);
 
-    translacao[1][0] += 20;
     translacao[0][0] += 20;
+    translacao[1][0] += 20;
 
     for (int i = 0; i < verticesT.length; i++){
       if(i==1){
-        l23.transformaVertice(i, reflexaoX);
+        t2r4.transformaVertice(i, reflexaoX);
       }
       else if(i==2){
-        l23.transformaVertice(i, reflexaoY);
+        t2r4.transformaVertice(i, reflexaoY);
       }
-      l23.moveVertice(i, translacao);
+      t2r4.moveVertice(i, translacao);
     }
 
-    l23.drawFigura();
+    t2r4.drawFigura();
 
   /* <---- FIM DA RESPOSTA 4 ----> */
 
