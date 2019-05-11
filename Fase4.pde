@@ -12,13 +12,6 @@ public class Fase4 extends Tela {
     drawRespostas();
   }
 
-  public void setRotacao(float angulo){
-    rotacao[0][0] = cos(angulo);
-    rotacao[0][1] = -sin(angulo);
-    rotacao[1][0] = sin(angulo);
-    rotacao[1][1] = cos(angulo);
-  }
-
   private void drawSetas() {
     //Criando os vértices do Pentágono
     float[][] translacao = {{600},{60}};

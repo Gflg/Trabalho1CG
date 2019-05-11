@@ -12,14 +12,14 @@ public class Fase10 extends Tela {
     setCisalhamentoY(0.7);
   }
 
-  public void setCisalhamentoX(float k){
+  private void setCisalhamentoX(float k){
     cisalhamentoX[0][0] = 1;
     cisalhamentoX[0][1] = k;
     cisalhamentoX[1][0] = 0;
     cisalhamentoX[1][1] = 1;
   }
 
-  public void setCisalhamentoY(float k){
+  private void setCisalhamentoY(float k){
     cisalhamentoY[0][0] = 1;
     cisalhamentoY[0][1] = 0;
     cisalhamentoY[1][0] = k;

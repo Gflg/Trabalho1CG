@@ -11,7 +11,7 @@ public class Fase3 extends Tela {
     drawRespostas();
   }
 
-  public void setRotacao(float angulo){
+  private void setRotacao(float angulo){
     rotacao[0][0] = cos(angulo);
     rotacao[0][1] = -sin(angulo);
     rotacao[1][0] = sin(angulo);
