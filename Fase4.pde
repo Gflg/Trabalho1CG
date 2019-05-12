@@ -411,7 +411,7 @@ public class Fase4 extends Tela {
     for (int i = 0; i < verticesTrianguloBaseDireita.length; i++)
       t16.moveVertice(i, translacao);
 
-  /* <---- INICIO DO DESENHO DA IMAGEM 1 ----> */
+  /* <---- INICIO DO DESENHO DA RESPOSTA 1 ----> */
 
     t1.drawFigura();
 
@@ -425,9 +425,9 @@ public class Fase4 extends Tela {
 
     stroke(0);
 
-  /* <---- FIM DO DESENHO DA IMAGEM 1 ----> */
+  /* <---- FIM DO DESENHO DA RESPOSTA 1 ----> */
 
-  /* <---- INICIO DO DESENHO DA IMAGEM 2 ----> */
+  /* <---- INICIO DO DESENHO DA RESPOSTA 2 ----> */
 
     t5.drawFigura();
 
@@ -441,9 +441,9 @@ public class Fase4 extends Tela {
 
     t8.drawFigura();
 
-  /* <---- FIM DO DESENHO DA IMAGEM 2 ----> */
+  /* <---- FIM DO DESENHO DA RESPOSTA 2 ----> */
 
-  /* <---- INICIO DO DESENHO DA IMAGEM 3 ----> */
+  /* <---- INICIO DO DESENHO DA RESPOSTA 3 ----> */
 
     stroke(255, 0, 0);
 
@@ -457,9 +457,9 @@ public class Fase4 extends Tela {
 
     t12.drawFigura();
 
-  /* <---- FIM DO DESENHO DA IMAGEM 3 ----> */
+  /* <---- FIM DO DESENHO DA RESPOSTA 3 ----> */
 
-  /* <---- INICIO DO DESENHO DA IMAGEM 4 ----> */
+  /* <---- INICIO DO DESENHO DA RESPOSTA 4 ----> */
 
     t13.drawFigura();
 
@@ -473,7 +473,7 @@ public class Fase4 extends Tela {
 
     t16.drawFigura();
 
-  /* <---- FIM DO DESENHO DA IMAGEM 4 ----> */
+  /* <---- FIM DO DESENHO DA RESPOSTA 4 ----> */
 
   }
 
