@@ -10,7 +10,10 @@ public class Fase2 extends Tela {
   }
 
   private void drawRetangulos() {
-    float[][] translacao = {{550}, {0}, {0}};
+
+    //Array de translacao
+    float[][] translacao = new float[3][3];
+
     //Criando os vértices do Retângulo
     Vertice[] verticesRetangulo = new Vertice[4];
     verticesRetangulo[0] = new Vertice(0, 0, 0);
@@ -20,96 +23,103 @@ public class Fase2 extends Tela {
 
     Quadrilatero q1 = new Quadrilatero(verticesRetangulo);
 
+    translacao[0][0] = 550;
+    translacao[0][1] = 0;
+    translacao[1][0] = 0;
+    translacao[1][1] = 0;
+    translacao[2][0] = 0;
+    translacao[2][1] = 0;
+
     stroke(0);
 
-    //Draw do retângulo com os vértices
     for (int i = 0; i < verticesRetangulo.length; i++)
       q1.moveVertice(i, translacao);
+
     q1.drawFigura();
-    
+
     fill(0);
+
     text("↓",translacao[0][0] + verticesRetangulo[0].getX() + 90, verticesRetangulo[3].getY() - verticesRetangulo[1].getY() + 60); //Posição inicial do texto x e y
 
-    fill(255,192,203);
+    fill(255, 192, 203);
+
     textSize(40);
     text("P", verticesRetangulo[0].getX() + 35 + translacao[0][0], translacao[1][0] + verticesRetangulo[1].getY() + 60); //Posição inicial do texto x e y
     text("7", translacao[0][0] + verticesRetangulo[0].getX() + (verticesRetangulo[1].getX() - verticesRetangulo[0].getX()) + 35, translacao[1][0] + verticesRetangulo[1].getY() + 60); //Posição inicial do texto x e y
 
-    translacao[0][0] += 100;
-
     Quadrilatero q2 = new Quadrilatero(verticesRetangulo);
+
+    translacao[0][0] += 100;
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q2.moveVertice(i, translacao);
 
-    //Draw do retângulo com os vértices
     q2.drawFigura();
 
-    //Segunda linha de retângulos
+    Quadrilatero q3 = new Quadrilatero(verticesRetangulo);
+
     translacao[0][0] = 650;
     translacao[1][0] = 2 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY());
-
-    Quadrilatero q3 = new Quadrilatero(verticesRetangulo);
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q3.moveVertice(i, translacao);
 
-    //Draw do retângulo com os vértices
     q3.drawFigura();
 
-    translacao[0][0] = 550;
-
     Quadrilatero q4 = new Quadrilatero(verticesRetangulo);
+
+    translacao[0][0] = 550;
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q4.moveVertice(i, translacao);
 
-    //Draw do retângulo com os vértices
     q4.drawFigura();
 
-    fill(255,0,0);
+    fill(255, 0, 0);
+
     text("R",translacao[0][0] + verticesRetangulo[0].getX() + 35, (verticesRetangulo[0].getY() + 2 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) + 60); //Posição inicial do texto x e y
     text("5",translacao[0][0] + verticesRetangulo[0].getX() + (verticesRetangulo[1].getX() - verticesRetangulo[0].getX()) + 35, (verticesRetangulo[0].getY() + 2 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) + 60); //Posição inicial do texto x e y
-    
+
     fill(0);
+
     text("↓",translacao[0][0] + verticesRetangulo[0].getX() + 90, 2 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY()) + 160); //Posição inicial do texto x e y
 
-    //Terceira linha vazia
     textSize(40);
     text("↓",translacao[0][0] + verticesRetangulo[0].getX() + 90, 4 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY()) + 160); //Posição inicial do texto x e y
 
-    //Quarta linha
+    Quadrilatero q5 = new Quadrilatero(verticesRetangulo);
+
     translacao[0][0] = 650;
     translacao[1][0] = 6 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY());
-
-    Quadrilatero q5 = new Quadrilatero(verticesRetangulo);
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q5.moveVertice(i, translacao);
 
-    //Draw do retângulo com os vértices
     q5.drawFigura();
 
-    translacao[0][0] = 550;
-
     Quadrilatero q6 = new Quadrilatero(verticesRetangulo);
+
+    translacao[0][0] = 550;
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q6.moveVertice(i, translacao);
 
-    //Draw do retângulo com os vértices
     q6.drawFigura();
 
-    fill(139,0,255);
+    fill(139, 0, 255);
+
     text("V",translacao[0][0] + verticesRetangulo[0].getX() + 35, (verticesRetangulo[0].getY() + 6 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) + 60); //Posição inicial do texto x e y
     text("1",translacao[0][0] + verticesRetangulo[0].getX() + (verticesRetangulo[1].getX() - verticesRetangulo[0].getX()) + 35, (verticesRetangulo[0].getY() + 6 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) + 60); //Posição inicial do texto x e y
 
   }
 
   protected void drawRespostas() {
-    // Desenhando área padrão de resposta
+
+    //Desenhando área padrão de resposta
     super.drawRespostas();
-    float[][] translacao = {{60}, {800}, {0}};
+
+    //Array de translacao
+    float[][] translacao = new float[3][3];
 
     //Criando os vértices do Retângulo
     Vertice[] verticesRetangulo = new Vertice[4];
@@ -118,116 +128,122 @@ public class Fase2 extends Tela {
     verticesRetangulo[2] = new Vertice(0, 100, 0);
     verticesRetangulo[3] = new Vertice(80, 100, 0);
 
+  /* <---- INICIO DA RESPOSTA 1 ----> */
+
     Quadrilatero q1 = new Quadrilatero(verticesRetangulo);
 
-    int translacaoX = 300;
+    translacao[0][0] = 45;
+    translacao[0][1] = 0;
+    translacao[1][0] = 800;
+    translacao[1][1] = 0;
+    translacao[2][0] = 0;
+    translacao[2][1] = 0;
 
-    // <!-- Resposta 1
-    //Draw do retângulo 1 da resposta 1 com os vértices
     for (int i = 0; i < verticesRetangulo.length; i++)
       q1.moveVertice(i, translacao);
+
     q1.drawFigura();
-    
+
     fill(74, 132, 232);
+
     textSize(40);
     text("S",translacao[0][0] + verticesRetangulo[0].getX() + 30,translacao[1][0] + verticesRetangulo[1].getY() + 60);
     text("2",translacao[0][0] + verticesRetangulo[0].getX() + (verticesRetangulo[1].getX() - verticesRetangulo[0].getX()) + 30,translacao[1][0] + verticesRetangulo[1].getY() + 60);
 
-    translacao[0][0] += 80;
-
     Quadrilatero q2 = new Quadrilatero(verticesRetangulo);
+
+    translacao[0][0] += 80;
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q2.moveVertice(i, translacao);
 
-    //Draw do retângulo 2 da resposta 1 com os vértices
     q2.drawFigura();
 
-    // -->
+  /* <---- FIM DA RESPOSTA 1 ----> */
 
-    // <!-- Resposta 2
-    translacao[0][0] += 220;
+  /* <---- INICIO DA RESPOSTA 2 ----> */
 
     Quadrilatero q3 = new Quadrilatero(verticesRetangulo);
+
+    translacao[0][0] += 235;
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q3.moveVertice(i, translacao);
 
-    //Draw do retângulo 1 da resposta 2 com os vértices
     q3.drawFigura();
-    
-    fill(48,213,200);
+
+    fill(48, 213, 200);
+
     textSize(40);
     text("T",translacao[0][0] + verticesRetangulo[0].getX() + 30,translacao[1][0] + verticesRetangulo[1].getY() + 60);
     text("4",translacao[0][0] + verticesRetangulo[0].getX() + (verticesRetangulo[1].getX() - verticesRetangulo[0].getX()) + 30,translacao[1][0] + verticesRetangulo[1].getY() + 60);
 
-    translacao[0][0] += 80;
-
     Quadrilatero q4 = new Quadrilatero(verticesRetangulo);
+
+    translacao[0][0] += 80;
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q4.moveVertice(i, translacao);
 
-    //Draw do retângulo 2 da resposta 2 com os vértices
     q4.drawFigura();
 
-    // -->
+  /* <---- FIM DA RESPOSTA 2 ----> */
 
-    // <!-- Resposta 3
-    translacao[0][0] += 220;
+  /* <---- INICIO DA RESPOSTA 3 ----> */
 
     Quadrilatero q5 = new Quadrilatero(verticesRetangulo);
+
+    translacao[0][0] += 235;
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q5.moveVertice(i, translacao);
 
-    //Draw do retângulo 1 da resposta 3 com os vértices
     q5.drawFigura();
 
     fill(255, 255, 0);
+
     textSize(40);
     text("T",translacao[0][0] + verticesRetangulo[0].getX() + 30,translacao[1][0] + verticesRetangulo[1].getY() + 60);
     text("3",translacao[0][0] + verticesRetangulo[0].getX() + (verticesRetangulo[1].getX() - verticesRetangulo[0].getX()) + 30,translacao[1][0] + verticesRetangulo[1].getY() + 60);
-    
-    translacao[0][0] += 80;
 
     Quadrilatero q6 = new Quadrilatero(verticesRetangulo);
+
+    translacao[0][0] += 80;
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q6.moveVertice(i, translacao);
 
-    //Draw do retângulo 2 da resposta 3 com os vértices
     q6.drawFigura();
 
-    // -->
+  /* <---- FIM DA RESPOSTA 3 ----> */
 
-    // <!-- Resposta 4
-    translacao[0][0] += 220;
+  /* <---- INICIO DA RESPOSTA 4 ----> */
 
     Quadrilatero q7 = new Quadrilatero(verticesRetangulo);
+
+    translacao[0][0] += 235;
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q7.moveVertice(i, translacao);
 
-    //Draw do retângulo 1 da resposta 4 com os vértices
     q7.drawFigura();
-    
-    fill(48,213,200);
+
+    fill(48, 213, 200);
+
     textSize(40);
     text("T",translacao[0][0] + verticesRetangulo[0].getX() + 30,translacao[1][0] + verticesRetangulo[1].getY() + 60);
     text("3",translacao[0][0] + verticesRetangulo[0].getX() + (verticesRetangulo[1].getX() - verticesRetangulo[0].getX()) + 30,translacao[1][0] + verticesRetangulo[1].getY() + 60);
 
-    translacao[0][0] += 80;
-
     Quadrilatero q8 = new Quadrilatero(verticesRetangulo);
+
+    translacao[0][0] += 80;
 
     for (int i = 0; i < verticesRetangulo.length; i++)
       q8.moveVertice(i, translacao);
 
-    //Draw do retângulo 2 da resposta 4 com os vértices
     q8.drawFigura();
 
-    //-->
+  /* <---- FIM DA RESPOSTA 4 ----> */
 
   }
 
