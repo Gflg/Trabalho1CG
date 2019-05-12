@@ -1,19 +1,10 @@
 public class Fase7 extends Tela {
 
+  //Array de cisalhamento eixo X
   float[][] cisalhamentoX = new float[2][2];
+
+  //Array de cisalhamento eixo Y
   float[][] cisalhamentoY = new float[2][2];
-
-  public Fase7() {
-    super(2);
-    setCisalhamentoX(0.7);
-    setCisalhamentoY(0.5);
-  }
-
-  public void drawTela() {
-    drawEstrelas();
-    drawPentagonos();
-    drawRespostas();
-  }
 
   private void setCisalhamentoX(float k){
     cisalhamentoX[0][0] = 1;
@@ -27,6 +18,18 @@ public class Fase7 extends Tela {
     cisalhamentoY[0][1] = 0;
     cisalhamentoY[1][0] = k;
     cisalhamentoY[1][1] = 1;
+  }
+
+  public Fase7() {
+    super(2);
+    setCisalhamentoX(0.7);
+    setCisalhamentoY(0.5);
+  }
+
+  public void drawTela() {
+    drawEstrelas();
+    drawPentagonos();
+    drawRespostas();
   }
 
   private void drawEstrelas() {

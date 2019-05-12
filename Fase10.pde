@@ -6,12 +6,6 @@ public class Fase10 extends Tela {
   //Array de cisalhamento eixo Y
   float[][] cisalhamentoY = new float[2][2];
 
-  public Fase10() {
-    super(3); //Parâmetro para o construtor da super classe é a posição (número) da resposta correta
-    setCisalhamentoX(0.7);
-    setCisalhamentoY(0.7);
-  }
-
   private void setCisalhamentoX(float k){
     cisalhamentoX[0][0] = 1;
     cisalhamentoX[0][1] = k;
@@ -24,6 +18,12 @@ public class Fase10 extends Tela {
     cisalhamentoY[0][1] = 0;
     cisalhamentoY[1][0] = k;
     cisalhamentoY[1][1] = 1;
+  }
+
+  public Fase10() {
+    super(3); //Parâmetro para o construtor da super classe é a posição (número) da resposta correta
+    setCisalhamentoX(0.7);
+    setCisalhamentoY(0.7);
   }
 
   public void drawTela() {
