@@ -54,9 +54,9 @@ public class Fase3D{
     translacao[2][1] = 0;
 
     for (int i = 0; i < decagono1.vertices.length; i++){
-      /*decagono1.transformaVertice(i, rotacaoZ);
+      decagono1.transformaVertice(i, rotacaoZ);
       decagono1.transformaVertice(i, rotacaoX);
-      decagono1.transformaVertice(i, rotacaoY);*/
+      decagono1.transformaVertice(i, rotacaoY);
       decagono1.moveVertice(i, translacao);
     }
 

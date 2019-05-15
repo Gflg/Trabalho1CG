@@ -45,9 +45,9 @@ void draw() {
           }
           break;
       case 1:
-          Fase3D fase = new Fase3D();
-          fase.drawTela();
-          /*Fase1 primeiraFase = new Fase1();
+          /*Fase3D fase = new Fase3D();
+          fase.drawTela();*/
+          Fase1 primeiraFase = new Fase1();
           primeiraFase.drawTela();
           estadoResposta = primeiraFase.checkResposta();
           if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
@@ -61,7 +61,7 @@ void draw() {
               transicao = 1;
               cor = 0;
               erros++;
-          }*/
+          }
           break;
       case 2:
           Fase2 segundaFase = new Fase2();

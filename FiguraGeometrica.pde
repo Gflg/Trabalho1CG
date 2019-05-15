@@ -88,12 +88,34 @@ public class FiguraGeometrica {
 */
 
   void transformaVertice(int vertice, float[][] transformacao) {
-    for(int i = 0; i < transformacao.length; i++){
-      float soma = 0;
-      for(int j = 0; j < transformacao[i].length; j++){
-        soma += transformacao[i][j]*vertices[vertice].coordenadas[j];
+    if(transformacao.length==4){
+      float[][] aux = new float[4][1];
+      for(int i=0; i<3; i++){
+        aux[i][0] = vertices[vertice].coordenadas[i];
       }
-      vertices[vertice].coordenadas[i] = soma;
+      aux[3][0] = 1;
+      for(int i = 0; i < transformacao.length; i++){
+        float soma = 0;
+        for(int j = 0; j < transformacao[i].length; j++){
+          soma += transformacao[i][j]*aux[j][0];
+        }
+        if (i < 3)
+          vertices[vertice].coordenadas[i] = soma;
+      }
+    }
+    else{
+      float[][] aux = new float[3][1];
+      for(int i=0; i<2; i++){
+        aux[i][0] = vertices[vertice].coordenadas[i];
+      }
+      aux[2][0] = 1;
+      for(int i = 0; i < transformacao.length; i++){
+        float soma = 0;
+        for(int j = 0; j < transformacao[i].length; j++){
+          soma += transformacao[i][j]*aux[j][0];
+        }
+        vertices[vertice].coordenadas[i] = soma;
+      }
     }
   }
 
