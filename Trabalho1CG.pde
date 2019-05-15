@@ -14,7 +14,7 @@ private int XuMax = (int) screenSize.getWidth();
 private int YuMax = (int) screenSize.getHeight();
 
 void settings() {
-  size(XuMax, YuMax);
+  size(1300, 1000);
 }
 
 void setup() {
