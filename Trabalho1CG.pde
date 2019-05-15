@@ -14,7 +14,7 @@ private int XuMax = (int) screenSize.getWidth();
 private int YuMax = (int) screenSize.getHeight();
 
 void settings() {
-  size(1300, 1000);
+  size(1300, 1000, P3D);
 }
 
 void setup() {
@@ -45,7 +45,9 @@ void draw() {
           }
           break;
       case 1:
-          Fase1 primeiraFase = new Fase1();
+          Fase3D fase = new Fase3D();
+          fase.drawTela();
+          /*Fase1 primeiraFase = new Fase1();
           primeiraFase.drawTela();
           estadoResposta = primeiraFase.checkResposta();
           if (estadoResposta.equals(Estado.RESPOSTA_CERTA)) {
@@ -59,7 +61,7 @@ void draw() {
               transicao = 1;
               cor = 0;
               erros++;
-          }
+          }*/
           break;
       case 2:
           Fase2 segundaFase = new Fase2();

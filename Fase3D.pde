@@ -39,8 +39,9 @@ public class Fase3D{
     //Criando os vértices do Decágono 1
     Vertice pontaDoDecagono1 = new Vertice(0, 0, 0);
 
-    Decagono decagono1 = new Decagono(pontaDoDecagono1);
-
+    Decagono3D decagono1 = new Decagono3D(pontaDoDecagono1);
+    
+    //Rotação = 45º porque a figura é isométrica
     setRotacao(PI/4);
 
     stroke(163, 16, 163);
@@ -53,9 +54,9 @@ public class Fase3D{
     translacao[2][1] = 0;
 
     for (int i = 0; i < decagono1.vertices.length; i++){
-      decagono1.transformaVertice(i, rotacaoZ);
+      /*decagono1.transformaVertice(i, rotacaoZ);
       decagono1.transformaVertice(i, rotacaoX);
-      decagono1.transformaVertice(i, rotacaoY);
+      decagono1.transformaVertice(i, rotacaoY);*/
       decagono1.moveVertice(i, translacao);
     }
 
@@ -74,14 +75,14 @@ public class Fase3D{
     escala[2][1] = 0;
     
     for (int i = 0; i < decagono2.vertices.length; i++){
-      decagono2.transformaVertice(i, rotacaoZ);
+      /*decagono2.transformaVertice(i, rotacaoZ);
       decagono2.transformaVertice(i, rotacaoX);
-      decagono2.transformaVertice(i, rotacaoY);
+      decagono2.transformaVertice(i, rotacaoY);*/
       decagono2.moveVertice(i, translacao);
       decagono2.transformaVertice(i, escala);
     }
     
-    /*decagono1.drawFigura();
-    decagono2.drawFigura();*/
+    decagono1.drawFigura();
+    decagono2.drawFigura();
   }
 }

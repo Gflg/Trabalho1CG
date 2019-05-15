@@ -9,7 +9,12 @@ public class Aresta {
   }
   
   public void drawAresta() {
-    line(vertices[0].getX(), vertices[0].getY(), vertices[1].getX(), vertices[1].getY());
+    if (vertices[0].getQtdDimensoes() == 2){
+      line(vertices[0].getX(), vertices[0].getY(), vertices[1].getX(), vertices[1].getY());
+    }
+    else{
+      line(vertices[0].getX(), vertices[0].getY(), vertices[0].getZ(), vertices[1].getX(), vertices[1].getY(), vertices[1].getZ());
+    }
   }
   
 }

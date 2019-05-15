@@ -27,6 +27,10 @@ public class Vertice {
   public float getZ() {
      return this.coordenadas[2]; 
   }
+  
+  public int getQtdDimensoes(){
+    return this.quantidadeDimensoes;
+  }
 
   public void setX(float x) {
     this.coordenadas[0] = x;
