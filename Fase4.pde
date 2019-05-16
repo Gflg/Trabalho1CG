@@ -201,7 +201,7 @@ public class Fase4 extends Tela {
 
     t4.drawFigura();
 
-    stroke(255, 0, 0); //As próximas coisas criadas serão pintadas de vermelho
+    stroke(0, 0, 255); //As próximas coisas criadas serão pintadas de azul
 
     t1.drawFigura();
 
@@ -217,7 +217,7 @@ public class Fase4 extends Tela {
 
     t7.drawFigura();
 
-    stroke(255, 0, 0); //As próximas coisas criadas serão pintadas de vermelho
+    stroke(0, 0, 255); //As próximas coisas criadas serão pintadas de azul
 
     t8.drawFigura();
 
@@ -233,7 +233,7 @@ public class Fase4 extends Tela {
 
     t12.drawFigura();
 
-    stroke(255, 0, 0); //As próximas coisas criadas serão pintadas de vermelho
+    stroke(0, 0, 255); //As próximas coisas criadas serão pintadas de azul
 
     t10.drawFigura();
 
@@ -249,7 +249,7 @@ public class Fase4 extends Tela {
 
     t15.drawFigura();
 
-    stroke(255, 0, 0); //As próximas coisas criadas serão pintadas de vermelho
+    stroke(0, 0, 255); //As próximas coisas criadas serão pintadas de azul
 
     t16.drawFigura();
 
@@ -419,7 +419,7 @@ public class Fase4 extends Tela {
 
     t3.drawFigura();
 
-    stroke(255, 0, 0);
+    stroke(0, 0, 255); //As próximas coisas criadas serão pintadas de azul
 
     t4.drawFigura();
 
@@ -431,7 +431,7 @@ public class Fase4 extends Tela {
 
     t5.drawFigura();
 
-    stroke(255, 0, 0);
+    stroke(0, 0, 255); //As próximas coisas criadas serão pintadas de azul
 
     t6.drawFigura();
 
@@ -445,7 +445,7 @@ public class Fase4 extends Tela {
 
   /* <---- INICIO DO DESENHO DA RESPOSTA 3 ----> */
 
-    stroke(255, 0, 0);
+    stroke(0, 0, 255); //As próximas coisas criadas serão pintadas de azul
 
     t9.drawFigura();
 
@@ -465,7 +465,7 @@ public class Fase4 extends Tela {
 
     t14.drawFigura();
 
-    stroke(255, 0, 0);
+    stroke(0, 0, 255); //As próximas coisas criadas serão pintadas de azul
 
     t15.drawFigura();
 

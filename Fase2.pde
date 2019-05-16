@@ -1,4 +1,4 @@
-public class Fase2 extends Tela {
+ public class Fase2 extends Tela {
 
   public Fase2() {
     super(4); //Parâmetro para o construtor da super classe é a posição (número) da resposta correta
@@ -115,8 +115,8 @@ public class Fase2 extends Tela {
 
   protected void drawRespostas() {
 
-    //Desenhando área padrão de resposta
     super.drawRespostas();
+    //Desenhando área padrão de resposta
 
     //Array de translacao
     float[][] translacao = new float[3][3];
@@ -147,7 +147,7 @@ public class Fase2 extends Tela {
     fill(74, 132, 232);
 
     textSize(40);
-    text("S",translacao[0][0] + verticesRetangulo[0].getX() + 30,translacao[1][0] + verticesRetangulo[1].getY() + 60);
+    text("V",translacao[0][0] + verticesRetangulo[0].getX() + 30, translacao[1][0] + verticesRetangulo[1].getY() + 60); //Posição inicial do texto x e y
     text("2",translacao[0][0] + verticesRetangulo[0].getX() + (verticesRetangulo[1].getX() - verticesRetangulo[0].getX()) + 30,translacao[1][0] + verticesRetangulo[1].getY() + 60);
 
     Quadrilatero q2 = new Quadrilatero(verticesRetangulo);
@@ -244,7 +244,7 @@ public class Fase2 extends Tela {
     q8.drawFigura();
 
   /* <---- FIM DA RESPOSTA 4 ----> */
-
+//super.drawRespostas();
   }
 
 }

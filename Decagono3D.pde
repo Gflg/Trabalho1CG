@@ -23,6 +23,7 @@ public class Decagono3D extends FiguraGeometrica {
     this.vertices[18] = new Vertice(pontaDecagono.getX() + 40, pontaDecagono.getY() + 120, pontaDecagono.getZ()+30);
     this.vertices[19] = new Vertice(pontaDecagono.getX(), pontaDecagono.getY() + 130, pontaDecagono.getZ()+30);
     Aresta[][] arestas = new Aresta[4][10];
+
     //face da frente
     arestas[0][0] = new Aresta(vertices[0], vertices[1]);
     arestas[0][1] = new Aresta(vertices[0], vertices[2]);
@@ -34,6 +35,7 @@ public class Decagono3D extends FiguraGeometrica {
     arestas[0][7] = new Aresta(vertices[6], vertices[8]);
     arestas[0][8] = new Aresta(vertices[7], vertices[9]);
     arestas[0][9] = new Aresta(vertices[8], vertices[9]);
+
     //face de trás
     arestas[1][0] = new Aresta(vertices[10], vertices[11]);
     arestas[1][1] = new Aresta(vertices[10], vertices[12]);
@@ -45,6 +47,7 @@ public class Decagono3D extends FiguraGeometrica {
     arestas[1][7] = new Aresta(vertices[16], vertices[18]);
     arestas[1][8] = new Aresta(vertices[17], vertices[19]);
     arestas[1][9] = new Aresta(vertices[18], vertices[19]);
+
     //face da esquerda
     arestas[2][0] = new Aresta(vertices[0], vertices[10]);
     arestas[2][1] = new Aresta(vertices[1], vertices[1]);
@@ -56,6 +59,7 @@ public class Decagono3D extends FiguraGeometrica {
     arestas[2][7] = new Aresta(vertices[7], vertices[7]);
     arestas[2][8] = new Aresta(vertices[8], vertices[8]);
     arestas[2][9] = new Aresta(vertices[9], vertices[9]);
+
     //face da direita
     arestas[3][0] = new Aresta(vertices[0], vertices[10]);
     arestas[3][1] = new Aresta(vertices[1], vertices[1]);
@@ -67,6 +71,24 @@ public class Decagono3D extends FiguraGeometrica {
     arestas[3][7] = new Aresta(vertices[7], vertices[7]);
     arestas[3][8] = new Aresta(vertices[8], vertices[8]);
     arestas[3][9] = new Aresta(vertices[9], vertices[9]);
+
+    //arestas wire
+    //arestas[0][0] = new Aresta(vertices[0], vertices[10]);
+
+    arestas[2][0] = new Aresta(vertices[1], vertices[11]); //
+    arestas[2][1] = new Aresta(vertices[3], vertices[13]); //
+    arestas[2][2] = new Aresta(vertices[5], vertices[15]); //
+    arestas[2][3] = new Aresta(vertices[7], vertices[17]); //
+
+    arestas[3][0] = new Aresta(vertices[2], vertices[12]); //
+    arestas[3][1] = new Aresta(vertices[4], vertices[14]); //
+    arestas[3][2] = new Aresta(vertices[6], vertices[16]); //
+    arestas[3][3] = new Aresta(vertices[8], vertices[18]); //
+    
+    arestas[2][4] = new Aresta(vertices[9], vertices[19]);
+    
+    arestas[3][4] = new Aresta(vertices[0], vertices[10]);
+
     this.faces = new Face[4];
     this.faces[0] = new Face(arestas[0]);
     this.faces[1] = new Face(arestas[1]);

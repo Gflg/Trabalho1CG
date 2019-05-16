@@ -15,7 +15,7 @@ public class Quadrilatero extends FiguraGeometrica {
     this.faces[0] = new Face(arestas);
     transformacaoCoordenadas(this.vertices);
   }
-  
+
   public Quadrilatero(float primeiroPontoX, float primeiroPontoY, float primeiroPontoZ, float largura, float altura) {
     super(3, 4);
     this.vertices[0] = new Vertice(primeiroPontoX, primeiroPontoY, primeiroPontoZ);
@@ -31,12 +31,12 @@ public class Quadrilatero extends FiguraGeometrica {
     this.faces[0] = new Face(arestas);
     transformacaoCoordenadas(this.vertices);
   }
-  
+
   public void pintaFundo() {
     for (int i = 0; i + this.vertices[0].getY() < this.vertices[3].getY(); i++) {
       line(this.vertices[0].getX(), this.vertices[0].getY() + i, this.vertices[1].getX(), this.vertices[1].getY() + i);
     }
     stroke (0,0,0);
   }
-  
+
 }

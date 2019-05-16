@@ -27,12 +27,13 @@ public abstract class Tela {
 
   // Desenha área padrão de respostas
   protected void drawRespostas() {
+
     stroke(0,0,0);
-    Quadrilatero fundo = new Quadrilatero(25, 750, 0, 1235, 220);
+    Quadrilatero fundo = new Quadrilatero(25, 735, 0, 1250, 10);
     fundo.drawFigura();
     stroke(180);
     fundo.pintaFundo();
-    
+
     stroke(125, 255, 255);
     resposta1.drawFigura();
     resposta1.pintaFundo();

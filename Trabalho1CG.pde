@@ -36,17 +36,17 @@ void draw() {
     String estadoResposta;
     switch (fase) {
       case 0:
+          Fase3D fase = new Fase3D();
+          fase.drawTela();
           fill(0, 0, 0);
           textSize(40);
-          text("Clique para iniciar!", 450, 500);
+          text("Clique para iniciar!", 450, 700);
           if (mousePressed) {
             transicao = 1;
             cor = 0; 
           }
           break;
       case 1:
-          /*Fase3D fase = new Fase3D();
-          fase.drawTela();*/
           Fase1 primeiraFase = new Fase1();
           primeiraFase.drawTela();
           estadoResposta = primeiraFase.checkResposta();

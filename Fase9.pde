@@ -31,7 +31,7 @@ public class Fase9 extends Tela {
 
     translacao[0][0] = 600;
     translacao[0][1] = 0;
-    translacao[1][0] = 100;
+    translacao[1][0] = 98;
     translacao[1][1] = 0;
     translacao[2][0] = 0;
     translacao[2][1] = 0;

@@ -55,12 +55,12 @@ public class Fase3 extends Tela {
 
     fill(0);
 
-    text("↓", translacao[0][0] - (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/2, (1.5 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
+    text("↓", translacao[0][0] - (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/2, (1.5 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) + 20);
 
     Quadrilatero q2 = new Quadrilatero(verticesRetangulo);
 
     translacao[0][0] += 50;
-    translacao[1][0] += 300;
+    translacao[1][0] += 280;
 
     setRotacao(3*PI/4);
 
@@ -73,12 +73,12 @@ public class Fase3 extends Tela {
 
     fill(0);
 
-    text("↓", translacao[0][0] - (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/2.8 - 50, (4 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 50);
+    text("↓", translacao[0][0] - (verticesRetangulo[3].getX() - verticesRetangulo[0].getX())/2.8 - 50, (4 * (verticesRetangulo[3].getY() - verticesRetangulo[1].getY())) - 20);
 
     Quadrilatero q3 = new Quadrilatero(verticesRetangulo);
 
     translacao[0][0] -= 75;
-    translacao[1][0] += 200;
+    translacao[1][0] += 240;
 
     setRotacao(5*PI/4);
 
@@ -154,6 +154,7 @@ public class Fase3 extends Tela {
     Quadrilatero q3 = new Quadrilatero(verticesRetangulo1);
 
     translacao[0][0] += 375;
+    translacao[1][0] -= 25;
 
     setRotacao(PI/4);
 
@@ -171,7 +172,7 @@ public class Fase3 extends Tela {
     Quadrilatero q4 = new Quadrilatero(verticesRetangulo1);
 
     translacao[0][0] += 250;
-    translacao[1][0] += 25;
+    translacao[1][0] += 35;
 
     setRotacao(7*(PI/4));
 
