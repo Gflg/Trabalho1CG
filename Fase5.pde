@@ -137,7 +137,7 @@ public class Fase5 extends Tela {
 
     Triangulo t12 = new Triangulo(verticesTrianguloH);
 
-    translacao[0][0] += 450;
+    translacao[0][0] += 900;
 
     for (int i = 0; i < verticesTrianguloH.length; i++){
       t12.moveVertice(i, translacao);
