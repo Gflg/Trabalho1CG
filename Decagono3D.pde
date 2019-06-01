@@ -74,7 +74,7 @@ public class Decagono3D extends FiguraGeometrica {
 
     //arestas wire
     //arestas[0][0] = new Aresta(vertices[0], vertices[10]);
-
+ 
     arestas[2][0] = new Aresta(vertices[1], vertices[11]); //
     arestas[2][1] = new Aresta(vertices[3], vertices[13]); //
     arestas[2][2] = new Aresta(vertices[5], vertices[15]); //
