@@ -138,12 +138,12 @@ public class Fase3D{
 
   public void pintaDecagono3DRotacao(Decagono3D decagono1){
     //Face de trás
-    float x1 = decagono1.vertices[1].getX()+6; //Esse +6 representa o ponto inicial no eixo x logo depois da aresta desenhada. 
-    float x2 = decagono1.vertices[2].getX()+5; //Esse +5 representa o ponto inicial no eixo x logo depois da aresta desenhada.
+    float x1 = decagono1.faces[0].arestas[0].vertices[0].getX()-6; //Esse +6 representa o ponto inicial no eixo x logo depois da aresta desenhada. 
+    float x2 = decagono1.faces[0].arestas[1].vertices[1].getX()-5; //Esse +5 representa o ponto inicial no eixo x logo depois da aresta desenhada.
     //Acredito que esses valores +6 e +5 variam conforme as diversas regiões do polígono devido às rotações que o decágono sofreu na projeção
     //Face da frente
-    float x3 = decagono1.vertices[11].getX()+6;
-    float x4 = decagono1.vertices[12].getX()-5;
+    float x3 = decagono1.faces[1].arestas[0].vertices[0].getX()-6;
+    float x4 = decagono1.faces[1].arestas[1].vertices[1].getX()-5;
     //Face de trás
     float altura = decagono1.vertices[1].getY();
     //Face da frente
@@ -159,90 +159,90 @@ public class Fase3D{
       //Face da frente pintada por último seguindo o conceito do algoritmo do pintor
       line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       //o x inicial de cada vértice é variado por uma taxa para que consigam tudo o que está dentro das arestas dessa região
-      x1+=0.5;
+      x1+=0.2;
       x2-=1.5;
-      x3+=0.5;
+      x3+=0.2;
       x4-=1.5;
-      //o y é sempre variado em 1, onde só precisei variar as taxas no eixo x
-      altura--;
-      altura2--;
+      //o y é sempre variado em 0.9, onde só precisei variar as taxas no eixo x
+      altura-=0.9;
+      altura2-=0.9;
     }
     
-    x1 = decagono1.vertices[3].getX()+13;
-    x2 = decagono1.vertices[4].getX()-5;
-    altura = decagono1.vertices[3].getY();
-    x3 = decagono1.vertices[13].getX()+13;
-    x4 = decagono1.vertices[14].getX()-5;
-    altura2 = decagono1.vertices[13].getY();
+    x1 = decagono1.faces[0].arestas[2].vertices[1].getX()+13;
+    x2 = decagono1.faces[0].arestas[3].vertices[1].getX()-5;
+    altura = decagono1.faces[0].arestas[3].vertices[1].getY();
+    x3 = decagono1.faces[1].arestas[2].vertices[1].getX()+15;
+    x4 = decagono1.faces[1].arestas[3].vertices[1].getX()-5;
+    altura2 = decagono1.faces[1].arestas[3].vertices[1].getY();
     
     //Região formada pelos vértices 1, 2, 3 e 4, que forma um trapézio.
     //Aqui o ponto de parada é a altura porque as coordenadas x das arestas esquerda e direita nunca vão se encontrar nessa região.
-    while(altura > decagono1.vertices[1].getY()){
+    while(altura >= decagono1.faces[0].arestas[0].vertices[1].getY()){
       line(x1, altura, decagono1.vertices[0].getZ(), x2, altura, decagono1.vertices[0].getZ());
       line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       x1-=0.1;
       x2-=1.1;
       x3-=0.1;
       x4-=1.1;
-      altura--;
-      altura2--;
+      altura-=0.9;
+      altura2-=0.9;
     }
     
-    x1 = decagono1.vertices[5].getX()+17;
-    x2 = decagono1.vertices[6].getX()-1.5;
-    altura = decagono1.vertices[5].getY();
-    x3 = decagono1.vertices[15].getX()+17;
-    x4 = decagono1.vertices[16].getX()-1.5;
-    altura2 = decagono1.vertices[15].getY();
+    x1 = decagono1.faces[0].arestas[4].vertices[1].getX()+17;
+    x2 = decagono1.faces[0].arestas[5].vertices[1].getX()-1.5;
+    altura = decagono1.faces[0].arestas[5].vertices[1].getY();
+    x3 = decagono1.faces[1].arestas[4].vertices[1].getX()+19;
+    x4 = decagono1.faces[1].arestas[5].vertices[1].getX()-1.5;
+    altura2 = decagono1.faces[1].arestas[5].vertices[1].getY();
     
     //Região formada pelos vértices 3, 4, 5 e 6, que forma um quadrilátero que possui as variações iguais no eixo x, como se fosse um retângulo em itálico.
-    while(altura > decagono1.vertices[3].getY()){
+    while(altura > decagono1.faces[0].arestas[2].vertices[1].getY()){
       line(x1, altura, decagono1.vertices[0].getZ(), x2, altura, decagono1.vertices[0].getZ());
       line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       x1-=0.7;
       x2-=0.7;
       x3-=0.7;
       x4-=0.7;
-      altura--;
-      altura2--;
+      altura-=0.9;
+      altura2-=0.9;
     }
 
-    x1 = decagono1.vertices[7].getX()+16;
-    x2 = decagono1.vertices[8].getX()+5;
-    altura = decagono1.vertices[7].getY();
-    x3 = decagono1.vertices[17].getX()+16;
-    x4 = decagono1.vertices[18].getX()+5;
-    altura2 = decagono1.vertices[17].getY();
+    x1 = decagono1.faces[0].arestas[6].vertices[1].getX()+16;
+    x2 = decagono1.faces[0].arestas[7].vertices[1].getX()+5;
+    altura = decagono1.faces[0].arestas[7].vertices[1].getY();
+    x3 = decagono1.faces[1].arestas[6].vertices[1].getX()+18;
+    x4 = decagono1.faces[1].arestas[7].vertices[1].getX()+5;
+    altura2 = decagono1.faces[1].arestas[7].vertices[1].getY();
     
     //Região formada pelos vértices 5, 6, 7 e 8, que forma um trapézio invertido.
-    while(altura > decagono1.vertices[5].getY()){
+    while(altura > decagono1.faces[0].arestas[4].vertices[1].getY()){
       line(x1, altura, decagono1.vertices[0].getZ(), x2, altura, decagono1.vertices[0].getZ());
       line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       x1-=1.1;
       x2-=0.2;
       x3-=1.1;
       x4-=0.2;
-      altura--;
-      altura2--;
+      altura-=0.9;
+      altura2-=0.9;
     }
     
-    x1 = decagono1.vertices[7].getX()+12;
-    x2 = decagono1.vertices[8].getX()+5;
-    altura = decagono1.vertices[7].getY();
-    x3 = decagono1.vertices[17].getX()+12;
-    x4 = decagono1.vertices[18].getX()+5;
-    altura2 = decagono1.vertices[17].getY();
+    x1 = decagono1.faces[0].arestas[6].vertices[1].getX()+12;
+    x2 = decagono1.faces[0].arestas[7].vertices[1].getX()+5;
+    altura = decagono1.faces[0].arestas[6].vertices[1].getY();
+    x3 = decagono1.faces[1].arestas[6].vertices[1].getX()+18;
+    x4 = decagono1.faces[1].arestas[7].vertices[1].getX()+6;
+    altura2 = decagono1.faces[1].arestas[7].vertices[1].getY();
 
     //Região formada pelos vértices 7, 8 e 9, que forma um triângulo invertido.
-    while(x1 < x2){
+    while(x1 < x2 && altura <= decagono1.faces[0].arestas[8].vertices[1].getY()){
       line(x1, altura, decagono1.vertices[0].getZ(), x2, altura, decagono1.vertices[0].getZ());
       line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       x1+=2.7;
       x2-=1;
       x3+=2.7;
       x4-=1;
-      altura++;
-      altura2++;
+      altura+=0.9;
+      altura2+=0.9;
     }
 
     stroke(163, 16, 163);
@@ -305,10 +305,10 @@ public class Fase3D{
       decagono2.transformaVertice(i, rotacaoY);
       decagono2.moveVertice(i, translacao);
     }
-
-    pintaDecagono3DRotacao(decagono2);
     
     decagono2.drawFigura();
+
+    pintaDecagono3DRotacao(decagono2);
 
     fill(0, 0, 0);
 
