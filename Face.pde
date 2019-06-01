@@ -6,7 +6,7 @@ public class Face {
     this.arestas = new Aresta[qtdArestas];    
   }
   
-  public Face(Aresta[] arestas) {
+  public Face(Aresta... arestas) {
     this.arestas = arestas;
   }
   
