@@ -137,27 +137,27 @@ public class Fase3D{
   }
 
   public void pintaDecagono3DRotacao(Decagono3D decagono1){
-    //Face da frente
-    float x1 = decagono1.vertices[1].getX()+6; //Esse +6 representa o ponto inicial no eixo x logo depois da aresta desenhada. 
-    float x2 = decagono1.vertices[2].getX()-5; //Esse +5 representa o ponto inicial no eixo x logo depois da aresta desenhada.
-    //Acredito que esses valores +6 e +5 variam conforme as diversas regiões do polígono devido às rotações que o decágono sofreu na projeção
     //Face de trás
+    float x1 = decagono1.vertices[1].getX()+6; //Esse +6 representa o ponto inicial no eixo x logo depois da aresta desenhada. 
+    float x2 = decagono1.vertices[2].getX()+5; //Esse +5 representa o ponto inicial no eixo x logo depois da aresta desenhada.
+    //Acredito que esses valores +6 e +5 variam conforme as diversas regiões do polígono devido às rotações que o decágono sofreu na projeção
+    //Face da frente
     float x3 = decagono1.vertices[11].getX()+6;
     float x4 = decagono1.vertices[12].getX()-5;
-    //Face da frente
-    float altura = decagono1.vertices[1].getY();
     //Face de trás
+    float altura = decagono1.vertices[1].getY();
+    //Face da frente
     float altura2 = decagono1.vertices[11].getY();
     
     
-    stroke(0, 255, 0);
+    stroke(255, 255, 255);
     
     //Região formada pelos vértices 0, 1 e 2, que forma um triângulo
     while(x1 < x2){
       //Face de trás pintada primeiro seguindo o conceito do algoritmo do pintor
-      line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
-      //Face da frente pintada por último seguindo o conceito do algoritmo do pintor
       line(x1, altura, decagono1.vertices[0].getZ(), x2, altura, decagono1.vertices[0].getZ());
+      //Face da frente pintada por último seguindo o conceito do algoritmo do pintor
+      line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       //o x inicial de cada vértice é variado por uma taxa para que consigam tudo o que está dentro das arestas dessa região
       x1+=0.5;
       x2-=1.5;
@@ -178,8 +178,8 @@ public class Fase3D{
     //Região formada pelos vértices 1, 2, 3 e 4, que forma um trapézio.
     //Aqui o ponto de parada é a altura porque as coordenadas x das arestas esquerda e direita nunca vão se encontrar nessa região.
     while(altura > decagono1.vertices[1].getY()){
-      line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       line(x1, altura, decagono1.vertices[0].getZ(), x2, altura, decagono1.vertices[0].getZ());
+      line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       x1-=0.1;
       x2-=1.1;
       x3-=0.1;
@@ -197,8 +197,8 @@ public class Fase3D{
     
     //Região formada pelos vértices 3, 4, 5 e 6, que forma um quadrilátero que possui as variações iguais no eixo x, como se fosse um retângulo em itálico.
     while(altura > decagono1.vertices[3].getY()){
-      line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       line(x1, altura, decagono1.vertices[0].getZ(), x2, altura, decagono1.vertices[0].getZ());
+      line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       x1-=0.7;
       x2-=0.7;
       x3-=0.7;
@@ -216,8 +216,8 @@ public class Fase3D{
     
     //Região formada pelos vértices 5, 6, 7 e 8, que forma um trapézio invertido.
     while(altura > decagono1.vertices[5].getY()){
-      line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       line(x1, altura, decagono1.vertices[0].getZ(), x2, altura, decagono1.vertices[0].getZ());
+      line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       x1-=1.1;
       x2-=0.2;
       x3-=1.1;
@@ -235,8 +235,8 @@ public class Fase3D{
 
     //Região formada pelos vértices 7, 8 e 9, que forma um triângulo invertido.
     while(x1 < x2){
-      line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       line(x1, altura, decagono1.vertices[0].getZ(), x2, altura, decagono1.vertices[0].getZ());
+      line(x3, altura2, decagono1.vertices[10].getZ(), x4, altura2, decagono1.vertices[10].getZ());
       x1+=2.7;
       x2-=1;
       x3+=2.7;
