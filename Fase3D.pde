@@ -118,6 +118,7 @@ public class Fase3D{
 
   public void pintaFaceDecagono(Decagono3D decagono1, int face){
     float taxaX1, taxaX2, x1, x2, altura;
+    // Faces frente e trás
     if(face == 0 || face == 1){
       taxaX1 = 0.2;
       taxaX2 = -1.4;
@@ -210,6 +211,82 @@ public class Fase3D{
         altura+=0.9;
       }
     } //fim do if face=0 ou face=1
+    else {
+      // Faces laterais
+      float z1, z2, y1, y2, taxaY1, taxaY2, taxaZ1, taxaZ2;
+      taxaX1 = taxaX2 = taxaY1 = taxaY2 = 1; // inicializando varíaveis
+      taxaZ1 = taxaZ2 = 0; // inicializando varíaveis
+      switch (face) {
+        case 2:
+          taxaX1 = -0.25;
+          taxaX2 = -0.25;
+          taxaY1 = 0.65;
+          taxaY2 = 0.65;
+          break;
+        case 3:
+          taxaX1 = 0.15;
+          taxaX2 = 0.15;
+          taxaY1 = 0.9;
+          taxaY2 = 0.9;
+          break;
+        case 4:
+          taxaX1 = 0.23;
+          taxaX2 = 0.23;
+          taxaY1 = 0.35;
+          taxaY2 = 0.35;
+          break;
+        case 5:
+          taxaX1 = 0.32;
+          taxaX2 = 0.32;
+          taxaY1 = 0.4;
+          taxaY2 = 0.4;
+          taxaZ1 = 0.27;
+          taxaZ2 = 0.4;
+          break;
+        case 6:          
+          //stroke(0,0,0);
+          //taxaX1 = 0.35;
+          //taxaX2 = 0.42;
+          //taxaY1 = 0.15;
+          //taxaY2 = 0.17;
+          //taxaZ1 = 0.65;
+          //taxaZ2 = 0.65;
+          //break;
+        case 7:
+          //break;
+        case 8:
+          //break;
+        case 9:
+          //break;
+        case 10:
+          //break;
+        case 11:
+          //break;
+        default:
+          return;
+      }
+      x1 = decagono1.faces[face].arestas[0].vertices[0].getX();
+      y1 = decagono1.faces[face].arestas[0].vertices[0].getY() + 1;
+      z1 = decagono1.faces[face].arestas[0].vertices[0].getZ();
+      x2 = decagono1.faces[face].arestas[0].vertices[1].getX();
+      y2 = decagono1.faces[face].arestas[0].vertices[1].getY() + 1;
+      z2 = decagono1.faces[face].arestas[0].vertices[1].getZ();
+      if (face == 5) { 
+        x1 += 3.5;
+        x2 -= 1;
+      }
+      while((y1 < decagono1.faces[face].arestas[2].vertices[0].getY() - taxaY1) && (y2 < decagono1.faces[face].arestas[2].vertices[1].getY() - taxaY2)) {
+        line(x1, y1, z1, x2, y2, z2);
+        x1 += taxaX1;
+        x2 += taxaX2;
+        if(y1 < decagono1.faces[face].arestas[2].vertices[0].getY() - taxaY1)
+          y1 += taxaY1;
+        if(y2 < decagono1.faces[face].arestas[2].vertices[1].getY())
+          y2 += taxaY2;
+        z1 += taxaZ1;
+        z2 += taxaZ2;
+      }
+    }
   }
 
   public void drawTela(){
@@ -269,8 +346,7 @@ public class Fase3D{
     }
     
     decagono2.drawFigura();
-    
-    calculaDistanciaFaces(decagono2, 840, 500, 80);
+    calculaDistanciaFaces(decagono2, decagono2.vertices[0].getX(), decagono2.vertices[0].getY(), 120);
     
     for(int i=0; i<12; i++){
       print("Distância da face " + i + ": " + distanciasFaces[i] + "\n");
