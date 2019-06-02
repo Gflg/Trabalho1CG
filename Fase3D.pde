@@ -90,10 +90,7 @@ public class Fase3D{
       if(i==0 || i==1)
         aux = decagono.faces[i].getDistanciaMediaDecagonoFaces0e1(observadorX, observadorY, observadorZ);
       else{
-        aux[0] = 0;
-        aux[1] = 0;
-        aux[2] = 0;
-        //Substituir essas linhas acima pela chamada da função das faces laterais
+        aux = decagono.faces[i].getDistanciaMediaDecagonoFacesLaterais(observadorX, observadorY, observadorZ);
       }
       for(int j=0; j<3; j++)
           distanciasFaces[i] += aux[j];
@@ -103,10 +100,10 @@ public class Fase3D{
   public void algoritmoPintor(Decagono3D decagono){
     float maior;
     int posMaior;
-    for(int i=0; i<2; i++){
+    for(int i=0; i<12; i++){
       maior = Integer.MIN_VALUE;
       posMaior = -1;
-      for(int j=0; j<2; j++){
+      for(int j=0; j<12; j++){
         if(maior < distanciasFaces[j]){
           maior = distanciasFaces[j];
           posMaior = j;
@@ -115,7 +112,7 @@ public class Fase3D{
       stroke(255,255,255);
       pintaFaceDecagono(decagono, posMaior);
       stroke(163, 16, 163);
-      distanciasFaces[i] = Integer.MIN_VALUE;
+      distanciasFaces[posMaior] = Integer.MIN_VALUE;
     }
   }
 
