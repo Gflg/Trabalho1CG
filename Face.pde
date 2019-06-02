@@ -16,4 +16,21 @@ public class Face {
     }
   }
   
+  public float[] getDistanciaMediaDecagonoFaces0e1(float centroX, float centroY, float centroZ) {
+    float[] mediaFinal = new float[3];
+    float[] mediaAresta = new float[3];
+    for(int i=0; i<3; i++)
+      mediaFinal[i] = 0;
+    for(int i=0; i<10; i++){
+      if(i==0 || i==3 || i==4 || i==7 || i==9){
+        mediaAresta = arestas[i].getDistanciaMediaAresta(centroX, centroY, centroZ);
+        for(int j=0; j<3; j++)
+          mediaFinal[j] += mediaAresta[j];
+      }
+    }
+    for(int i=0; i<3; i++)
+      mediaFinal[i] = mediaFinal[i]/5;
+    return mediaFinal;
+  }
+  
 }

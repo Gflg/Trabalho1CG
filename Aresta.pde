@@ -17,4 +17,30 @@ public class Aresta {
     }
   }
   
+  public float[] getDistanciaMediaAresta(float centroX, float centroY, float centroZ){
+    float[] media = new float[3];
+    for(int i=0; i<3; i++){
+      media[i] = 0;
+    }
+    float distanciaX, distanciaY, distanciaZ;
+    for(int i=0; i<2; i++){
+      distanciaX = vertices[i].getX() - centroX;
+      distanciaY = vertices[i].getY() - centroY;
+      distanciaZ = vertices[i].getZ() - centroZ;
+      if(distanciaX < 0)
+        distanciaX = -distanciaX;
+      if(distanciaY < 0)
+        distanciaY = -distanciaY;
+      if(distanciaZ < 0)
+        distanciaZ = -distanciaZ;
+      media[0] += distanciaX;
+      media[1] += distanciaY;
+      media[2] += distanciaZ;
+    }
+    for(int i=0; i<3; i++){
+      media[i] = media[i]/2;
+    }
+    return media;
+  }
+  
 }

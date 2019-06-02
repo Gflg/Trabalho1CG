@@ -109,5 +109,9 @@ public class Decagono3D extends FiguraGeometrica {
 
     transformacaoCoordenadas(this.vertices);
   }
+  
+  public int qtdFaces(){
+    return 12;
+  }
 
 }
