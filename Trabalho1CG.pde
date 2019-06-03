@@ -18,7 +18,7 @@ void settings() {
 }
 
 void setup() {
-  cor = transicao = fase = acertos = erros = ultimoTempo = pontuacao = 0;
+  cor = transicao = fase =  acertos = erros = ultimoTempo = pontuacao = 0;
   background(255);
 }
 
@@ -234,12 +234,8 @@ void draw() {
           }
           break;
       default:
-          fill(0, 0, 0);
-          textSize(40);
-          text("Obrigado por jogar!", 450, 450);
-          text("Acertos: " + acertos, 540, 500);
-          text("Erros    : " + erros, 540, 550);
-          text("Pontuação: " + pontuacao, 540, 600);
+          TelaPontos telaFinal = new TelaPontos(acertos, erros, pontuacao);
+          telaFinal.drawTela();
     }
   }
 
