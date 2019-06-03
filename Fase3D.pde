@@ -217,25 +217,29 @@ public class Fase3D{
       taxaX1 = taxaX2 = taxaY1 = taxaY2 = 1; // inicializando varíaveis
       taxaZ1 = taxaZ2 = 0; // inicializando varíaveis
       switch (face) {
-        case 2:
+        case 2: 
+          stroke(0,0,0);
           taxaX1 = -0.25;
           taxaX2 = -0.25;
           taxaY1 = 0.65;
           taxaY2 = 0.65;
           break;
-        case 3:
+        case 3: 
+          stroke(0,0,0);
           taxaX1 = 0.15;
           taxaX2 = 0.15;
           taxaY1 = 0.9;
           taxaY2 = 0.9;
           break;
-        case 4:
+        case 4: 
+          stroke(0,0,0);
           taxaX1 = 0.23;
           taxaX2 = 0.23;
           taxaY1 = 0.35;
           taxaY2 = 0.35;
           break;
-        case 5:
+        case 5: 
+          stroke(0,0,0);
           taxaX1 = 0.32;
           taxaX2 = 0.32;
           taxaY1 = 0.4;
@@ -244,15 +248,14 @@ public class Fase3D{
           taxaZ2 = 0.4;
           break;
         case 6:          
-          //stroke(0,0,0);
-          //taxaX1 = 0.35;
-          //taxaX2 = 0.42;
-          //taxaY1 = 0.15;
-          //taxaY2 = 0.17;
-          //taxaZ1 = 0.65;
-          //taxaZ2 = 0.65;
-          //break;
-          return;
+          stroke(0,0,0);
+          taxaX1 = 0.4;
+          taxaX2 = 0.5;
+          taxaY1 = 0.2;
+          taxaY2 = 0.2;
+          taxaZ1 = 0.8;
+          taxaZ2 = 0.5;
+          break;
         case 7:
           taxaX1 = 0.75;
           taxaX2 = 0.7;
@@ -278,6 +281,7 @@ public class Fase3D{
           taxaY2 = 0.35;
           break;
         case 11:
+        // como eu, humano, vou escolher os paramêtros para pintar algo que não vejo?
           //stroke(0,0,0);
           //taxaX1 = 0.23;
           //taxaX2 = 0.23;
@@ -293,11 +297,19 @@ public class Fase3D{
       x2 = decagono1.faces[face].arestas[0].vertices[1].getX();
       y2 = decagono1.faces[face].arestas[0].vertices[1].getY() + 1;
       z2 = decagono1.faces[face].arestas[0].vertices[1].getZ();
+      float limiteY1 = decagono1.faces[face].arestas[2].vertices[0].getY() - taxaY1;
+      float limiteY2 = decagono1.faces[face].arestas[2].vertices[1].getY() - taxaY2;
       if (face == 5) { 
         x1 += 3.5;
         x2 -= 1;
+      } else if (face == 6) {
+        x1 += 2.5;
+        y1 -= 3;
+        y2 -= 0.5;
+        limiteY1 -= 0.5;
+        limiteY2 -= 0.5;
       }
-      while((y1 < decagono1.faces[face].arestas[2].vertices[0].getY() - taxaY1) && (y2 < decagono1.faces[face].arestas[2].vertices[1].getY() - taxaY2)) {
+      while((y1 < limiteY1) && (y2 < limiteY2)) {
         line(x1, y1, z1, x2, y2, z2);
         x1 += taxaX1;
         x2 += taxaX2;
