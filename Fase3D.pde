@@ -252,15 +252,37 @@ public class Fase3D{
           //taxaZ1 = 0.65;
           //taxaZ2 = 0.65;
           //break;
+          return;
         case 7:
-          //break;
+          taxaX1 = 0.75;
+          taxaX2 = 0.7;
+          taxaY1 = 0.5;
+          taxaY2 = 0.5;
+          break;
         case 8:
-          //break;
+          taxaX1 = 0.85;
+          taxaX2 = 0.85;
+          taxaY1 = 0.8;
+          taxaY2 = 0.8;
+          break;
         case 9:
-          //break;
+          taxaX1 = 0.23;
+          taxaX2 = 0.23;
+          taxaY1 = 0.35;
+          taxaY2 = 0.35;
+          break;
         case 10:
-          //break;
+          taxaX1 = 0.1;
+          taxaX2 = 0.1;
+          taxaY1 = 0.35;
+          taxaY2 = 0.35;
+          break;
         case 11:
+          //stroke(0,0,0);
+          //taxaX1 = 0.23;
+          //taxaX2 = 0.23;
+          //taxaY1 = 0.35;
+          //taxaY2 = 0.35;
           //break;
         default:
           return;
