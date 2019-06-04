@@ -368,7 +368,7 @@ public class TelaPontos {
     }
     
     decagono.drawFigura();
-    calculaDistanciaFaces(decagono, decagono.vertices[0].getX(), decagono.vertices[0].getY(), 120);
+    calculaDistanciaFaces(decagono, 650, 500, -1);
     
     for(int i=0; i<12; i++){
       print("Distância da face " + i + ": " + distanciasFaces[i] + "\n");
